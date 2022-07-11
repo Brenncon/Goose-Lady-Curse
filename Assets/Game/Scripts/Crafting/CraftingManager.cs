@@ -1,3 +1,4 @@
+using Project.Build.Commands;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -7,13 +8,13 @@ using UnityEngine.UI;
 
 public class CraftingManager : Singleton<CraftingManager>
 {
-    bool inventoryFull = false;
-
     Item selectedItem = null;
 
     public TMP_InputField craftingNumberInputField;
 
     public Inventory playerInventory;
+
+    [HideInInspector] [ReadOnly] public bool inventoryFull = false;
 
     [HideInInspector] public CraftingRecipe craftingRecipe;
 
@@ -144,9 +145,12 @@ public class CraftingManager : Singleton<CraftingManager>
         return true;
     }
 
-    public void ResponseInventoryFull(bool isFull)
+    private void ResponseInventoryFull(bool isFull)
     {
         // Save the status of the player inventory here
         inventoryFull = isFull;
+
+        // Throw a debug message
+        Debug.Log($"Crafting system thinks inventory is full: {isFull}");
     }
 }

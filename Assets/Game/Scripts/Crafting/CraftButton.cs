@@ -29,24 +29,33 @@ public class CraftButton : MonoBehaviour
         // If there is an item seclected, and the input stack number is greater than 0
         if (recipe != null && stackNumber > 0)
         {
-            // temp
             // For the amount of item that the player want to craft
             for (int i = 0; i < stackNumber; i++)
             {
-                // Check if the inventory is full here
-
-                // Add that 1 of that item to the inventory
-                craftEvent.Invoke(recipe.item, 1);
-
-                // Consume reagent
-                // For every reagent
-                for (int j = 0; j < recipe.reagents.Length; j++)
+                // If the inventory is not full or there exist an item stack in the inventory where it is less than the max stack number
+                if (CraftingManager.Instance.inventoryFull == false || CraftingManager.Instance.playerInventory.FindNotMaxItemStack(recipe.item))
                 {
-                    // Consume that reagent
-                    consumeReagentEvent.Invoke(recipe.reagents[j].item, recipe.reagents[j].requiredAmount);
+                    // Add that 1 of that item to the inventory
+                    craftEvent.Invoke(recipe.item, 1);
+
+                    // Consume reagent
+                    // For every reagent
+                    for (int j = 0; j < recipe.reagents.Length; j++)
+                    {
+                        // Consume that reagent
+                        consumeReagentEvent.Invoke(recipe.reagents[j].item, recipe.reagents[j].requiredAmount);
+                    }
+                }
+                // If the inventory is full
+                else
+                {
+                    // Throw a warning message to the player, debug message for now
+                    Debug.Log("Inventory is full, unable to craft");
+
+                    // Do not craft
+                    break;
                 }
             }
-            // temp
 
             // Updates the reagents
             CraftingManager.Instance.CheckReagents();
