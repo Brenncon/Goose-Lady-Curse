@@ -7,6 +7,8 @@ using UnityEngine.UI;
 
 public class CraftingManager : Singleton<CraftingManager>
 {
+    [SerializeField] bool inventoryFull = false;
+
     Item selectedItem = null;
 
     public TMP_InputField craftingNumberInputField;
@@ -20,6 +22,12 @@ public class CraftingManager : Singleton<CraftingManager>
     [SerializeField] Transform reagentBlockPrefeb, reagentMenuContent;
 
     [SerializeField] CraftButton craftButton;
+
+    void Start()
+    {
+        // Initialize
+        inventoryFull = false;
+    }
 
     public void CheckReagents()
     {
@@ -134,5 +142,11 @@ public class CraftingManager : Singleton<CraftingManager>
 
         // Return true
         return true;
+    }
+
+    public void ResponseInventoryFull(bool isFull)
+    {
+        // Save the status of the player inventory here
+        inventoryFull = isFull;
     }
 }
