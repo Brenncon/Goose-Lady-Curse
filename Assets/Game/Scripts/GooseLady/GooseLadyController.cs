@@ -65,7 +65,7 @@ public class GooseLadyController : MonoBehaviour
         }
         if (TryGetComponent<Animator>(out animator))
         {
-            animator.SetFloat("speed", agent.velocity.magnitude / agent.speed);
+            animator.SetFloat("speed", agent.velocity.magnitude);
             animator.SetFloat("speed multiplier", animationMultiplier);
         }
     }

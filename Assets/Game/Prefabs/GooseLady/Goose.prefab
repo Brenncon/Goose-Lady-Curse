@@ -1662,6 +1662,7 @@ MonoBehaviour:
   playerFollowOffset: 2
   attackRange: 1
   margin: 0.05
+  animationMultiplier: 4
   targetDistance: 0
   target: {fileID: 0}
   resetOffset: {x: 0, y: 0, z: -2}
