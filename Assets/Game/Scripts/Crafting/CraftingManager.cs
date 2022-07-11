@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class CraftingManager : Singleton<CraftingManager>
 {
-    [SerializeField] bool inventoryFull = false;
+    bool inventoryFull = false;
 
     Item selectedItem = null;
 
