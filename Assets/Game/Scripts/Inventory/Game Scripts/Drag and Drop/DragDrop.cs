@@ -158,7 +158,6 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
         DropItem.Invoke(originalInventorySlot.slottedItem, originalInventorySlot.stackNumber);
 
         // Reset the original inventory slot
-        originalInventorySlot.myInventory.itemList[originalInventorySlot.myBagIndex][originalInventorySlot.mySlotIndex].slottedItem = null;
-        originalInventorySlot.myInventory.itemList[originalInventorySlot.myBagIndex][originalInventorySlot.mySlotIndex].stackNumber = 0;
+        originalInventorySlot.myInventory.RemoveItemFromSpecificSlot(originalInventorySlot, originalInventorySlot.stackNumber);
     }
 }
