@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 /// <summary>
 /// This class handles the behavior when the player issues the attack command
 /// Under this state the avatar will chase and attack the target until:
@@ -10,9 +11,11 @@ using UnityEngine;
 /// </summary>
 public class PlayerAttackState : PlayerBaseState
 {
+    public UnityEvent<bool> EnterCombat;
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         SceneLoader.Instance.OnSceneUnloadedEvent += UnRegisterCallbacks;
+        EnterCombat.Invoke(true);
         //fsm.inputReader.EnableGameplayInput();
     }
 
@@ -39,6 +42,7 @@ public class PlayerAttackState : PlayerBaseState
     public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         fsm.actions.CancelAttack();
+        EnterCombat.Invoke(false);
         UnRegisterCallbacks();
     }
     /// <summary>
