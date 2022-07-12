@@ -101,8 +101,8 @@ public class Inventory : MonoBehaviour
         return count;
     }
 
-    // Return true if there is an item stack of that item that has not reach maxStackNumber
-    public bool FindNotMaxItemStack(Item item)
+    // Return true if there is an item stack of that item that will not reach maxStackNumber after adding stackNumber amount of item
+    public bool FindAvailableStack(Item item, int stackNumber)
     {
         // For every bag
         for (int i = 0; i < itemList.Count; i++)
@@ -113,8 +113,8 @@ public class Inventory : MonoBehaviour
                 // If the slotted item in that slot is the same with the targeted item
                 if (itemList[i][j].slottedItem == item)
                 {
-                    // If that slot's item has not reach max item stack
-                    if (itemList[i][j].stackNumber < item.maxStackNumber)
+                    // If that slot's item will not reach max item stack after adding stackNumber
+                    if (itemList[i][j].stackNumber + stackNumber <= item.maxStackNumber)
                     {
                         // Return true
                         return true;
