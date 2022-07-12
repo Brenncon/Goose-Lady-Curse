@@ -51,6 +51,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a70ccc62d3e838a47bfd71772a11ede7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EnterCombat:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 8d695218a900f3445a98bfd2c92d86d5, type: 2}
+        m_TargetAssemblyTypeName: BoolEventChannel, Assembly-CSharp
+        m_MethodName: Raise
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &-4818576537082377183
 MonoBehaviour:
   m_ObjectHideFlags: 1
