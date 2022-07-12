@@ -73,10 +73,13 @@ public class AvatarActions : MonoBehaviour
             Debug.LogError("item is null");
             return;
         }
-        if (item.TryGetComponent<ItemWrapper>(out ItemWrapper itemWrapper)&&!inventoryIsFull)
+        if (item.TryGetComponent<ItemWrapper>(out ItemWrapper itemWrapper))
         {
             ItemPickupEvent.Invoke(itemWrapper.item, itemWrapper.stackNumber);
-            Destroy(item.gameObject, 0.1f);
+            if (!inventoryIsFull)
+            {
+                Destroy(item.gameObject, 0.1f);
+            }
         }
         else
         {

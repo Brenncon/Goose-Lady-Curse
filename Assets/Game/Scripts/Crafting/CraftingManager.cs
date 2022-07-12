@@ -1,3 +1,4 @@
+using Project.Build.Commands;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -13,6 +14,8 @@ public class CraftingManager : Singleton<CraftingManager>
 
     public Inventory playerInventory;
 
+    [HideInInspector] [ReadOnly] public bool inventoryFull = false;
+
     [HideInInspector] public CraftingRecipe craftingRecipe;
 
     [SerializeField] TMP_Text itemNameText, itemDescriptionText;
@@ -20,6 +23,12 @@ public class CraftingManager : Singleton<CraftingManager>
     [SerializeField] Transform reagentBlockPrefeb, reagentMenuContent;
 
     [SerializeField] CraftButton craftButton;
+
+    void Start()
+    {
+        // Initialize
+        inventoryFull = false;
+    }
 
     public void CheckReagents()
     {
@@ -134,5 +143,14 @@ public class CraftingManager : Singleton<CraftingManager>
 
         // Return true
         return true;
+    }
+
+    private void ResponseInventoryFull(bool isFull)
+    {
+        // Save the status of the player inventory here
+        inventoryFull = isFull;
+
+        // Throw a debug message
+        Debug.Log($"Crafting system thinks inventory is full: {isFull}");
     }
 }
