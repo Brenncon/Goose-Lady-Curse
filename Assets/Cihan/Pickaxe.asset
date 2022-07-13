@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cb70ddd5a25a76458d8643dd41efe54, type: 3}
+  m_Name: Pickaxe
+  m_EditorClassIdentifier: 
+  itemID: -1
+  itemDisplayName: Pickaxe
+  itemIcon: {fileID: 21300000, guid: 903f98c003c98404ba77f6164639abbb, type: 3}
+  item3DModelPrefeb: {fileID: 7174249340566022651, guid: be762519a7f251a4bae473bdc3f018ff, type: 3}
+  maxStackNumber: 1
+  equipmentSlot: {fileID: 11400000, guid: 4e85378141c83f2408a5c88ffe20dc07, type: 2}
+  modifiers:
+  - {fileID: 11400000, guid: 8f3e0aa711ac20e49b7672a9b19c55b7, type: 2}
