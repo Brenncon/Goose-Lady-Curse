@@ -20,16 +20,19 @@ public class EquipmentDragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragH
 
     [SerializeField] Canvas canvas;
 
-    void Start()
+    void Awake()
     {
         // Initialize
         rectTransform = GetComponent<RectTransform>();
         canvasGroup = GetComponent<CanvasGroup>();
         equipmentSlotController = GetComponent<EquipmentSlotController>();
         originalParentTransform = transform.parent;
+    }
 
+    void OnEnable()
+    {
         // If the equipment slot that I am responsible for is occupied
-        if (equipmentSlotController.targetSlot.isOccupied == true)
+        if (equipmentSlotController.targetSlot.equipment != null)
         {
             // Enable the drag-ability
             EnableDragDrop(equipmentSlotController.targetSlot);
