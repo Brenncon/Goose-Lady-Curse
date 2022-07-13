@@ -10,6 +10,8 @@ public class CraftButton : MonoBehaviour
 {
     public UnityEvent<Item, int> craftEvent, consumeReagentEvent;
 
+    public UnityEvent<string> DisplayWarningMessage;
+
     void Start()
     {
         // Initialize
@@ -52,6 +54,9 @@ public class CraftButton : MonoBehaviour
                 {
                     // Throw a warning message to the player, debug message for now
                     Debug.Log("Inventory is full, unable to craft");
+
+                    // Throw a warning message to the player
+                    DisplayWarningMessage.Invoke("Inventory is full, unable to craft");
 
                     // Do not craft
                     break;

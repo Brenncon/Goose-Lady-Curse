@@ -23,6 +23,7 @@ public class Inventory : MonoBehaviour
     public UnityEvent RefreshInventorySlots;
     public UnityEvent CheckCraftable;
     public UnityEvent<bool> InventoryIsFull;
+    public UnityEvent<string> DisplayWarningMessage;
 
     // This should happen on start and on bag update, probaly should use an event for this
     void Awake()
@@ -204,6 +205,9 @@ public class Inventory : MonoBehaviour
         {
             // Throw a debug message
             Debug.Log("Inventory is full.");
+
+            // Throw a warning message to the player
+            DisplayWarningMessage.Invoke("Inventory is full.");
         }
         // If I can find a suitable item slot
         else
@@ -293,6 +297,9 @@ public class Inventory : MonoBehaviour
         {
             // Throw a debug message
             Debug.Log("There is no such item in the inventory.");
+
+            // Throw a warning message to the player
+            DisplayWarningMessage.Invoke("There is no such item in the inventory.");
         }
 
         // Refresh Inventory slots
@@ -345,7 +352,7 @@ public class Inventory : MonoBehaviour
     {
         // Cache the targeted ItemSlot
         ItemSlot targetedItemSlot = itemList[inventorySlot.myBagIndex][inventorySlot.mySlotIndex];
-        
+
         // If there are still item left in the stack after removal
         if (targetedItemSlot.stackNumber - stackNumber > 0)
         {
@@ -524,7 +531,7 @@ public class Inventory : MonoBehaviour
                 // Throw a debug message
                 Debug.Log("This is a container");
             }
-                catch
+            catch
             {
                 // Throw a debug message
                 Debug.Log("This is not a container");
@@ -605,6 +612,31 @@ public class Inventory : MonoBehaviour
 
             // Notify the inventory that it is currently not full
             isFull = false;
+        }
+    }
+
+    public void TryPickupItem(Item item, int stackNumber, GameObject itemGameObject)
+    {
+        // Throw a debug message
+        Debug.Log($"Trying to pickup {itemGameObject}, with {stackNumber} {item}");
+
+        // Check if there is room for the item, if so
+        if (isFull == false || FindAvailableStack(item, stackNumber) == true)
+        {
+            // Add the item to the inventory
+            AddItem(item, stackNumber);
+
+            // Then destory the item in the game world
+            Destroy(itemGameObject);
+        }
+        // If there is no room for the new item
+        else
+        {
+            // Throw a debug message
+            Debug.Log("Unable to pickup item, inventory is full");
+
+            // Throw an error message to the player
+            DisplayWarningMessage.Invoke("Inventory is Full");
         }
     }
 }
