@@ -23,8 +23,6 @@ public class EquipmentSlotController : MonoBehaviour
         // If there is an equipment in the equipment slot
         if (targetSlot.equipment != null)
         {
-            Debug.Log("I am here");
-
             // Change the sprite to the current item icon
             itemIcon.sprite = targetSlot.equipment.itemIcon;
         }
