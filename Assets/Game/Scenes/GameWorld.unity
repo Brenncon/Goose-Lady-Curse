@@ -3506,72 +3506,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radius: 1
---- !u!114 &1745878707
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1745878704}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64059b3adcd13cf4fae19ca5998e1f73, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  defence: 10
-  isDead: 0
-  currentState: 0
 --- !u!4 &1745878708 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4735006753694777342, guid: c353d3c7c15177946b1f2daadebc8adb, type: 3}
   m_PrefabInstance: {fileID: 1745878702}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1745878709
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1745878704}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 36003be02bd7fc54db18675085e2ab6f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  idleStates: []
-  movementStates: []
-  attackingStates: []
-  deathStates: []
-  species: NA
-  stats: {fileID: 0}
-  wanderZone: 10
-  awareness: 30
-  scent: 30
-  toughness: 5
-  constainedToWanderZone: 0
-  nonAgressiveTowards: []
-  matchSurfaceRotation: 0
-  surfaceRotationSpeed: 2
-  logChanges: 0
-  showGizmos: 0
-  drawWanderRange: 1
-  drawScentRange: 1
-  drawAwarenessRange: 1
-  deathEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  attackingEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  idleEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  movementEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  origin: {x: 0, y: 0, z: 0}
-  CurrentState: 0
-  attackReach: 2
 --- !u!143 &1745878710
 CharacterController:
   m_ObjectHideFlags: 0
