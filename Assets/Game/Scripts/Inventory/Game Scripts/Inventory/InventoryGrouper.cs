@@ -72,8 +72,8 @@ public class InventoryGrouper : MonoBehaviour
             }
         }
 
-        // Go to the right position and scale to the right size
-        ScaleInventoryGrouper();
+        //// Go to the right position and scale to the right size
+        //ScaleInventoryGrouper();
     }
 
     void OnDisable()
