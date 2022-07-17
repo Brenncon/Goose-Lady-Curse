@@ -11,7 +11,7 @@ public class AvatarCombat : MonoBehaviour
     public Stat attackInterval;
     public Stat defence;
     public SurvivalStat health;
-
+    public bool targetDead;
     [SerializeField, ReadOnly]
     private float intervalCounter;
     [SerializeField, ReadOnly]
@@ -32,9 +32,10 @@ public class AvatarCombat : MonoBehaviour
             return;
         }
 
-        if (target.TryGetComponent<CreatureCombat>(out CreatureCombat creatureCombat) && !attacking)
+        if (target.TryGetComponent<CreatureCombatAddon>(out CreatureCombatAddon creatureCombat) && !attacking)
         {
             creatureCombat.TakeDamage(attackDamage.finalValue);
+            targetDead = creatureCombat.isDead;
             avatarAnimator.SetTrigger("attack");
             intervalCounter = attackInterval.finalValue;
             attacking = true;
@@ -51,6 +52,11 @@ public class AvatarCombat : MonoBehaviour
     public void AttackComplete()
     {
         attacking = false;
+    }
+
+    public bool TargetIsDead()
+    {
+        return targetDead;
     }
 
     //public void CancelAttack()

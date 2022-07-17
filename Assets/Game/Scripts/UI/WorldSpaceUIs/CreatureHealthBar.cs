@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class CreatureHealthBar : MonoBehaviour
 {
     private Slider healthBar;
-    public CreatureCombat combat;
+    public CreatureCombatAddon combat;
     private void Start()
     {
         healthBar = GetComponent<Slider>();
@@ -14,7 +14,7 @@ public class CreatureHealthBar : MonoBehaviour
 
     private void Update()
     {
-        healthBar.value = combat.currentHealth;
+        //healthBar.value = combat.currentHealth;
         transform.LookAt(transform.position+Camera.main.transform.rotation*Vector3.forward,Camera.main.transform.rotation*Vector3.up);
     }
 }
