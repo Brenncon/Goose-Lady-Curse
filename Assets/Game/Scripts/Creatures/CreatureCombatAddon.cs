@@ -14,6 +14,7 @@ public class CreatureCombatAddon : MonoBehaviour
     private float playerRadius;
     private float safetyMargin = 1f;//navmesh agent always stop at 1f distance for some reason, need to count that in.
     private bool isAttacking;
+    private bool hasAgent;
     private Vector3 targetDirection;
     private Transform player;
     private AvatarCombat combat;
@@ -35,7 +36,7 @@ public class CreatureCombatAddon : MonoBehaviour
     private void Awake()
     {
         animalAI = GetComponent<Animal_WanderScript>();
-        agent = GetComponent<NavMeshAgent>();
+        hasAgent = TryGetComponent<NavMeshAgent>(out agent);
         creatureCollider = GetComponent<CapsuleCollider>();
         foreach (MovementState state in animalAI.movementStates)
         {
@@ -69,7 +70,7 @@ public class CreatureCombatAddon : MonoBehaviour
                 WanderStateUpdate();
                 break;
         }
-        
+
     }
 
     private void SetAttackState()
@@ -98,12 +99,13 @@ public class CreatureCombatAddon : MonoBehaviour
         animalAI.enabled = false;
         animalAI.SetState(Common_WanderScript.WanderState.Dead);
         creatureCollider.enabled = false;
-        agent.enabled = false;
+        if (hasAgent)
+            agent.enabled = false;
     }
 
     private void AttackStateUpdate()
     {
-        if (!IsInAttackRange()&&!isAttacking)
+        if (!IsInAttackRange() && !isAttacking)
         {
             SetChaseState();
             return;
@@ -159,11 +161,14 @@ public class CreatureCombatAddon : MonoBehaviour
 
     private void PursuePlayer()
     {
-        Vector3 destination = player.position - targetDirection * (animalAI.attackReach);
-        agent.SetDestination(destination);
+        if (hasAgent)
+        {
+            Vector3 destination = player.position - targetDirection * (animalAI.attackReach);
+            agent.SetDestination(destination);
 
-        animalAI.SetState(Common_WanderScript.WanderState.Chase);
-        agent.speed = runningState.moveSpeed;
+            animalAI.SetState(Common_WanderScript.WanderState.Chase);
+            agent.speed = runningState.moveSpeed;
+        }
     }
 
     public void TakeDamage(float damage)

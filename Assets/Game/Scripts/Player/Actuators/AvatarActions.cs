@@ -129,6 +129,11 @@ public class AvatarActions : MonoBehaviour
         combat.AttackComplete();
     }
 
+    public bool TargetIsDead()
+    {
+        return combat.TargetIsDead();
+    }
+
     public void Interact()
     {
         if (interactionTarget != null)
