@@ -71,6 +71,24 @@ public partial class @InputMap : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Rotate Camera Left"",
+                    ""type"": ""Button"",
+                    ""id"": ""2ecb3425-9209-4bdd-b7f6-04ee9887f14f"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Rotate Camera Right"",
+                    ""type"": ""Button"",
+                    ""id"": ""c24bb52e-5c75-4fed-8a16-7e66729272a5"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -126,6 +144,28 @@ public partial class @InputMap : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": ""Mouse and Keyboard"",
                     ""action"": ""Pickup"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""60469d95-4d62-4312-9806-faa2dd8b4928"",
+                    ""path"": ""<Keyboard>/q"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Rotate Camera Left"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""7ecfc0fd-de15-4601-b941-b2226f90eb67"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Rotate Camera Right"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -382,6 +422,8 @@ public partial class @InputMap : IInputActionCollection2, IDisposable
         m_CharacterControls_ZoomCamera = m_CharacterControls.FindAction("Zoom Camera", throwIfNotFound: true);
         m_CharacterControls_Pickup = m_CharacterControls.FindAction("Pickup", throwIfNotFound: true);
         m_CharacterControls_Attack = m_CharacterControls.FindAction("Attack", throwIfNotFound: true);
+        m_CharacterControls_RotateCameraLeft = m_CharacterControls.FindAction("Rotate Camera Left", throwIfNotFound: true);
+        m_CharacterControls_RotateCameraRight = m_CharacterControls.FindAction("Rotate Camera Right", throwIfNotFound: true);
         // GameplayMenus
         m_GameplayMenus = asset.FindActionMap("GameplayMenus", throwIfNotFound: true);
         m_GameplayMenus_CloseAllMenus = m_GameplayMenus.FindAction("Close All Menus", throwIfNotFound: true);
@@ -462,6 +504,8 @@ public partial class @InputMap : IInputActionCollection2, IDisposable
     private readonly InputAction m_CharacterControls_ZoomCamera;
     private readonly InputAction m_CharacterControls_Pickup;
     private readonly InputAction m_CharacterControls_Attack;
+    private readonly InputAction m_CharacterControls_RotateCameraLeft;
+    private readonly InputAction m_CharacterControls_RotateCameraRight;
     public struct CharacterControlsActions
     {
         private @InputMap m_Wrapper;
@@ -471,6 +515,8 @@ public partial class @InputMap : IInputActionCollection2, IDisposable
         public InputAction @ZoomCamera => m_Wrapper.m_CharacterControls_ZoomCamera;
         public InputAction @Pickup => m_Wrapper.m_CharacterControls_Pickup;
         public InputAction @Attack => m_Wrapper.m_CharacterControls_Attack;
+        public InputAction @RotateCameraLeft => m_Wrapper.m_CharacterControls_RotateCameraLeft;
+        public InputAction @RotateCameraRight => m_Wrapper.m_CharacterControls_RotateCameraRight;
         public InputActionMap Get() { return m_Wrapper.m_CharacterControls; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -495,6 +541,12 @@ public partial class @InputMap : IInputActionCollection2, IDisposable
                 @Attack.started -= m_Wrapper.m_CharacterControlsActionsCallbackInterface.OnAttack;
                 @Attack.performed -= m_Wrapper.m_CharacterControlsActionsCallbackInterface.OnAttack;
                 @Attack.canceled -= m_Wrapper.m_CharacterControlsActionsCallbackInterface.OnAttack;
+                @RotateCameraLeft.started -= m_Wrapper.m_CharacterControlsActionsCallbackInterface.OnRotateCameraLeft;
+                @RotateCameraLeft.performed -= m_Wrapper.m_CharacterControlsActionsCallbackInterface.OnRotateCameraLeft;
+                @RotateCameraLeft.canceled -= m_Wrapper.m_CharacterControlsActionsCallbackInterface.OnRotateCameraLeft;
+                @RotateCameraRight.started -= m_Wrapper.m_CharacterControlsActionsCallbackInterface.OnRotateCameraRight;
+                @RotateCameraRight.performed -= m_Wrapper.m_CharacterControlsActionsCallbackInterface.OnRotateCameraRight;
+                @RotateCameraRight.canceled -= m_Wrapper.m_CharacterControlsActionsCallbackInterface.OnRotateCameraRight;
             }
             m_Wrapper.m_CharacterControlsActionsCallbackInterface = instance;
             if (instance != null)
@@ -514,6 +566,12 @@ public partial class @InputMap : IInputActionCollection2, IDisposable
                 @Attack.started += instance.OnAttack;
                 @Attack.performed += instance.OnAttack;
                 @Attack.canceled += instance.OnAttack;
+                @RotateCameraLeft.started += instance.OnRotateCameraLeft;
+                @RotateCameraLeft.performed += instance.OnRotateCameraLeft;
+                @RotateCameraLeft.canceled += instance.OnRotateCameraLeft;
+                @RotateCameraRight.started += instance.OnRotateCameraRight;
+                @RotateCameraRight.performed += instance.OnRotateCameraRight;
+                @RotateCameraRight.canceled += instance.OnRotateCameraRight;
             }
         }
     }
@@ -689,6 +747,8 @@ public partial class @InputMap : IInputActionCollection2, IDisposable
         void OnZoomCamera(InputAction.CallbackContext context);
         void OnPickup(InputAction.CallbackContext context);
         void OnAttack(InputAction.CallbackContext context);
+        void OnRotateCameraLeft(InputAction.CallbackContext context);
+        void OnRotateCameraRight(InputAction.CallbackContext context);
     }
     public interface IGameplayMenusActions
     {
