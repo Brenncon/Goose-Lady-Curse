@@ -24,6 +24,9 @@ public class InputReader : ScriptableObject, InputMap.ICharacterControlsActions,
     public event UnityAction CloseAllMenusEvent = delegate { };
     public event UnityAction SkipDialogEvent = delegate { };
     public event UnityAction OpenNoteBookEvent = delegate { };
+    public event UnityAction RotateCameraLeftEvent = delegate { };
+    public event UnityAction RotateCameraRightEvent = delegate { };
+    public event UnityAction RotateCameraCancelEvent = delegate { };
 
     private InputMap gameInput;
     private Ray ray;
@@ -182,6 +185,30 @@ public class InputReader : ScriptableObject, InputMap.ICharacterControlsActions,
         if (context.phase == InputActionPhase.Performed)
         {
             OpenNoteBookEvent.Invoke();
+        }
+    }
+
+    public void OnRotateCameraLeft(InputAction.CallbackContext context)
+    {
+        if (context.phase == InputActionPhase.Performed)
+        {
+            RotateCameraLeftEvent.Invoke();
+        }
+        if (context.phase == InputActionPhase.Canceled)
+        {
+            RotateCameraCancelEvent.Invoke();
+        }
+    }
+
+    public void OnRotateCameraRight(InputAction.CallbackContext context)
+    {
+        if (context.phase == InputActionPhase.Performed)
+        {
+            RotateCameraRightEvent.Invoke();
+        }
+        if (context.phase == InputActionPhase.Canceled)
+        {
+            RotateCameraCancelEvent.Invoke();
         }
     }
 
