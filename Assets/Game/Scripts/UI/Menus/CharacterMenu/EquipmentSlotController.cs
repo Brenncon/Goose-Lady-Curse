@@ -15,10 +15,17 @@ public class EquipmentSlotController : MonoBehaviour
         itemIcon = GetComponent<Image>();
     }
 
-    private void OnEnable()
+    void OnEnable()
     {
         targetSlot.OnEquip.AddListener(ChangeIcon);
         targetSlot.OnUnequip.AddListener(ClearIcon);
+
+        // If there is an equipment in the equipment slot
+        if (targetSlot.equipment != null)
+        {
+            // Change the sprite to the current item icon
+            itemIcon.sprite = targetSlot.equipment.itemIcon;
+        }
     }
 
     private void OnDisable()

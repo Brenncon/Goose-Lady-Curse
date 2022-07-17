@@ -10,6 +10,8 @@ public class CraftButton : MonoBehaviour
 {
     public UnityEvent<Item, int> craftEvent, consumeReagentEvent;
 
+    public UnityEvent<string> DisplayWarningMessage;
+
     void Start()
     {
         // Initialize
@@ -33,7 +35,8 @@ public class CraftButton : MonoBehaviour
             for (int i = 0; i < stackNumber; i++)
             {
                 // If the inventory is not full or there exist an item stack in the inventory where it is less than the max stack number
-                if (CraftingManager.Instance.inventoryFull == false || CraftingManager.Instance.playerInventory.FindNotMaxItemStack(recipe.item))
+                // 1 is tempory here because there doesn't not exist a stack number for the item in the recipe yet
+                if (CraftingManager.Instance.inventoryFull == false || CraftingManager.Instance.playerInventory.FindAvailableStack(recipe.item, 1))
                 {
                     // Add that 1 of that item to the inventory
                     craftEvent.Invoke(recipe.item, 1);
@@ -51,6 +54,9 @@ public class CraftButton : MonoBehaviour
                 {
                     // Throw a warning message to the player, debug message for now
                     Debug.Log("Inventory is full, unable to craft");
+
+                    // Throw a warning message to the player
+                    DisplayWarningMessage.Invoke("Inventory is full, unable to craft");
 
                     // Do not craft
                     break;

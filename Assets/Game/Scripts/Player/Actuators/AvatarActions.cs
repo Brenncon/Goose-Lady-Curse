@@ -31,7 +31,7 @@ public class AvatarActions : MonoBehaviour
     [Tooltip("Avatar's spawn location")]
     public Transform spawnPoint;
     [Tooltip("This channel send item pickup event to inventory")]
-    public UnityEvent<Item, int> ItemPickupEvent;
+    public UnityEvent<Item, int, GameObject> TryPickupItemEvent;
 
     public Structure interactionTarget;
     private Animator avatarAnimator;
@@ -75,11 +75,7 @@ public class AvatarActions : MonoBehaviour
         }
         if (item.TryGetComponent<ItemWrapper>(out ItemWrapper itemWrapper))
         {
-            ItemPickupEvent.Invoke(itemWrapper.item, itemWrapper.stackNumber);
-            if (!inventoryIsFull)
-            {
-                Destroy(item.gameObject, 0.1f);
-            }
+            TryPickupItemEvent.Invoke(itemWrapper.item, itemWrapper.stackNumber, item.gameObject);
         }
         else
         {
@@ -131,11 +127,6 @@ public class AvatarActions : MonoBehaviour
     public void CancelAttack()
     {
         combat.AttackComplete();
-    }
-
-    public bool TargetIsDead()
-    {
-        return combat.targetDead;
     }
 
     public void Interact()
