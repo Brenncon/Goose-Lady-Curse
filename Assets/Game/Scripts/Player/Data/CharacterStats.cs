@@ -1,3 +1,4 @@
+using Project.Build.Commands;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
@@ -10,6 +11,7 @@ public class CharacterStats : MonoBehaviour
     public SurvivalStat health;
     public UnityEvent playerDied;
     private bool notDialogPause;
+    [SerializeField,ReadOnly]
     private bool isDead;
     private void Start()
     {

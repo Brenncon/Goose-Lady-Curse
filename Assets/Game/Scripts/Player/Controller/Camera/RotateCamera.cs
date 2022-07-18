@@ -54,19 +54,16 @@ public class RotateCamera : MonoBehaviour
 
     public void RotateLeft()
     {
-        Debug.Log("rotate left");
         direction = RotateDirection.left;   
     }
 
     public void RotateRight()
     {
-        Debug.Log("rotate right");
         direction = RotateDirection.right;
     }
 
     public void CancelRotation()
     {
-        Debug.Log("rotate cancel");
         direction = RotateDirection.none;
     }
 }

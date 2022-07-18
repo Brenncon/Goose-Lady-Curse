@@ -11,7 +11,7 @@ public class AvatarCombat : MonoBehaviour
     public Stat attackInterval;
     public Stat defence;
     public SurvivalStat health;
-
+    public bool targetDead;
     [SerializeField, ReadOnly]
     private float intervalCounter;
     [SerializeField, ReadOnly]
@@ -32,7 +32,17 @@ public class AvatarCombat : MonoBehaviour
             return;
         }
 
-        if (target.TryGetComponent<CreatureCombat>(out CreatureCombat creatureCombat) && !attacking)
+        if (target != null && target.TryGetComponent<CreatureCombatAddon>(out CreatureCombatAddon creatureCombatAddon) && !attacking)
+        {
+            creatureCombatAddon.TakeDamage(attackDamage.finalValue);
+            targetDead = creatureCombatAddon.isDead;
+            avatarAnimator.SetTrigger("attack");
+            intervalCounter = attackInterval.finalValue;
+            attacking = true;
+        }
+
+        //for the rock and minerals
+        if (target != null && target.TryGetComponent<CreatureCombat>(out CreatureCombat creatureCombat) && !attacking)
         {
             creatureCombat.TakeDamage(attackDamage.finalValue);
             avatarAnimator.SetTrigger("attack");
@@ -51,6 +61,11 @@ public class AvatarCombat : MonoBehaviour
     public void AttackComplete()
     {
         attacking = false;
+    }
+
+    public bool TargetIsDead()
+    {
+        return targetDead;
     }
 
     //public void CancelAttack()

@@ -30,6 +30,7 @@ public class PlayerMovementState : PlayerBaseState
 
     public void IdleState()
     {
-        fsm.ChangeState(fsm.IdleStateName);
+        if (!fsm.isDead)
+            fsm.ChangeState(fsm.IdleStateName);
     }
 }
