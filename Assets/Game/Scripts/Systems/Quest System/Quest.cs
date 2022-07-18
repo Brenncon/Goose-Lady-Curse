@@ -64,7 +64,7 @@ public class Quest : MonoBehaviour
         stage = Stage.outro;
         objectiveComplete = true;
         HideEmojiEvent.Invoke();
-        UpdateQuestHint.Invoke("Return to statue");//TODO: change the hard coded message later
+        UpdateQuestHint.Invoke("Approach a statue");//TODO: change the hard coded message later
     }
 
     public void OnQuestIncomplete()

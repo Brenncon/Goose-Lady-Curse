@@ -3446,11 +3446,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c353d3c7c15177946b1f2daadebc8adb, type: 3}
---- !u!1 &1745878703 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5061103645392613752, guid: c353d3c7c15177946b1f2daadebc8adb, type: 3}
-  m_PrefabInstance: {fileID: 1745878702}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1745878704 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5061103645234086826, guid: c353d3c7c15177946b1f2daadebc8adb, type: 3}
@@ -3494,11 +3489,6 @@ MonoBehaviour:
   defence: 10
   intervalCounter: 0
   attacking: 0
---- !u!4 &1745878708 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4735006753694777342, guid: c353d3c7c15177946b1f2daadebc8adb, type: 3}
-  m_PrefabInstance: {fileID: 1745878702}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1780892986
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3506,38 +3496,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 225971880476952193, guid: 0c73038af489e57479f9db4be58223cc, type: 3}
-      propertyPath: _targetGameObject.gameObjectVal
-      value: 
-      objectReference: {fileID: 1745878703}
-    - target: {fileID: 4549820548219045244, guid: 0c73038af489e57479f9db4be58223cc, type: 3}
-      propertyPath: selectedCommands.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5576937104920183452, guid: 0c73038af489e57479f9db4be58223cc, type: 3}
-      propertyPath: nodeRect.width
-      value: 75.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 5576937104920183452, guid: 0c73038af489e57479f9db4be58223cc, type: 3}
-      propertyPath: commandList.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 5576937104920183452, guid: 0c73038af489e57479f9db4be58223cc, type: 3}
-      propertyPath: commandList.Array.data[1]
-      value: 
-      objectReference: {fileID: 1780892992}
-    - target: {fileID: 5576937104920183452, guid: 0c73038af489e57479f9db4be58223cc, type: 3}
-      propertyPath: commandList.Array.data[2]
-      value: 
-      objectReference: {fileID: 1780892991}
-    - target: {fileID: 5576937104920183452, guid: 0c73038af489e57479f9db4be58223cc, type: 3}
-      propertyPath: commandList.Array.data[3]
-      value: 
-      objectReference: {fileID: 1780892990}
-    - target: {fileID: 6498283990682560247, guid: 0c73038af489e57479f9db4be58223cc, type: 3}
-      propertyPath: _targetGameObject.gameObjectVal
-      value: 
-      objectReference: {fileID: 1745878704}
     - target: {fileID: 8406403306594580197, guid: 0c73038af489e57479f9db4be58223cc, type: 3}
       propertyPath: m_Name
       value: Quest Manager
@@ -3586,23 +3544,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8935784264709379528, guid: 0c73038af489e57479f9db4be58223cc, type: 3}
-      propertyPath: storyText
-      value: Oh, you are the human I spawned to the island.
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8935784264709379528, guid: 0c73038af489e57479f9db4be58223cc, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 0c73038af489e57479f9db4be58223cc, type: 3}
---- !u!114 &1780892987 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8406403307675228253, guid: 0c73038af489e57479f9db4be58223cc, type: 3}
-  m_PrefabInstance: {fileID: 1780892986}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25fb867d2049d41f597aefdd6b19f598, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1780892988 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 9206620880118580896, guid: 0c73038af489e57479f9db4be58223cc, type: 3}
@@ -3614,85 +3558,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a334fe2ffb574b3583ff3b18b4792d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1780892989 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3407252572550297379, guid: 0c73038af489e57479f9db4be58223cc, type: 3}
-  m_PrefabInstance: {fileID: 1780892986}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1780892990 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5146772468166486908, guid: 0c73038af489e57479f9db4be58223cc, type: 3}
-  m_PrefabInstance: {fileID: 1780892986}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1780892989}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95d9ff288f3904c05ada7ac9c9a075bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1780892991
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1780892989}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb3e86f556e074b84af1cc7eb8f8e5e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 6
-  indentLevel: 0
-  _sourceObject:
-    gameObjectRef: {fileID: 0}
-    gameObjectVal: {fileID: 1214027450135282923, guid: 7ced32ca6d3846249905f8dcae5f70a5, type: 3}
-  _parentTransform:
-    transformRef: {fileID: 0}
-    transformVal: {fileID: 1745878708}
-  _spawnAtSelf:
-    booleanRef: {fileID: 0}
-    booleanVal: 0
-  _spawnPosition:
-    vector3Ref: {fileID: 0}
-    vector3Val: {x: 1, y: 1, z: 1}
-  _spawnRotation:
-    vector3Ref: {fileID: 0}
-    vector3Val: {x: 0, y: 0, z: 0}
-  _newlySpawnedObject:
-    gameObjectRef: {fileID: 0}
-    gameObjectVal: {fileID: 0}
-  sourceObjectOLD: {fileID: 0}
-  parentTransformOLD: {fileID: 0}
-  spawnPositionOLD: {x: 0, y: 0, z: 0}
-  spawnRotationOLD: {x: 0, y: 0, z: 0}
---- !u!114 &1780892992
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1780892989}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 5
-  indentLevel: 0
-  storyText: 
-  description: 
-  character: {fileID: 1780892987}
-  portrait: {fileID: 21300000, guid: ccbb6ce1f10d10441bcf218f6f10c62d, type: 3}
-  voiceOverClip: {fileID: 0}
-  showAlways: 1
-  showCount: 1
-  extendPrevious: 0
-  fadeWhenDone: 1
-  waitForClick: 1
-  stopVoiceover: 1
-  waitForVO: 0
-  setSayDialog: {fileID: 0}
 --- !u!1001 &1792474457
 PrefabInstance:
   m_ObjectHideFlags: 0
