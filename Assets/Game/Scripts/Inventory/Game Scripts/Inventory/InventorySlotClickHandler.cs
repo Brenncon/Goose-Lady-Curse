@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.EventSystems;
 
 public class InventorySlotClickHandler : MonoBehaviour, IPointerClickHandler
 {
     [SerializeField] Inventory myInventory;
+
+    public UnityEvent AskInventoryCheckFullStatus;
 
     void Start()
     {
@@ -30,7 +33,11 @@ public class InventorySlotClickHandler : MonoBehaviour, IPointerClickHandler
             // Use that item / consumable / equipment in the item slot
             transform.parent.GetComponent<InventorySlot>().slottedItem.Use(myItemSlot);
 
+            // Ask the inventory to ask the inventory UI to refresh the status
             myInventory.RefreshInventorySlots.Invoke();
+
+            // Ask the inventory to check if it is full
+            AskInventoryCheckFullStatus.Invoke();
         }
     }
 }
