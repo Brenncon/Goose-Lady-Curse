@@ -11,7 +11,6 @@ public class CreatureCombatAddon : MonoBehaviour
 {
     [SerializeField]
     private float defence;
-    private float playerRadius;
     private float safetyMargin = 1f;//navmesh agent always stop at 1f distance for some reason, need to count that in.
     private bool isAttacking;
     private bool hasAgent;
@@ -19,9 +18,9 @@ public class CreatureCombatAddon : MonoBehaviour
     private Transform player;
     private AvatarCombat combat;
     private NavMeshAgent agent;
-    private Animal_WanderScript animalAI;
     private MovementState runningState;
-    private CapsuleCollider creatureCollider;
+    private Animal_WanderScript animalAI;
+    public CreatureHealthBar healthBar;
     public bool isDead;
     private enum State
     {
@@ -37,7 +36,6 @@ public class CreatureCombatAddon : MonoBehaviour
     {
         animalAI = GetComponent<Animal_WanderScript>();
         hasAgent = TryGetComponent<NavMeshAgent>(out agent);
-        creatureCollider = GetComponent<CapsuleCollider>();
         foreach (MovementState state in animalAI.movementStates)
         {
             if (state.stateName == "Running")
@@ -52,8 +50,8 @@ public class CreatureCombatAddon : MonoBehaviour
     {
 
         player = GameObject.FindGameObjectWithTag("Player").transform;
-        playerRadius = player.GetComponent<NavMeshAgent>().radius;
         combat = player.GetComponent<AvatarCombat>();
+        healthBar.SetMaxValue(animalAI.stats.toughness);
     }
 
     private void Update()
@@ -70,11 +68,11 @@ public class CreatureCombatAddon : MonoBehaviour
                 WanderStateUpdate();
                 break;
         }
-
     }
 
     private void SetAttackState()
     {
+        healthBar.gameObject.SetActive(true);
         currentState = State.attack;
         animalAI.SetState(Common_WanderScript.WanderState.Attack);
         animalAI.enabled = false;
@@ -82,25 +80,28 @@ public class CreatureCombatAddon : MonoBehaviour
 
     private void SetChaseState()
     {
+        healthBar.gameObject.SetActive(true);
         currentState = State.chase;
         animalAI.enabled = false;
     }
 
     private void SetWanderState()
     {
+        healthBar.gameObject.SetActive(false);
         currentState = State.wander;
         animalAI.enabled = true;
     }
 
     private void SetDeathState()
     {
+        healthBar.gameObject.SetActive(false);
         currentState = State.death;
         isDead = true;
         animalAI.enabled = false;
         animalAI.SetState(Common_WanderScript.WanderState.Dead);
-        creatureCollider.enabled = false;
         if (hasAgent)
             agent.enabled = false;
+
     }
 
     private void AttackStateUpdate()
@@ -176,6 +177,7 @@ public class CreatureCombatAddon : MonoBehaviour
         float actualDamage = 0;
         actualDamage = Mathf.Clamp(damage, 0, damage - defence);
         animalAI.toughness -= actualDamage;
+        healthBar.SetValue(animalAI.toughness);
         if (animalAI.toughness <= 0 && currentState != State.death)
         {
             SetDeathState();
