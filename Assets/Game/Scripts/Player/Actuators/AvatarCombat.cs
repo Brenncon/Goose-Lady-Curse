@@ -32,10 +32,19 @@ public class AvatarCombat : MonoBehaviour
             return;
         }
 
-        if (target.TryGetComponent<CreatureCombatAddon>(out CreatureCombatAddon creatureCombat) && !attacking)
+        if (target != null && target.TryGetComponent<CreatureCombatAddon>(out CreatureCombatAddon creatureCombatAddon) && !attacking)
+        {
+            creatureCombatAddon.TakeDamage(attackDamage.finalValue);
+            targetDead = creatureCombatAddon.isDead;
+            avatarAnimator.SetTrigger("attack");
+            intervalCounter = attackInterval.finalValue;
+            attacking = true;
+        }
+
+        //for the rock and minerals
+        if (target != null && target.TryGetComponent<CreatureCombat>(out CreatureCombat creatureCombat) && !attacking)
         {
             creatureCombat.TakeDamage(attackDamage.finalValue);
-            targetDead = creatureCombat.isDead;
             avatarAnimator.SetTrigger("attack");
             intervalCounter = attackInterval.finalValue;
             attacking = true;
