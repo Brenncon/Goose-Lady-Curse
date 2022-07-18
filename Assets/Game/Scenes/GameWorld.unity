@@ -1481,6 +1481,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 5113450027929443088, guid: 059e2f58ed893844995583daec0120a5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 059e2f58ed893844995583daec0120a5, type: 3}
 --- !u!850595691 &876541673
@@ -2573,6 +2577,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Key (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1284379524389179895, guid: afd1a9f582c842f4885aa55c8b261bf6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6331191771001077911, guid: afd1a9f582c842f4885aa55c8b261bf6, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -3544,8 +3552,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 8935784264709379528, guid: 0c73038af489e57479f9db4be58223cc, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c73038af489e57479f9db4be58223cc, type: 3}
 --- !u!114 &1780892988 stripped
 MonoBehaviour:
@@ -3884,6 +3891,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 846028984658924269, guid: d3228dbb3e0e02746a80caeda5332f9b, type: 3}
+      propertyPath: m_BlockingMask.m_Bits
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2615406746623798534, guid: d3228dbb3e0e02746a80caeda5332f9b, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6932017771572343016, guid: d3228dbb3e0e02746a80caeda5332f9b, type: 3}
       propertyPath: m_Name
       value: Goose lady Place Holder

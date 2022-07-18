@@ -49,7 +49,7 @@ public class Quest : MonoBehaviour
         }
     }
 
-    public void SkipDialog()
+    public virtual void SkipDialog()
     {
         dialog.StopAllBlocks();
         if (stage == Stage.ongoing)

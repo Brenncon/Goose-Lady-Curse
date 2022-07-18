@@ -12,10 +12,7 @@ GameObject:
   - component: {fileID: 4549820548219045244}
   - component: {fileID: 1289127312410829313}
   - component: {fileID: 5576937104920183452}
-  - component: {fileID: 4632869049214854832}
   - component: {fileID: 3050780815927428951}
-  - component: {fileID: 5257534391388389474}
-  - component: {fileID: 8935784264709379528}
   - component: {fileID: 1780892992}
   - component: {fileID: 1780892996}
   - component: {fileID: 1780892997}
@@ -26,7 +23,6 @@ GameObject:
   - component: {fileID: 1780893002}
   - component: {fileID: 1780893003}
   - component: {fileID: 3899848276253162457}
-  - component: {fileID: 1780892990}
   m_Layer: 0
   m_Name: Quest0
   m_TagString: Untagged
@@ -73,9 +69,9 @@ MonoBehaviour:
     width: 0
     height: 0
   selectedBlocks:
-  - {fileID: 4632869049214854832}
+  - {fileID: 5576937104920183452}
   selectedCommands:
-  - {fileID: 1780892990}
+  - {fileID: 3899848276253162457}
   variables: []
   description: 'Intro
 
@@ -102,7 +98,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   description: 
-  objectiveComplete: 1
+  objectiveComplete: 0
   nextQuest: {fileID: 2060556769151682770}
   UpdateQuestHint:
     m_PersistentCalls:
@@ -152,7 +148,7 @@ MonoBehaviour:
         m_CallState: 2
   ladyEmojis: {fileID: 11400000, guid: de2dd31d517ad5a41a84054695a29bad, type: 2}
   stage: 0
-  objective: {fileID: 11400000, guid: 142b50c74b450e34bbb66438c14fe025, type: 2}
+  objective: {fileID: 0}
   targetCount: 1
   currentCount: 0
 --- !u!114 &5576937104920183452
@@ -191,33 +187,6 @@ MonoBehaviour:
   - {fileID: 1780892996}
   - {fileID: 3899848276253162457}
   suppressAllAutoSelections: 0
---- !u!114 &4632869049214854832
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3407252572550297379}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nodeRect:
-    serializedVersion: 2
-    x: 373
-    y: 220
-    width: 95
-    height: 40
-  tint: {r: 1, g: 1, b: 1, a: 1}
-  useCustomTint: 0
-  itemId: 1
-  blockName: ongoing
-  description: 
-  eventHandler: {fileID: 5257534391388389474}
-  commandList:
-  - {fileID: 1780892990}
-  suppressAllAutoSelections: 0
 --- !u!114 &3050780815927428951
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -233,48 +202,6 @@ MonoBehaviour:
   parentBlock: {fileID: 5576937104920183452}
   suppressBlockAutoSelect: 0
   message: intro
---- !u!114 &5257534391388389474
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3407252572550297379}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d7d417659cd54a6787f70f763950c34, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  parentBlock: {fileID: 4632869049214854832}
-  suppressBlockAutoSelect: 0
-  message: ongoing
---- !u!114 &8935784264709379528
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3407252572550297379}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 2
-  indentLevel: 0
-  storyText: Ah ha a mortal, you have been chosen to save this island!
-  description: 
-  character: {fileID: 8406403307675228253}
-  portrait: {fileID: 21300000, guid: ccbb6ce1f10d10441bcf218f6f10c62d, type: 3}
-  voiceOverClip: {fileID: 0}
-  showAlways: 1
-  showCount: 1
-  extendPrevious: 0
-  fadeWhenDone: 1
-  waitForClick: 1
-  stopVoiceover: 1
-  waitForVO: 0
-  setSayDialog: {fileID: 0}
 --- !u!114 &1780892992
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -535,62 +462,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemId: 15
-  indentLevel: 0
-  description: 
-  delay: 0
-  invokeType: 0
-  staticEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1289127312410829313}
-        m_TargetAssemblyTypeName: Quest, Assembly-CSharp
-        m_MethodName: OnQuestComplete
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  booleanParameter:
-    booleanRef: {fileID: 0}
-    booleanVal: 0
-  booleanEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  integerParameter:
-    integerRef: {fileID: 0}
-    integerVal: 0
-  integerEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  floatParameter:
-    floatRef: {fileID: 0}
-    floatVal: 0
-  floatEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  stringParameter:
-    stringRef: {fileID: 0}
-    stringVal: 
-  stringEvent:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!114 &1780892990
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3407252572550297379}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95d9ff288f3904c05ada7ac9c9a075bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 16
   indentLevel: 0
   description: 
   delay: 0
@@ -1795,7 +1666,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7991c03fe3c46ab458786d2491bbd729, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  description: Explore the rest of the island
+  description: Go eat an apple
   objectiveComplete: 0
   nextQuest: {fileID: 5631547878235482420}
   UpdateQuestHint:
