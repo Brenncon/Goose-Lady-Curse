@@ -1768,6 +1768,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6809860463435552693, guid: 85c0a565ca705e2458a538b1051f64b0, type: 3}
+      propertyPath: AddItemFromWorld.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 11400000, guid: b593013012e00224a896307a0fd8adfe, type: 2}
+    - target: {fileID: 6809860463435552693, guid: 85c0a565ca705e2458a538b1051f64b0, type: 3}
+      propertyPath: AddItemFromWorld.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Raise
+      objectReference: {fileID: 0}
+    - target: {fileID: 6809860463435552693, guid: 85c0a565ca705e2458a538b1051f64b0, type: 3}
+      propertyPath: AddItemFromWorld.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ItemIntEventChannel, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 6809860463435552695, guid: 85c0a565ca705e2458a538b1051f64b0, type: 3}
       propertyPath: m_Name
       value: Player Inventory
