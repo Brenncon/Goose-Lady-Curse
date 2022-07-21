@@ -22,6 +22,7 @@ public class Inventory : MonoBehaviour
     // Assign the responsible InventoryGrouper to this event and call RefreshInventorySlots()
     public UnityEvent RefreshInventorySlots;
     public UnityEvent CheckCraftable;
+    public UnityEvent<Item, int> AddItemFromWorld;
     public UnityEvent<bool> InventoryIsFull;
     public UnityEvent<string> DisplayWarningMessage;
 
@@ -537,6 +538,9 @@ public class Inventory : MonoBehaviour
                 Debug.Log("This is not a container");
             }
         }
+
+        // See if the inventory is full
+        CheckinventoryState();
     }
 
     // Function to remove a bag from a bag slot to a specific inventory slot
@@ -550,6 +554,9 @@ public class Inventory : MonoBehaviour
         // Remove the bag from the inventory
         bags[bagSlotIndex] = null;
         itemList[bagSlotIndex] = new ItemSlot[0];
+
+        // See if the inventory is full
+        CheckinventoryState();
     }
 
     // Function to see if a bag is empty
@@ -593,7 +600,7 @@ public class Inventory : MonoBehaviour
     }
 
     // Method to check inventory state and invoke event accordingly
-    void CheckinventoryState()
+    public void CheckinventoryState()
     {
         // Check if the inventory is full
         if (IsInventoryFull() == true && isFull == false)
@@ -624,7 +631,7 @@ public class Inventory : MonoBehaviour
         if (isFull == false || FindAvailableStack(item, stackNumber) == true)
         {
             // Add the item to the inventory
-            AddItem(item, stackNumber);
+            AddItemFromWorld.Invoke(item, stackNumber);
 
             // Then destory the item in the game world
             Destroy(itemGameObject);

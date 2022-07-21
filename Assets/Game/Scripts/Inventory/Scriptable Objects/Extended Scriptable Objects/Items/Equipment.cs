@@ -83,8 +83,7 @@ public class Equipment : Item
         else
         {
             // Remove it from the inventory
-            itemSlot.slottedItem = null;
-            itemSlot.stackNumber = 0;
+            Consume(itemSlot, 1);
         }
 
         // Equip the equipment

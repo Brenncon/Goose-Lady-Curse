@@ -25,11 +25,16 @@ public class PlayerAttackState : PlayerBaseState
         {
             IdleState();
         }
+       
         if (fsm.actions.IsInAttackRange())
         {
             fsm.motion.FaceTarget();
             fsm.motion.Halt();
             fsm.actions.Attack(fsm.motion.target);
+            if (fsm.actions.TargetIsDead())
+            {
+                fsm.motion.target = null;
+            }
         }
         else
         {

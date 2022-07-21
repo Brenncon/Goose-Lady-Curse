@@ -20,9 +20,9 @@ namespace Polyperfect.Common
         private const float contingencyDistance = 1f;
 
         [SerializeField] public IdleState[] idleStates;
-        [SerializeField] private MovementState[] movementStates;
-        [SerializeField] private AIState[] attackingStates;
-        [SerializeField] private AIState[] deathStates;
+        [SerializeField] public MovementState[] movementStates;//modified to public to support add on
+        [SerializeField] public AIState[] attackingStates;//modified to public to support add on
+        [SerializeField] public AIState[] deathStates;//modified to public to support add on
 
         [SerializeField] public string species = "NA";
 
@@ -30,7 +30,7 @@ namespace Polyperfect.Common
         public AIStats stats;
 
         [SerializeField, Tooltip("How far away from it's origin this animal will wander by itself.")]
-        private float wanderZone = 10f;
+        public float wanderZone = 10f;//modified to public to support add on
 
         public float MaxDistance
         {
@@ -49,10 +49,10 @@ namespace Polyperfect.Common
         private int originalDominance = 0;
 
         [SerializeField, Tooltip("How far this animal can sense a predator.")]
-        private float awareness = 30f;
+        public float awareness = 30f;//modified to public to support add on
 
         [SerializeField, Tooltip("How far this animal can sense it's prey.")]
-        private float scent = 30f;
+        public float scent = 30f;//modified to public to support add on
 
         private float originalScent = 0f;
 
@@ -63,7 +63,7 @@ namespace Polyperfect.Common
         private float power = 10f;
 
         // [SerializeField, Tooltip("How much health this animal has.")]
-        private float toughness = 5f;
+        public float toughness = 5f;//modified to public to support add on
 
         // [SerializeField, Tooltip("Chance of this animal attacking another animal."), Range(0f, 100f)]
         private float aggression = 0f;
@@ -121,7 +121,7 @@ namespace Polyperfect.Common
         private Animator animator;
         private CharacterController characterController;
         private NavMeshAgent navMeshAgent;
-        private Vector3 origin;
+        public Vector3 origin;//modified to public to support add on
 
         private int totalIdleStateWeight;
 
@@ -156,7 +156,7 @@ namespace Polyperfect.Common
         Common_WanderScript primaryPursuer;
         Common_WanderScript attackTarget;
         float moveSpeed = 0f;
-        float attackReach =2f;
+        public float attackReach =2f; //modified to public to support add on
         bool forceUpdate = false;
         float idleStateDuration;
         Vector3 startPosition;
@@ -555,7 +555,7 @@ namespace Polyperfect.Common
 
         }
 
-        void FaceDirection(Vector3 facePosition)
+        public void FaceDirection(Vector3 facePosition) //modified to public to support addon
         {
             transform.rotation = Quaternion.LookRotation(Vector3.ProjectOnPlane(Vector3.RotateTowards(transform.forward,
                 facePosition, turnSpeed * Time.deltaTime*Mathf.Deg2Rad, 0f), Vector3.up), Vector3.up);
@@ -715,7 +715,7 @@ namespace Polyperfect.Common
                 attackTarget.forceUpdate = true;
         }
 
-        bool IsValidLocation(Vector3 targetPosition)
+        public bool IsValidLocation(Vector3 targetPosition) ////modified to public to support add on
         {
             if (!constainedToWanderZone)
                 return true;
@@ -731,7 +731,7 @@ namespace Polyperfect.Common
             return attackReach+thisRange+thatRange;
         }
 
-        void SetState(WanderState state)
+        public void SetState(WanderState state)
         {
             var previousState = CurrentState;
             if (previousState == WanderState.Dead)

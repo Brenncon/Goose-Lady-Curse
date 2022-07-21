@@ -12,6 +12,15 @@ public class ItemQuest : Quest
     [SerializeField, ReadOnly]
     private float currentCount;
 
+    public override void SkipDialog()
+    {
+        if (objective == null)
+        {
+            OnQuestComplete();
+        }
+        base.SkipDialog();
+    }
+
     public void PickupObjective(Item item, int stack)
     {
         if (objective != null)

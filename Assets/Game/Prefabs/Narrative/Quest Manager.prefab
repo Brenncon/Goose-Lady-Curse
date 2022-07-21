@@ -12,14 +12,17 @@ GameObject:
   - component: {fileID: 4549820548219045244}
   - component: {fileID: 1289127312410829313}
   - component: {fileID: 5576937104920183452}
-  - component: {fileID: 4632869049214854832}
   - component: {fileID: 3050780815927428951}
-  - component: {fileID: 5257534391388389474}
-  - component: {fileID: 8935784264709379528}
-  - component: {fileID: 6478959366945309560}
-  - component: {fileID: 5607886972881718514}
-  - component: {fileID: 9186853735445555516}
-  - component: {fileID: 5146772468166486908}
+  - component: {fileID: 1780892992}
+  - component: {fileID: 1780892996}
+  - component: {fileID: 1780892997}
+  - component: {fileID: 1780892998}
+  - component: {fileID: 1780892999}
+  - component: {fileID: 1780893000}
+  - component: {fileID: 1780893001}
+  - component: {fileID: 1780893002}
+  - component: {fileID: 1780893003}
+  - component: {fileID: 3899848276253162457}
   m_Layer: 0
   m_Name: Quest0
   m_TagString: Untagged
@@ -68,9 +71,9 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 5576937104920183452}
   selectedCommands:
-  - {fileID: 5146772468166486908}
+  - {fileID: 3899848276253162457}
   variables: []
-  description: 'Tutorial
+  description: 'Intro
 
 '
   stepPause: 0
@@ -94,7 +97,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7991c03fe3c46ab458786d2491bbd729, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  description: Find the key
+  description: 
   objectiveComplete: 0
   nextQuest: {fileID: 2060556769151682770}
   UpdateQuestHint:
@@ -112,9 +115,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  emojiHint:
-  - {fileID: 8160972069625782107, guid: 4c75e6b8bbc8f114db1fd274953bb4c1, type: 3}
-  - {fileID: 3768455697274741083, guid: 3c04bf7eb53f70d4390dba3526f3cd92, type: 3}
+  emojiHint: []
   ShowEmojiEvent:
     m_PersistentCalls:
       m_Calls:
@@ -147,7 +148,7 @@ MonoBehaviour:
         m_CallState: 2
   ladyEmojis: {fileID: 11400000, guid: de2dd31d517ad5a41a84054695a29bad, type: 2}
   stage: 0
-  objective: {fileID: 11400000, guid: 142b50c74b450e34bbb66438c14fe025, type: 2}
+  objective: {fileID: 0}
   targetCount: 1
   currentCount: 0
 --- !u!114 &5576937104920183452
@@ -165,7 +166,7 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: 381
-    y: 151
+    y: 150
     width: 75
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -175,35 +176,16 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 3050780815927428951}
   commandList:
-  - {fileID: 8935784264709379528}
-  - {fileID: 5146772468166486908}
-  suppressAllAutoSelections: 0
---- !u!114 &4632869049214854832
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3407252572550297379}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nodeRect:
-    serializedVersion: 2
-    x: 373
-    y: 220
-    width: 95
-    height: 40
-  tint: {r: 1, g: 1, b: 1, a: 1}
-  useCustomTint: 0
-  itemId: 1
-  blockName: ongoing
-  description: 
-  eventHandler: {fileID: 5257534391388389474}
-  commandList:
-  - {fileID: 9186853735445555516}
+  - {fileID: 1780892992}
+  - {fileID: 1780893003}
+  - {fileID: 1780893002}
+  - {fileID: 1780893001}
+  - {fileID: 1780893000}
+  - {fileID: 1780892999}
+  - {fileID: 1780892998}
+  - {fileID: 1780892997}
+  - {fileID: 1780892996}
+  - {fileID: 3899848276253162457}
   suppressAllAutoSelections: 0
 --- !u!114 &3050780815927428951
 MonoBehaviour:
@@ -220,22 +202,7 @@ MonoBehaviour:
   parentBlock: {fileID: 5576937104920183452}
   suppressBlockAutoSelect: 0
   message: intro
---- !u!114 &5257534391388389474
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3407252572550297379}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d7d417659cd54a6787f70f763950c34, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  parentBlock: {fileID: 4632869049214854832}
-  suppressBlockAutoSelect: 0
-  message: ongoing
---- !u!114 &8935784264709379528
+--- !u!114 &1780892992
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -247,9 +214,64 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 2
+  itemId: 5
   indentLevel: 0
-  storyText: There is a key on the beach, find it and open the gate.
+  storyText: What the? Who are you? W-wait where am I?
+  description: 
+  character: {fileID: 8406403307615056768}
+  portrait: {fileID: 21300000, guid: be58c415684e5b241854e96a9e5030ac, type: 3}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &1780892996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3407252572550297379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 14
+  indentLevel: 0
+  storyText: Ok, I guess?
+  description: 
+  character: {fileID: 8406403307615056768}
+  portrait: {fileID: 21300000, guid: be58c415684e5b241854e96a9e5030ac, type: 3}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &1780892997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3407252572550297379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 13
+  indentLevel: 0
+  storyText: You will be fine! When I get restored, I can get you back to wherever
+    place you come from. Deal?
   description: 
   character: {fileID: 8406403307675228253}
   portrait: {fileID: 21300000, guid: ccbb6ce1f10d10441bcf218f6f10c62d, type: 3}
@@ -262,63 +284,7 @@ MonoBehaviour:
   stopVoiceover: 1
   waitForVO: 0
   setSayDialog: {fileID: 0}
---- !u!114 &6478959366945309560
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3407252572550297379}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7bd2812d0ae4c04099619019bfa637d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  channel: {fileID: 11400000, guid: b593013012e00224a896307a0fd8adfe, type: 2}
-  response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1289127312410829313}
-        m_TargetAssemblyTypeName: ItemQuest, Assembly-CSharp
-        m_MethodName: PickupObjective
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &5607886972881718514
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3407252572550297379}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7bd2812d0ae4c04099619019bfa637d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  channel: {fileID: 11400000, guid: 6c25a850810d33d4b8fb720c9290b127, type: 2}
-  response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1289127312410829313}
-        m_TargetAssemblyTypeName: ItemQuest, Assembly-CSharp
-        m_MethodName: DropoffObjective
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &9186853735445555516
+--- !u!114 &1780892998
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -330,11 +296,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 3
+  itemId: 12
   indentLevel: 0
-  storyText: 'Have you got the key yet?
-
-'
+  storyText: "Huh??? I'm not sure if I\u2019m up for the task..."
+  description: 
+  character: {fileID: 8406403307615056768}
+  portrait: {fileID: 21300000, guid: be58c415684e5b241854e96a9e5030ac, type: 3}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &1780892999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3407252572550297379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 11
+  indentLevel: 0
+  storyText: Please I beg you!
   description: 
   character: {fileID: 8406403307675228253}
   portrait: {fileID: 21300000, guid: ccbb6ce1f10d10441bcf218f6f10c62d, type: 3}
@@ -347,7 +338,118 @@ MonoBehaviour:
   stopVoiceover: 1
   waitForVO: 0
   setSayDialog: {fileID: 0}
---- !u!114 &5146772468166486908
+--- !u!114 &1780893000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3407252572550297379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 10
+  indentLevel: 0
+  storyText: 'I got stuck in this goose body and I can''t return to my true form
+    without aid! '
+  description: 
+  character: {fileID: 8406403307675228253}
+  portrait: {fileID: 21300000, guid: ccbb6ce1f10d10441bcf218f6f10c62d, type: 3}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &1780893001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3407252572550297379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 9
+  indentLevel: 0
+  storyText: N-No please don't leave me I need your help! (Sad Goose sound in the
+    background)
+  description: 
+  character: {fileID: 8406403307675228253}
+  portrait: {fileID: 21300000, guid: ccbb6ce1f10d10441bcf218f6f10c62d, type: 3}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &1780893002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3407252572550297379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 8
+  indentLevel: 0
+  storyText: Nah thanks, I got to get back to- (Get up and leave)
+  description: 
+  character: {fileID: 8406403307615056768}
+  portrait: {fileID: 21300000, guid: be58c415684e5b241854e96a9e5030ac, type: 3}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &1780893003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3407252572550297379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 7
+  indentLevel: 0
+  storyText: "I am the Goddess of this island, if you are willing to do my bidding
+    you will be properly rewarded. Now you need to \u2013"
+  description: 
+  character: {fileID: 8406403307675228253}
+  portrait: {fileID: 21300000, guid: ccbb6ce1f10d10441bcf218f6f10c62d, type: 3}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &3899848276253162457
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -359,7 +461,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95d9ff288f3904c05ada7ac9c9a075bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 4
+  itemId: 15
   indentLevel: 0
   description: 
   delay: 0
@@ -369,7 +471,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1289127312410829313}
         m_TargetAssemblyTypeName: Quest, Assembly-CSharp
-        m_MethodName: ShowEmoji
+        m_MethodName: OnQuestComplete
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -419,13 +521,16 @@ GameObject:
   - component: {fileID: 4440862180604509756}
   - component: {fileID: 6932174165789986330}
   - component: {fileID: 7780303692449944775}
-  - component: {fileID: 225971880476952193}
   - component: {fileID: 8307160922990601448}
   - component: {fileID: 4609026255832922754}
   - component: {fileID: 3385375640071788708}
   - component: {fileID: 8406403306851092417}
   - component: {fileID: 1780892994}
   - component: {fileID: 1780892993}
+  - component: {fileID: 503110908}
+  - component: {fileID: 503110909}
+  - component: {fileID: 503110910}
+  - component: {fileID: 503110911}
   m_Layer: 0
   m_Name: Quest1
   m_TagString: Untagged
@@ -473,10 +578,9 @@ MonoBehaviour:
     height: 0
   selectedBlocks:
   - {fileID: 63900420162183858}
-  selectedCommands:
-  - {fileID: 1780892993}
+  selectedCommands: []
   variables: []
-  description: 
+  description: Crafting Tuorial
   stepPause: 0
   colorCommands: 1
   hideComponents: 1
@@ -498,7 +602,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7991c03fe3c46ab458786d2491bbd729, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  description: Find the second key
+  description: Craft a pickaxe
   objectiveComplete: 0
   nextQuest: {fileID: 3682269817804152895}
   UpdateQuestHint:
@@ -517,9 +621,8 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   emojiHint:
-  - {fileID: 8160972069625782107, guid: 4c75e6b8bbc8f114db1fd274953bb4c1, type: 3}
-  - {fileID: 3768455697274741083, guid: 580f54e605a8968498ab6188548a8629, type: 3}
-  - {fileID: 3768455697274741083, guid: b361cb8e6d0fe184cb3cde35364ccf73, type: 3}
+  - {fileID: 8160972069625782107, guid: 921327f2e8af6ce4a925fd5c80075b63, type: 3}
+  - {fileID: 8160972069625782107, guid: fcff19f260529cc458d4b8d79848c333, type: 3}
   ShowEmojiEvent:
     m_PersistentCalls:
       m_Calls:
@@ -552,7 +655,7 @@ MonoBehaviour:
         m_CallState: 2
   ladyEmojis: {fileID: 11400000, guid: de2dd31d517ad5a41a84054695a29bad, type: 2}
   stage: 0
-  objective: {fileID: 11400000, guid: c3e5ff5808ef0d3438885edc4a13f830, type: 2}
+  objective: {fileID: 11400000, guid: b10034d4845ef40409b05da5d9becff3, type: 2}
   targetCount: 1
   currentCount: 0
 --- !u!114 &63900420162183858
@@ -580,10 +683,13 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 4440862180604509756}
   commandList:
-  - {fileID: 225971880476952193}
   - {fileID: 7780303692449944775}
   - {fileID: 8307160922990601448}
   - {fileID: 1780892994}
+  - {fileID: 503110911}
+  - {fileID: 503110910}
+  - {fileID: 503110909}
+  - {fileID: 503110908}
   - {fileID: 1780892993}
   suppressAllAutoSelections: 0
 --- !u!114 &2474020981048050502
@@ -657,7 +763,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 2
   indentLevel: 0
-  storyText: Great let me unlock the gate for you
+  storyText: 'Ok first thing first, we need to remove the rocks up ahead. '
   description: 
   character: {fileID: 8406403307675228253}
   portrait: {fileID: 21300000, guid: ccbb6ce1f10d10441bcf218f6f10c62d, type: 3}
@@ -670,27 +776,6 @@ MonoBehaviour:
   stopVoiceover: 1
   waitForVO: 0
   setSayDialog: {fileID: 0}
---- !u!114 &225971880476952193
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4133967064926911169}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dbd8c931f22994b9d90e2037fffaa770, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 3
-  indentLevel: 0
-  _targetGameObject:
-    gameObjectRef: {fileID: 0}
-    gameObjectVal: {fileID: 0}
-  activeState:
-    booleanRef: {fileID: 0}
-    booleanVal: 0
-  targetGameObjectOLD: {fileID: 0}
 --- !u!114 &8307160922990601448
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -705,7 +790,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 4
   indentLevel: 0
-  storyText: Onto the next quest you go
+  storyText: "Otherwise, we can\u2019t reach the items we need."
   description: 
   character: {fileID: 8406403307675228253}
   portrait: {fileID: 21300000, guid: ccbb6ce1f10d10441bcf218f6f10c62d, type: 3}
@@ -788,7 +873,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 6
   indentLevel: 0
-  storyText: The key is some where in the forest
+  storyText: Have you crafted pickaxe yet?
   description: 
   character: {fileID: 8406403307675228253}
   portrait: {fileID: 21300000, guid: ccbb6ce1f10d10441bcf218f6f10c62d, type: 3}
@@ -815,10 +900,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 7
   indentLevel: 0
-  storyText: To unlock the next gate you need to find the key in the forest
+  storyText: No way! Those rocks are huge! What do you take me for? Chris?
   description: 
-  character: {fileID: 8406403307675228253}
-  portrait: {fileID: 21300000, guid: ccbb6ce1f10d10441bcf218f6f10c62d, type: 3}
+  character: {fileID: 8406403307615056768}
+  portrait: {fileID: 21300000, guid: be58c415684e5b241854e96a9e5030ac, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -842,7 +927,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 8
   indentLevel: 0
-  description: 
+  description: display puzzle icon
   delay: 0
   invokeType: 0
   staticEvent:
@@ -884,6 +969,454 @@ MonoBehaviour:
   stringEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &503110908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4133967064926911169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 12
+  indentLevel: 0
+  storyText: I also see that you have a notepad with you. Let me add some things
+    that will help you out.
+  description: 
+  character: {fileID: 8406403307675228253}
+  portrait: {fileID: 21300000, guid: ccbb6ce1f10d10441bcf218f6f10c62d, type: 3}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &503110909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4133967064926911169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 11
+  indentLevel: 0
+  storyText: To craft a pickaxe, you need to collect branch from near trees, and
+    stone in beach area where you spawned and combine them into a pickaxe.
+  description: 
+  character: {fileID: 8406403307675228253}
+  portrait: {fileID: 21300000, guid: ccbb6ce1f10d10441bcf218f6f10c62d, type: 3}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &503110910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4133967064926911169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 10
+  indentLevel: 0
+  storyText: Do I look like I have a pickaxe?
+  description: 
+  character: {fileID: 8406403307615056768}
+  portrait: {fileID: 21300000, guid: be58c415684e5b241854e96a9e5030ac, type: 3}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &503110911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4133967064926911169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 9
+  indentLevel: 0
+  storyText: You can do that; I know you mortals dig your way out with a pickaxe.
+  description: 
+  character: {fileID: 8406403307675228253}
+  portrait: {fileID: 21300000, guid: ccbb6ce1f10d10441bcf218f6f10c62d, type: 3}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!1 &5140151588567479091
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5716987566136816271}
+  - component: {fileID: 2644799750373079058}
+  - component: {fileID: 5631547878235482420}
+  - component: {fileID: 4926789033357758452}
+  - component: {fileID: 4355166647871945550}
+  - component: {fileID: 7470886405903545204}
+  - component: {fileID: 3792758130071309309}
+  - component: {fileID: 3285892564544402548}
+  - component: {fileID: 7488870545123414262}
+  - component: {fileID: 2387606667901770841}
+  - component: {fileID: 5640619720757070046}
+  m_Layer: 0
+  m_Name: Quest3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5716987566136816271
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5140151588567479091}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2169.4473, y: 391.45712, z: -58.96425}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8406403306594580198}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2644799750373079058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5140151588567479091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a334fe2ffb574b3583ff3b18b4792d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 1
+  scrollPos: {x: 11, y: 0}
+  variablesScrollPos: {x: 0, y: 0}
+  variablesExpanded: 1
+  blockViewHeight: 400
+  zoom: 1
+  scrollViewRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
+  selectedBlocks:
+  - {fileID: 4926789033357758452}
+  selectedCommands: []
+  variables: []
+  description: 
+  stepPause: 0
+  colorCommands: 1
+  hideComponents: 1
+  saveSelection: 1
+  localizationId: 
+  showLineNumbers: 0
+  hideCommands: []
+  luaEnvironment: {fileID: 0}
+  luaBindingName: flowchart
+--- !u!114 &5631547878235482420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5140151588567479091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7991c03fe3c46ab458786d2491bbd729, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  description: Explore the rest of the island
+  objectiveComplete: 0
+  nextQuest: {fileID: 0}
+  UpdateQuestHint:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 2e56fec1a16ace347bd1182793e8cba6, type: 2}
+        m_TargetAssemblyTypeName: StringEventChannel, Assembly-CSharp
+        m_MethodName: Raise
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  emojiHint: []
+  ShowEmojiEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 0aed965de62488247b85cd8b18b50bce, type: 2}
+        m_TargetAssemblyTypeName: GOListEventChannel, Assembly-CSharp
+        m_MethodName: Raise
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  HideEmojiEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: a6ee105d4d5d82241ac959b4225b8ab9, type: 2}
+        m_TargetAssemblyTypeName: VoidEventChannel, Assembly-CSharp
+        m_MethodName: Raise
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  ladyEmojis: {fileID: 11400000, guid: de2dd31d517ad5a41a84054695a29bad, type: 2}
+  stage: 0
+  objective: {fileID: 0}
+  targetCount: 1
+  currentCount: 0
+--- !u!114 &4926789033357758452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5140151588567479091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: 247
+    y: 113
+    width: 75
+    height: 40
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  useCustomTint: 0
+  itemId: 0
+  blockName: intro
+  description: 
+  eventHandler: {fileID: 7470886405903545204}
+  commandList:
+  - {fileID: 3285892564544402548}
+  suppressAllAutoSelections: 0
+--- !u!114 &4355166647871945550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5140151588567479091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: 244
+    y: 197
+    width: 95
+    height: 40
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  useCustomTint: 0
+  itemId: 1
+  blockName: ongoing
+  description: 
+  eventHandler: {fileID: 3792758130071309309}
+  commandList:
+  - {fileID: 5640619720757070046}
+  suppressAllAutoSelections: 0
+--- !u!114 &7470886405903545204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5140151588567479091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d7d417659cd54a6787f70f763950c34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentBlock: {fileID: 4926789033357758452}
+  suppressBlockAutoSelect: 0
+  message: intro
+--- !u!114 &3792758130071309309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5140151588567479091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d7d417659cd54a6787f70f763950c34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentBlock: {fileID: 4355166647871945550}
+  suppressBlockAutoSelect: 0
+  message: ongoing
+--- !u!114 &3285892564544402548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5140151588567479091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 2
+  indentLevel: 0
+  storyText: "Now let\u2019s equip the pickaxe and dig a path."
+  description: 
+  character: {fileID: 8406403307675228253}
+  portrait: {fileID: 21300000, guid: ccbb6ce1f10d10441bcf218f6f10c62d, type: 3}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &7488870545123414262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5140151588567479091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7bd2812d0ae4c04099619019bfa637d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  channel: {fileID: 11400000, guid: b593013012e00224a896307a0fd8adfe, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5631547878235482420}
+        m_TargetAssemblyTypeName: ItemQuest, Assembly-CSharp
+        m_MethodName: PickupObjective
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2387606667901770841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5140151588567479091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7bd2812d0ae4c04099619019bfa637d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  channel: {fileID: 11400000, guid: 6c25a850810d33d4b8fb720c9290b127, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5631547878235482420}
+        m_TargetAssemblyTypeName: ItemQuest, Assembly-CSharp
+        m_MethodName: DropoffObjective
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &5640619720757070046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5140151588567479091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 6
+  indentLevel: 0
+  storyText: Let's move on.
+  description: 
+  character: {fileID: 8406403307675228253}
+  portrait: {fileID: 21300000, guid: ccbb6ce1f10d10441bcf218f6f10c62d, type: 3}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
 --- !u!1 &8406403306594580197
 GameObject:
   m_ObjectHideFlags: 0
@@ -917,6 +1450,7 @@ Transform:
   - {fileID: 5538870593756858351}
   - {fileID: 8926239437091062000}
   - {fileID: 4770465506290573806}
+  - {fileID: 5716987566136816271}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -977,7 +1511,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25fb867d2049d41f597aefdd6b19f598, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: Mary Ann
+  nameText: Protagnist
   nameColor: {r: 1, g: 1, b: 1, a: 1}
   soundEffect: {fileID: 0}
   portraits:
@@ -1052,11 +1586,15 @@ GameObject:
   - component: {fileID: 7412195299496174204}
   - component: {fileID: 8538987909181381858}
   - component: {fileID: 76203318342201628}
-  - component: {fileID: 6498283990682560247}
   - component: {fileID: 5049547358430078878}
   - component: {fileID: 3560841936069588059}
   - component: {fileID: 3904671788613431106}
   - component: {fileID: 2950689376149885491}
+  - component: {fileID: 4512800634621005834}
+  - component: {fileID: 4482647944091162466}
+  - component: {fileID: 2533809840838904975}
+  - component: {fileID: 3545698034910598032}
+  - component: {fileID: 2399499009304574362}
   m_Layer: 0
   m_Name: Quest2
   m_TagString: Untagged
@@ -1103,9 +1641,8 @@ MonoBehaviour:
     width: 0
     height: 0
   selectedBlocks:
-  - {fileID: 7790221863181901618}
-  selectedCommands:
-  - {fileID: 6498283990682560247}
+  - {fileID: 9218346493099010193}
+  selectedCommands: []
   variables: []
   description: 
   stepPause: 0
@@ -1129,9 +1666,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7991c03fe3c46ab458786d2491bbd729, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  description: Explore the rest of the island
+  description: Go eat an apple
   objectiveComplete: 0
-  nextQuest: {fileID: 0}
+  nextQuest: {fileID: 5631547878235482420}
   UpdateQuestHint:
     m_PersistentCalls:
       m_Calls:
@@ -1147,7 +1684,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  emojiHint: []
+  emojiHint:
+  - {fileID: 8160972069625782107, guid: 24cbced740ddf864aade42273fa63ba7, type: 3}
   ShowEmojiEvent:
     m_PersistentCalls:
       m_Calls:
@@ -1180,7 +1718,7 @@ MonoBehaviour:
         m_CallState: 2
   ladyEmojis: {fileID: 11400000, guid: de2dd31d517ad5a41a84054695a29bad, type: 2}
   stage: 0
-  objective: {fileID: 0}
+  objective: {fileID: 11400000, guid: 7d3bcc37e7236b347ae2ca02ac20074e, type: 2}
   targetCount: 1
   currentCount: 0
 --- !u!114 &7790221863181901618
@@ -1208,9 +1746,13 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 7412195299496174204}
   commandList:
-  - {fileID: 6498283990682560247}
   - {fileID: 76203318342201628}
   - {fileID: 5049547358430078878}
+  - {fileID: 4512800634621005834}
+  - {fileID: 4482647944091162466}
+  - {fileID: 2533809840838904975}
+  - {fileID: 3545698034910598032}
+  - {fileID: 2399499009304574362}
   suppressAllAutoSelections: 0
 --- !u!114 &9218346493099010193
 MonoBehaviour:
@@ -1226,8 +1768,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 244
-    y: 197
+    x: 240
+    y: 202
     width: 95
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -1283,7 +1825,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 2
   indentLevel: 0
-  storyText: Great let me unlock the gate for you
+  storyText: I knew you could figure that out.
   description: 
   character: {fileID: 8406403307675228253}
   portrait: {fileID: 21300000, guid: ccbb6ce1f10d10441bcf218f6f10c62d, type: 3}
@@ -1296,27 +1838,6 @@ MonoBehaviour:
   stopVoiceover: 1
   waitForVO: 0
   setSayDialog: {fileID: 0}
---- !u!114 &6498283990682560247
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9210363371614658116}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dbd8c931f22994b9d90e2037fffaa770, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 3
-  indentLevel: 0
-  _targetGameObject:
-    gameObjectRef: {fileID: 0}
-    gameObjectVal: {fileID: 0}
-  activeState:
-    booleanRef: {fileID: 0}
-    booleanVal: 0
-  targetGameObjectOLD: {fileID: 0}
 --- !u!114 &5049547358430078878
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1331,10 +1852,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 4
   indentLevel: 0
-  storyText: Feel free to explore my island
+  storyText: "Ugh... that\u2019s a lot of work. Do you have something to eat? I\u2019m
+    starving."
   description: 
-  character: {fileID: 8406403307675228253}
-  portrait: {fileID: 21300000, guid: ccbb6ce1f10d10441bcf218f6f10c62d, type: 3}
+  character: {fileID: 8406403307615056768}
+  portrait: {fileID: 21300000, guid: be58c415684e5b241854e96a9e5030ac, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -1414,7 +1936,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 6
   indentLevel: 0
-  storyText: Go find something to do.
+  storyText: Why are you staring at me like that? Go eat that apple!
   description: 
   character: {fileID: 8406403307675228253}
   portrait: {fileID: 21300000, guid: ccbb6ce1f10d10441bcf218f6f10c62d, type: 3}
@@ -1427,3 +1949,168 @@ MonoBehaviour:
   stopVoiceover: 1
   waitForVO: 0
   setSayDialog: {fileID: 0}
+--- !u!114 &4512800634621005834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9210363371614658116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 7
+  indentLevel: 0
+  storyText: "Look there\u2019s an apple under that tree. You can pick that up and
+    eat it."
+  description: 
+  character: {fileID: 8406403307675228253}
+  portrait: {fileID: 21300000, guid: ccbb6ce1f10d10441bcf218f6f10c62d, type: 3}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &4482647944091162466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9210363371614658116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 8
+  indentLevel: 0
+  storyText: All these work for just an apple? You are ripping me off.
+  description: 
+  character: {fileID: 8406403307615056768}
+  portrait: {fileID: 21300000, guid: be58c415684e5b241854e96a9e5030ac, type: 3}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &2533809840838904975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9210363371614658116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 9
+  indentLevel: 0
+  storyText: "I\u2019m a goose now, not much I can do\u2026  "
+  description: 
+  character: {fileID: 8406403307675228253}
+  portrait: {fileID: 21300000, guid: ccbb6ce1f10d10441bcf218f6f10c62d, type: 3}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &3545698034910598032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9210363371614658116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 10
+  indentLevel: 0
+  storyText: "And don\u2019t even think about eating me!!!"
+  description: 
+  character: {fileID: 8406403307675228253}
+  portrait: {fileID: 21300000, guid: ccbb6ce1f10d10441bcf218f6f10c62d, type: 3}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &2399499009304574362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9210363371614658116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95d9ff288f3904c05ada7ac9c9a075bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 11
+  indentLevel: 0
+  description: Display puzzle Icon
+  delay: 0
+  invokeType: 0
+  staticEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3682269817804152895}
+        m_TargetAssemblyTypeName: Quest, Assembly-CSharp
+        m_MethodName: ShowEmoji
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  booleanParameter:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+  booleanEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  integerParameter:
+    integerRef: {fileID: 0}
+    integerVal: 0
+  integerEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  floatParameter:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  floatEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  stringParameter:
+    stringRef: {fileID: 0}
+    stringVal: 
+  stringEvent:
+    m_PersistentCalls:
+      m_Calls: []
