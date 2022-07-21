@@ -27,20 +27,21 @@ public class TooltipController : MonoBehaviour
             // If that UI gameObject is a menu button
             if (uiGameObject.GetComponent<MenuButtonClassifier>() != null)
             {
-                // Throw a debug message
-                Debug.Log(uiGameObject.GetComponent<MenuButtonClassifier>().tooltipText);
-
                 // Ask tooltip UI to display tooltip text
                 tooltipUI.SetText(uiGameObject.GetComponent<MenuButtonClassifier>().tooltipText);
                 tooltipUI.gameObject.SetActive(true);
             }
             else
             {
-                Debug.Log("Not an UI");
-
                 // Ask tooltip UI to hide the tooltip text
                 tooltipUI.gameObject.SetActive(false);
             }
+        }
+        // If the player is not hovering UI
+        else
+        {
+            // Ask tooltip UI to hide the tooltip text
+            tooltipUI.gameObject.SetActive(false);
         }
     }
 
