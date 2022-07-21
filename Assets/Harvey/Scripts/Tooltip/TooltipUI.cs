@@ -20,6 +20,27 @@ public class TooltipUI : MonoBehaviour
 
     void Update()
     {
+        // Update tooltip position
+        UpdateTooltipPosition();
+    }
+
+    public void SetText(string tooltipText)
+    {
+        // Set the text of the tooltip text
+        mytext.text = tooltipText;
+
+        // Make sure that it is updated
+        mytext.ForceMeshUpdate();
+
+        // Get the text size of the tooltip text
+        Vector2 textSize = mytext.GetRenderedValues(false);
+
+        // Resize the background to match the size of the tooltip text
+        myRectTransform.sizeDelta = textSize;
+    }
+
+    public void UpdateTooltipPosition()
+    {
         // Move with the cursor
         Vector2 anchoredPosition = Mouse.current.position.ReadValue() / canvasRectTransform.localScale.x;
 
@@ -36,20 +57,5 @@ public class TooltipUI : MonoBehaviour
 
         // Set the tooltip textbox to whereever the mouse is at
         tooltipUIRectTransform.anchoredPosition = anchoredPosition;
-    }
-
-    public void SetText(string tooltipText)
-    {
-        // Set the text of the tooltip text
-        mytext.text = tooltipText;
-
-        // Make sure that it is updated
-        mytext.ForceMeshUpdate();
-
-        // Get the text size of the tooltip text
-        Vector2 textSize = mytext.GetRenderedValues(false);
-
-        // Resize the background to match the size of the tooltip text
-        myRectTransform.sizeDelta = textSize;
     }
 }

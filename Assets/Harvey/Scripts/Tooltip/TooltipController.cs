@@ -29,6 +29,7 @@ public class TooltipController : MonoBehaviour
             {
                 // Ask tooltip UI to display tooltip text
                 tooltipUI.SetText(uiGameObject.GetComponent<MenuButtonClassifier>().tooltipText);
+                tooltipUI.UpdateTooltipPosition();
                 tooltipUI.gameObject.SetActive(true);
             }
             // If that UI gameObject is an inventory slot and the inventory slot is holding an item
@@ -36,6 +37,7 @@ public class TooltipController : MonoBehaviour
             {
                 // Ask tooltip UI to display tooltip text
                 tooltipUI.SetText(uiGameObject.transform.parent.GetComponent<InventorySlot>().slottedItem.name + "\n" + uiGameObject.transform.parent.GetComponent<InventorySlot>().slottedItem.description);
+                tooltipUI.UpdateTooltipPosition();
                 tooltipUI.gameObject.SetActive(true);
             }
             // If that UI gameObject is an equipment slot and the equipment slot is holding an item
@@ -46,6 +48,7 @@ public class TooltipController : MonoBehaviour
                 {
                     // Ask tooltip UI to display tooltip text
                     tooltipUI.SetText(uiGameObject.GetComponent<EquipmentSlotController>().targetSlot.equipment.name + "\n" + uiGameObject.GetComponent<EquipmentSlotController>().targetSlot.equipment.description);
+                    tooltipUI.UpdateTooltipPosition();
                     tooltipUI.gameObject.SetActive(true);
                 }
                 else
