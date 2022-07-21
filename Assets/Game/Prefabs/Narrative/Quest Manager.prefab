@@ -70,8 +70,7 @@ MonoBehaviour:
     height: 0
   selectedBlocks:
   - {fileID: 5576937104920183452}
-  selectedCommands:
-  - {fileID: 3899848276253162457}
+  selectedCommands: []
   variables: []
   description: 'Intro
 
@@ -526,11 +525,9 @@ GameObject:
   - component: {fileID: 3385375640071788708}
   - component: {fileID: 8406403306851092417}
   - component: {fileID: 1780892994}
-  - component: {fileID: 1780892993}
-  - component: {fileID: 503110908}
-  - component: {fileID: 503110909}
   - component: {fileID: 503110910}
   - component: {fileID: 503110911}
+  - component: {fileID: 1780892993}
   m_Layer: 0
   m_Name: Quest1
   m_TagString: Untagged
@@ -576,8 +573,7 @@ MonoBehaviour:
     y: 0
     width: 0
     height: 0
-  selectedBlocks:
-  - {fileID: 63900420162183858}
+  selectedBlocks: []
   selectedCommands: []
   variables: []
   description: Crafting Tuorial
@@ -602,7 +598,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7991c03fe3c46ab458786d2491bbd729, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  description: Craft a pickaxe
+  description: Pickup an apple
   objectiveComplete: 0
   nextQuest: {fileID: 3682269817804152895}
   UpdateQuestHint:
@@ -621,8 +617,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   emojiHint:
-  - {fileID: 8160972069625782107, guid: 921327f2e8af6ce4a925fd5c80075b63, type: 3}
-  - {fileID: 8160972069625782107, guid: fcff19f260529cc458d4b8d79848c333, type: 3}
+  - {fileID: 8160972069625782107, guid: 24cbced740ddf864aade42273fa63ba7, type: 3}
   ShowEmojiEvent:
     m_PersistentCalls:
       m_Calls:
@@ -655,7 +650,7 @@ MonoBehaviour:
         m_CallState: 2
   ladyEmojis: {fileID: 11400000, guid: de2dd31d517ad5a41a84054695a29bad, type: 2}
   stage: 0
-  objective: {fileID: 11400000, guid: b10034d4845ef40409b05da5d9becff3, type: 2}
+  objective: {fileID: 11400000, guid: 7d3bcc37e7236b347ae2ca02ac20074e, type: 2}
   targetCount: 1
   currentCount: 0
 --- !u!114 &63900420162183858
@@ -672,8 +667,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 246
-    y: 113
+    x: 251
+    y: 116
     width: 75
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -688,8 +683,7 @@ MonoBehaviour:
   - {fileID: 1780892994}
   - {fileID: 503110911}
   - {fileID: 503110910}
-  - {fileID: 503110909}
-  - {fileID: 503110908}
+  - {fileID: 0}
   - {fileID: 1780892993}
   suppressAllAutoSelections: 0
 --- !u!114 &2474020981048050502
@@ -763,10 +757,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 2
   indentLevel: 0
-  storyText: 'Ok first thing first, we need to remove the rocks up ahead. '
+  storyText: "I\u2019m starving\u2026 Do you have something to eat?"
   description: 
-  character: {fileID: 8406403307675228253}
-  portrait: {fileID: 21300000, guid: ccbb6ce1f10d10441bcf218f6f10c62d, type: 3}
+  character: {fileID: 8406403307615056768}
+  portrait: {fileID: 21300000, guid: be58c415684e5b241854e96a9e5030ac, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -790,7 +784,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 4
   indentLevel: 0
-  storyText: "Otherwise, we can\u2019t reach the items we need."
+  storyText: "Look there\u2019s an <color=green>apple</color> on the ground. "
   description: 
   character: {fileID: 8406403307675228253}
   portrait: {fileID: 21300000, guid: ccbb6ce1f10d10441bcf218f6f10c62d, type: 3}
@@ -873,7 +867,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 6
   indentLevel: 0
-  storyText: Have you crafted pickaxe yet?
+  storyText: Why are you staring at me like that? Go eat that apple!
   description: 
   character: {fileID: 8406403307675228253}
   portrait: {fileID: 21300000, guid: ccbb6ce1f10d10441bcf218f6f10c62d, type: 3}
@@ -900,10 +894,64 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 7
   indentLevel: 0
-  storyText: No way! Those rocks are huge! What do you take me for? Chris?
+  storyText: Wow, such hospitality.
   description: 
   character: {fileID: 8406403307615056768}
   portrait: {fileID: 21300000, guid: be58c415684e5b241854e96a9e5030ac, type: 3}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &503110910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4133967064926911169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 10
+  indentLevel: 0
+  storyText: "And don\u2019t even think about eating me!!!"
+  description: 
+  character: {fileID: 8406403307675228253}
+  portrait: {fileID: 21300000, guid: ccbb6ce1f10d10441bcf218f6f10c62d, type: 3}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &503110911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4133967064926911169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 9
+  indentLevel: 0
+  storyText: "I\u2019m a goose now, not much I can do\u2026  "
+  description: 
+  character: {fileID: 8406403307675228253}
+  portrait: {fileID: 21300000, guid: ccbb6ce1f10d10441bcf218f6f10c62d, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -925,9 +973,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95d9ff288f3904c05ada7ac9c9a075bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 8
+  itemId: 11
   indentLevel: 0
-  description: display puzzle icon
+  description: 
   delay: 0
   invokeType: 0
   staticEvent:
@@ -969,116 +1017,6 @@ MonoBehaviour:
   stringEvent:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &503110908
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4133967064926911169}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 12
-  indentLevel: 0
-  storyText: I also see that you have a notepad with you. Let me add some things
-    that will help you out.
-  description: 
-  character: {fileID: 8406403307675228253}
-  portrait: {fileID: 21300000, guid: ccbb6ce1f10d10441bcf218f6f10c62d, type: 3}
-  voiceOverClip: {fileID: 0}
-  showAlways: 1
-  showCount: 1
-  extendPrevious: 0
-  fadeWhenDone: 1
-  waitForClick: 1
-  stopVoiceover: 1
-  waitForVO: 0
-  setSayDialog: {fileID: 0}
---- !u!114 &503110909
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4133967064926911169}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 11
-  indentLevel: 0
-  storyText: To craft a pickaxe, you need to collect branch from near trees, and
-    stone in beach area where you spawned and combine them into a pickaxe.
-  description: 
-  character: {fileID: 8406403307675228253}
-  portrait: {fileID: 21300000, guid: ccbb6ce1f10d10441bcf218f6f10c62d, type: 3}
-  voiceOverClip: {fileID: 0}
-  showAlways: 1
-  showCount: 1
-  extendPrevious: 0
-  fadeWhenDone: 1
-  waitForClick: 1
-  stopVoiceover: 1
-  waitForVO: 0
-  setSayDialog: {fileID: 0}
---- !u!114 &503110910
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4133967064926911169}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 10
-  indentLevel: 0
-  storyText: Do I look like I have a pickaxe?
-  description: 
-  character: {fileID: 8406403307615056768}
-  portrait: {fileID: 21300000, guid: be58c415684e5b241854e96a9e5030ac, type: 3}
-  voiceOverClip: {fileID: 0}
-  showAlways: 1
-  showCount: 1
-  extendPrevious: 0
-  fadeWhenDone: 1
-  waitForClick: 1
-  stopVoiceover: 1
-  waitForVO: 0
-  setSayDialog: {fileID: 0}
---- !u!114 &503110911
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4133967064926911169}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 9
-  indentLevel: 0
-  storyText: You can do that; I know you mortals dig your way out with a pickaxe.
-  description: 
-  character: {fileID: 8406403307675228253}
-  portrait: {fileID: 21300000, guid: ccbb6ce1f10d10441bcf218f6f10c62d, type: 3}
-  voiceOverClip: {fileID: 0}
-  showAlways: 1
-  showCount: 1
-  extendPrevious: 0
-  fadeWhenDone: 1
-  waitForClick: 1
-  stopVoiceover: 1
-  waitForVO: 0
-  setSayDialog: {fileID: 0}
 --- !u!1 &5140151588567479091
 GameObject:
   m_ObjectHideFlags: 0
@@ -1321,7 +1259,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 2
   indentLevel: 0
-  storyText: "Now let\u2019s equip the pickaxe and dig a path."
+  storyText: I knew you could figure it out.
   description: 
   character: {fileID: 8406403307675228253}
   portrait: {fileID: 21300000, guid: ccbb6ce1f10d10441bcf218f6f10c62d, type: 3}
@@ -1666,7 +1604,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7991c03fe3c46ab458786d2491bbd729, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  description: Go eat an apple
+  description: Craft a pickaxe
   objectiveComplete: 0
   nextQuest: {fileID: 5631547878235482420}
   UpdateQuestHint:
@@ -1685,7 +1623,8 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   emojiHint:
-  - {fileID: 8160972069625782107, guid: 24cbced740ddf864aade42273fa63ba7, type: 3}
+  - {fileID: 8160972069625782107, guid: 921327f2e8af6ce4a925fd5c80075b63, type: 3}
+  - {fileID: 8160972069625782107, guid: fcff19f260529cc458d4b8d79848c333, type: 3}
   ShowEmojiEvent:
     m_PersistentCalls:
       m_Calls:
@@ -1718,7 +1657,7 @@ MonoBehaviour:
         m_CallState: 2
   ladyEmojis: {fileID: 11400000, guid: de2dd31d517ad5a41a84054695a29bad, type: 2}
   stage: 0
-  objective: {fileID: 11400000, guid: 7d3bcc37e7236b347ae2ca02ac20074e, type: 2}
+  objective: {fileID: 11400000, guid: b10034d4845ef40409b05da5d9becff3, type: 2}
   targetCount: 1
   currentCount: 0
 --- !u!114 &7790221863181901618
@@ -1825,7 +1764,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 2
   indentLevel: 0
-  storyText: I knew you could figure that out.
+  storyText: 'Ok first thing first, we need to remove the rocks up ahead. '
   description: 
   character: {fileID: 8406403307675228253}
   portrait: {fileID: 21300000, guid: ccbb6ce1f10d10441bcf218f6f10c62d, type: 3}
@@ -1852,8 +1791,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 4
   indentLevel: 0
-  storyText: "Ugh... that\u2019s a lot of work. Do you have something to eat? I\u2019m
-    starving."
+  storyText: How am supposed to remove such a huge rock?
   description: 
   character: {fileID: 8406403307615056768}
   portrait: {fileID: 21300000, guid: be58c415684e5b241854e96a9e5030ac, type: 3}
@@ -1963,8 +1901,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 7
   indentLevel: 0
-  storyText: "Look there\u2019s an apple under that tree. You can pick that up and
-    eat it."
+  storyText: I know you mortals dig your way out with a <color=green>pickaxe</color>.
   description: 
   character: {fileID: 8406403307675228253}
   portrait: {fileID: 21300000, guid: ccbb6ce1f10d10441bcf218f6f10c62d, type: 3}
@@ -1991,7 +1928,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 8
   indentLevel: 0
-  storyText: All these work for just an apple? You are ripping me off.
+  storyText: Do I look like I have a <color=green>pickaxe</color>?
   description: 
   character: {fileID: 8406403307615056768}
   portrait: {fileID: 21300000, guid: be58c415684e5b241854e96a9e5030ac, type: 3}
@@ -2018,7 +1955,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 9
   indentLevel: 0
-  storyText: "I\u2019m a goose now, not much I can do\u2026  "
+  storyText: 'To craft a <color=green>pickaxe</color>, you need to collect <color=green>branch</color>
+    from nearby trees, and <color=green>stone</color> in the beach area where you
+    spawned and combine them into a <color=green>pickaxe</color>. '
   description: 
   character: {fileID: 8406403307675228253}
   portrait: {fileID: 21300000, guid: ccbb6ce1f10d10441bcf218f6f10c62d, type: 3}
@@ -2045,7 +1984,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 10
   indentLevel: 0
-  storyText: "And don\u2019t even think about eating me!!!"
+  storyText: I also see that you have a <color=green>notepad (Hotkey "N")</color>
+    with you. Let me add some things that will help you out.
   description: 
   character: {fileID: 8406403307675228253}
   portrait: {fileID: 21300000, guid: ccbb6ce1f10d10441bcf218f6f10c62d, type: 3}
