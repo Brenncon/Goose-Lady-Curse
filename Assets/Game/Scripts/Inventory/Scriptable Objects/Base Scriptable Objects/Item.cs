@@ -24,6 +24,9 @@ public class Item : ScriptableObject
     // maxStackNumber is the maximum number of items that a stack can hold
     public int maxStackNumber = 99;
 
+    [Tooltip("Description of the item")]
+    [TextArea(5, 20)] public string description = "";
+
     // Method to add stack number
     public virtual void Add(ItemSlot heldItem, int stackNumber)
     {

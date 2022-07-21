@@ -31,6 +31,29 @@ public class TooltipController : MonoBehaviour
                 tooltipUI.SetText(uiGameObject.GetComponent<MenuButtonClassifier>().tooltipText);
                 tooltipUI.gameObject.SetActive(true);
             }
+            // If that UI gameObject is an inventory slot and the inventory slot is holding an item
+            else if (uiGameObject.GetComponent<DragDrop>() != null && uiGameObject.transform.parent.GetComponent<InventorySlot>().slottedItem != null)
+            {
+                // Ask tooltip UI to display tooltip text
+                tooltipUI.SetText(uiGameObject.transform.parent.GetComponent<InventorySlot>().slottedItem.name + "\n" + uiGameObject.transform.parent.GetComponent<InventorySlot>().slottedItem.description);
+                tooltipUI.gameObject.SetActive(true);
+            }
+            // If that UI gameObject is an equipment slot and the equipment slot is holding an item
+            else if (uiGameObject.GetComponent<EquipmentSlotController>() != null)
+            {
+                // If the equipment slot is holding an item
+                if (uiGameObject.GetComponent<EquipmentSlotController>().targetSlot.equipment != null)
+                {
+                    // Ask tooltip UI to display tooltip text
+                    tooltipUI.SetText(uiGameObject.GetComponent<EquipmentSlotController>().targetSlot.equipment.name + "\n" + uiGameObject.GetComponent<EquipmentSlotController>().targetSlot.equipment.description);
+                    tooltipUI.gameObject.SetActive(true);
+                }
+                else
+                {
+                    // Ask tooltip UI to hide the tooltip text
+                    tooltipUI.gameObject.SetActive(false);
+                }
+            }
             else
             {
                 // Ask tooltip UI to hide the tooltip text

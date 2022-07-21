@@ -20,6 +20,7 @@ public class TooltipUI : MonoBehaviour
 
     void Update()
     {
+        // Move with the cursor
         Vector2 anchoredPosition = Mouse.current.position.ReadValue() / canvasRectTransform.localScale.x;
 
         if (anchoredPosition.x + myRectTransform.rect.width > canvasRectTransform.rect.width)
