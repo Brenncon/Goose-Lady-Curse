@@ -15,6 +15,12 @@ public class Container : Item
     // volume is the number of items that the container can hold;
     public int volume = 1;
 
+    void Awake()
+    {
+        // Set the tooltipText
+        tooltipText = "<Right Click to Equip>";
+    }
+
     public override void Add(ItemSlot heldItem, int stackNumber)
     {
         // Throw a debug message

@@ -23,6 +23,7 @@ public class WarningMessage : MonoBehaviour
         myText.text = warningMessageText;
 
         // Play the fade out animation
+        myAnimation.Stop();
         myAnimation.Play();
     }
 
