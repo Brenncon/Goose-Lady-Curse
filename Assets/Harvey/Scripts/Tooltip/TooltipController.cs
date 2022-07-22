@@ -33,12 +33,24 @@ public class TooltipController : MonoBehaviour
                 tooltipUI.gameObject.SetActive(true);
             }
             // If that UI gameObject is an inventory slot and the inventory slot is holding an item
-            else if (uiGameObject.GetComponent<DragDrop>() != null && uiGameObject.transform.parent.GetComponent<InventorySlot>().slottedItem != null)
+            else if (uiGameObject.GetComponent<DragDrop>() != null)
             {
-                // Ask tooltip UI to display tooltip text
-                tooltipUI.SetText(uiGameObject.transform.parent.GetComponent<InventorySlot>().slottedItem.name + "\n" + uiGameObject.transform.parent.GetComponent<InventorySlot>().slottedItem.description);
-                tooltipUI.UpdateTooltipPosition();
-                tooltipUI.gameObject.SetActive(true);
+                if (uiGameObject.transform.parent.GetComponent<InventorySlot>().slottedItem != null)
+                {
+                    // Cache the slotted item
+                    Item slottedItem = uiGameObject.transform.parent.GetComponent<InventorySlot>().slottedItem;
+
+                    // Ask tooltip UI to display tooltip text
+                    string tooltipText = slottedItem.name + "\n" + slottedItem.description;
+                    if (slottedItem.tooltipText != string.Empty)
+                    {
+                        tooltipText = tooltipText + "\n" + slottedItem.tooltipText;
+                    }
+
+                    tooltipUI.SetText(tooltipText);
+                    tooltipUI.UpdateTooltipPosition();
+                    tooltipUI.gameObject.SetActive(true);
+                }
             }
             // If that UI gameObject is an equipment slot and the equipment slot is holding an item
             else if (uiGameObject.GetComponent<EquipmentSlotController>() != null)
@@ -46,8 +58,13 @@ public class TooltipController : MonoBehaviour
                 // If the equipment slot is holding an item
                 if (uiGameObject.GetComponent<EquipmentSlotController>().targetSlot.equipment != null)
                 {
+                    // Cache the equipment
+                    Equipment equipment = uiGameObject.GetComponent<EquipmentSlotController>().targetSlot.equipment;
+
                     // Ask tooltip UI to display tooltip text
-                    tooltipUI.SetText(uiGameObject.GetComponent<EquipmentSlotController>().targetSlot.equipment.name + "\n" + uiGameObject.GetComponent<EquipmentSlotController>().targetSlot.equipment.description);
+                    string tooltipText = equipment.name + "\n" + equipment.description;
+
+                    tooltipUI.SetText(tooltipText);
                     tooltipUI.UpdateTooltipPosition();
                     tooltipUI.gameObject.SetActive(true);
                 }

@@ -1,3 +1,4 @@
+using Project.Build.Commands;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -26,6 +27,8 @@ public class Item : ScriptableObject
 
     [Tooltip("Description of the item")]
     [TextArea(5, 20)] public string description = "";
+
+    [ReadOnly] public string tooltipText = "";
 
     // Method to add stack number
     public virtual void Add(ItemSlot heldItem, int stackNumber)
