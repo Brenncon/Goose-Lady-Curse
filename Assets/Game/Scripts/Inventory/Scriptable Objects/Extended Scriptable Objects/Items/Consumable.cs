@@ -1,3 +1,4 @@
+using Project.Build.Commands;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,6 +13,12 @@ public class Consumable : Item
 {
     // A list of item effects for that consumable
     public List<Modifier> modifier = new List<Modifier>();
+
+    void Awake()
+    {
+        // Set the tooltipText
+        tooltipText = "<Right Click to Consume>";
+    }
 
     public override void Add(ItemSlot heldItem, int stackNumber)
     {

@@ -43,7 +43,6 @@ public class ItemEditor : EditorWindow
     public string nameOfObjectToCreate;
     public string pathToCreateNewObject;
     public EquipmentSlot equipmentSlot;
-    [TextArea(5, 20)] public string description = "";
 
     // volume is the number of items that the container can hold;
     public int volume = 1;
@@ -64,7 +63,6 @@ public class ItemEditor : EditorWindow
         itemIcon = (Sprite)EditorGUILayout.ObjectField("Item Icon", itemIcon, typeof(Sprite), allowSceneObjects: true);
         item3DModelPrefeb = (Transform)EditorGUILayout.ObjectField("Item 3D Model Prefab", item3DModelPrefeb, typeof(Transform), false);
         maxStackNumber = EditorGUILayout.IntField("Max Stack Number", maxStackNumber);
-        description = EditorGUILayout.TextField("Item Description", description);
 
         ItemToLoad = (ScriptableObject)EditorGUILayout.ObjectField("Item To Load", ItemToLoad, typeof(ScriptableObject), allowSceneObjects: true);
 
@@ -107,7 +105,6 @@ public class ItemEditor : EditorWindow
                 item3DModelPrefeb = consumable.item3DModelPrefeb;
                 maxStackNumber = consumable.maxStackNumber;
                 modifier = consumable.modifier;
-                description = consumable.description;
                 int numOfModifiers = modifier.Count;
 
                 if (numOfModifiers == 1)
@@ -149,7 +146,6 @@ public class ItemEditor : EditorWindow
                 itemIcon = item.itemIcon;
                 item3DModelPrefeb = item.item3DModelPrefeb;
                 maxStackNumber = item.maxStackNumber;
-                description = item.description;
             }
             else if (_options[_selected].ToString() == "Equipment")
             {
@@ -159,7 +155,6 @@ public class ItemEditor : EditorWindow
                 itemIcon = equipment.itemIcon;
                 item3DModelPrefeb = equipment.item3DModelPrefeb;
                 maxStackNumber = equipment.maxStackNumber;
-                description = equipment.description;
                 equipmentSlot = equipment.equipmentSlot;
                 modifiers = equipment.modifiers;
                 int numOfModifiers = modifiers.Length;
@@ -203,7 +198,6 @@ public class ItemEditor : EditorWindow
                 itemIcon = container.itemIcon;
                 item3DModelPrefeb = container.item3DModelPrefeb;
                 maxStackNumber = container.maxStackNumber;
-                description = container.description;
                 volume = container.volume;
             }
         }
@@ -222,7 +216,6 @@ public class ItemEditor : EditorWindow
                 (ItemToLoad as Item).itemIcon = itemIcon;
                 (ItemToLoad as Item).item3DModelPrefeb = item3DModelPrefeb;
                 (ItemToLoad as Item).maxStackNumber = maxStackNumber;
-                (ItemToLoad as Item).description = description;
             }
             else if (_options[_selected].ToString() == "Consumable")
             {
@@ -232,7 +225,6 @@ public class ItemEditor : EditorWindow
                 (ItemToLoad as Consumable).itemIcon = itemIcon;
                 (ItemToLoad as Consumable).item3DModelPrefeb = item3DModelPrefeb;
                 (ItemToLoad as Consumable).maxStackNumber = maxStackNumber;
-                (ItemToLoad as Consumable).description = description;
 
                 List<Modifier> newModifierList = new List<Modifier>();
 
@@ -271,7 +263,6 @@ public class ItemEditor : EditorWindow
                 (ItemToLoad as Equipment).itemIcon = itemIcon;
                 (ItemToLoad as Equipment).item3DModelPrefeb = item3DModelPrefeb;
                 (ItemToLoad as Equipment).maxStackNumber = maxStackNumber;
-                (ItemToLoad as Equipment).description = description;
                 (ItemToLoad as Equipment).equipmentSlot = equipmentSlot;
 
                 Modifier[] newModifiersArray = new Modifier[4];
@@ -312,7 +303,6 @@ public class ItemEditor : EditorWindow
                 (ItemToLoad as Container).itemIcon = itemIcon;
                 (ItemToLoad as Container).item3DModelPrefeb = item3DModelPrefeb;
                 (ItemToLoad as Container).maxStackNumber = maxStackNumber;
-                (ItemToLoad as Container).description = description;
                 (ItemToLoad as Container).volume = volume;
             }
         }
