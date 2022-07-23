@@ -101,6 +101,7 @@ GameObject:
   - component: {fileID: 6915934301569596261}
   - component: {fileID: 6915934301569596262}
   - component: {fileID: 4464870862011750264}
+  - component: {fileID: 721823095}
   m_Layer: 0
   m_Name: Player Controller
   m_TagString: Untagged
@@ -297,6 +298,48 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &721823095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6915934300665898942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d29d28c4ba2c1d43a6552552ac697df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  showIcons:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 090c26443f43aa1459349ae30d7bc498, type: 2}
+        m_TargetAssemblyTypeName: VoidEventChannel, Assembly-CSharp
+        m_MethodName: Raise
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  hideIcons:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: a6ee105d4d5d82241ac959b4225b8ab9, type: 2}
+        m_TargetAssemblyTypeName: VoidEventChannel, Assembly-CSharp
+        m_MethodName: Raise
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &6915934301112085579
 GameObject:
   m_ObjectHideFlags: 0
@@ -308,7 +351,7 @@ GameObject:
   - component: {fileID: 6915934301112085576}
   - component: {fileID: 6915934301112085583}
   - component: {fileID: 721823096}
-  - component: {fileID: 721823095}
+  - component: {fileID: 1002053023223979299}
   m_Layer: 0
   m_Name: cm
   m_TagString: Untagged
@@ -364,7 +407,7 @@ MonoBehaviour:
     m_Bits: 0
   IgnoreTag: 
   CameraRadius: 0.2
---- !u!114 &721823095
+--- !u!114 &1002053023223979299
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

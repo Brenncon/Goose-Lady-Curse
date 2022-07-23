@@ -13,9 +13,8 @@ public class Quest : MonoBehaviour
     public Quest nextQuest;
     public UnityEvent<string> UpdateQuestHint;
     public List<GameObject> emojiHint;
-    public UnityEvent<List<GameObject>> ShowEmojiEvent;
-    public UnityEvent HideEmojiEvent;
-    public GooseLadyEmojis ladyEmojis;
+    public UnityEvent<List<GameObject>> SetEmojiEvent;
+    public UnityEvent ClearEmojiEvent;
     public enum Stage
     {
         intro,
@@ -55,7 +54,7 @@ public class Quest : MonoBehaviour
         if (stage == Stage.ongoing)
         {
             //OnQuestIncomplete();
-            ShowEmojiEvent.Invoke(emojiHint);
+            SetEmojiEvent.Invoke(emojiHint);
         }
     }
 
@@ -63,7 +62,7 @@ public class Quest : MonoBehaviour
     {
         stage = Stage.outro;
         objectiveComplete = true;
-        HideEmojiEvent.Invoke();
+        ClearEmojiEvent.Invoke();
         UpdateQuestHint.Invoke("Approach a statue");//TODO: change the hard coded message later
     }
 
@@ -74,8 +73,8 @@ public class Quest : MonoBehaviour
         UpdateQuestHint.Invoke(description);
     }
 
-    public void ShowEmoji()
+    public void SetEmoji()
     {
-        ShowEmojiEvent.Invoke(emojiHint);
+        SetEmojiEvent.Invoke(emojiHint);
     }
 }
