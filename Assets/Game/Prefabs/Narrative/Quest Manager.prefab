@@ -196,7 +196,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 5
   indentLevel: 0
-  storyText: What the? Who are you? W-wait where am I?
+  storyText: What the? Who are you? W-wait, where am I?
   description: 
   character: {fileID: 8406403307615056768}
   portrait: {fileID: 21300000, guid: be58c415684e5b241854e96a9e5030ac, type: 3}
@@ -250,8 +250,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 13
   indentLevel: 0
-  storyText: You will be fine! When I get restored, I can get you back to wherever
-    place you come from. Deal?
+  storyText: You will be fine! When I get restored, I can get you back wherever you
+    come from. Deal?
   description: 
   character: {fileID: 8406403307675228253}
   portrait: {fileID: 21300000, guid: ccbb6ce1f10d10441bcf218f6f10c62d, type: 3}
@@ -278,7 +278,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 12
   indentLevel: 0
-  storyText: "Huh??? I'm not sure if I\u2019m up for the task..."
+  storyText: Huh??? I'm not sure if I'm up for the task...
   description: 
   character: {fileID: 8406403307615056768}
   portrait: {fileID: 21300000, guid: be58c415684e5b241854e96a9e5030ac, type: 3}
@@ -305,7 +305,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 11
   indentLevel: 0
-  storyText: Please I beg you!
+  storyText: Please, I beg you!
   description: 
   character: {fileID: 8406403307675228253}
   portrait: {fileID: 21300000, guid: ccbb6ce1f10d10441bcf218f6f10c62d, type: 3}
@@ -332,7 +332,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 10
   indentLevel: 0
-  storyText: 'I got stuck in this goose body and I can''t return to my true form
+  storyText: 'I got stuck in this goose body, and I can''t return to my proper form
     without aid! '
   description: 
   character: {fileID: 8406403307675228253}
@@ -360,8 +360,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 9
   indentLevel: 0
-  storyText: N-No please don't leave me I need your help! (Sad Goose sound in the
-    background)
+  storyText: 'N-No please don''t leave me. I need your help! '
   description: 
   character: {fileID: 8406403307675228253}
   portrait: {fileID: 21300000, guid: ccbb6ce1f10d10441bcf218f6f10c62d, type: 3}
@@ -388,7 +387,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 8
   indentLevel: 0
-  storyText: Nah thanks, I got to get back to- (Get up and leave)
+  storyText: 'Nah, thanks. I got to get back to- '
   description: 
   character: {fileID: 8406403307615056768}
   portrait: {fileID: 21300000, guid: be58c415684e5b241854e96a9e5030ac, type: 3}
@@ -415,8 +414,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 7
   indentLevel: 0
-  storyText: "I am the Goddess of this island, if you are willing to do my bidding
-    you will be properly rewarded. Now you need to \u2013"
+  storyText: "I am the Goddess of this island. You will be properly rewarded if you
+    are willing to do my bidding. Now you need to \u2013"
   description: 
   character: {fileID: 8406403307675228253}
   portrait: {fileID: 21300000, guid: ccbb6ce1f10d10441bcf218f6f10c62d, type: 3}
@@ -498,7 +497,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetStat: {fileID: 11400000, guid: 72b6f944c7934724a95b27445bf573f0, type: 2}
-  value: 30
+  value: 31
 --- !u!114 &1780892993
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -512,7 +511,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetStat: {fileID: 11400000, guid: 91bffc1407c4b6e468fdedcbf5a5200b, type: 2}
-  value: 30
+  value: 31
 --- !u!114 &1780892994
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -719,10 +718,11 @@ MonoBehaviour:
     y: 0
     width: 0
     height: 0
-  selectedBlocks: []
+  selectedBlocks:
+  - {fileID: 63900420162183858}
   selectedCommands: []
   variables: []
-  description: Crafting Tuorial
+  description: Survival tutorial
   stepPause: 0
   colorCommands: 1
   hideComponents: 1
@@ -744,7 +744,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7991c03fe3c46ab458786d2491bbd729, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  description: Pickup an apple
+  description: Pickup an apple(Apple can )
   objectiveComplete: 0
   nextQuest: {fileID: 3682269817804152895}
   UpdateQuestHint:
@@ -929,7 +929,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 4
   indentLevel: 0
-  storyText: "Look there\u2019s an <color=green>apple</color> on the ground. "
+  storyText: "Look there\u2019s an {color=cyan}apple{/color} on the ground. "
   description: 
   character: {fileID: 8406403307675228253}
   portrait: {fileID: 21300000, guid: ccbb6ce1f10d10441bcf218f6f10c62d, type: 3}
@@ -1120,7 +1120,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 11
   indentLevel: 0
-  description: 
+  description: set puzzle icon
   delay: 0
   invokeType: 0
   staticEvent:
@@ -1128,7 +1128,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2060556769151682770}
         m_TargetAssemblyTypeName: Quest, Assembly-CSharp
-        m_MethodName: ShowEmoji
+        m_MethodName: SetEmoji
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1755,8 +1755,9 @@ MonoBehaviour:
     width: 0
     height: 0
   selectedBlocks:
-  - {fileID: 9218346493099010193}
-  selectedCommands: []
+  - {fileID: 7790221863181901618}
+  selectedCommands:
+  - {fileID: 4512800634621005834}
   variables: []
   description: 
   stepPause: 0
@@ -2076,7 +2077,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 7
   indentLevel: 0
-  storyText: I know you mortals dig your way out with a <color=green>pickaxe</color>.
+  storyText: I know you mortals dig your way out with a {color=cyan}pickaxe{/color}.
   description: 
   character: {fileID: 8406403307675228253}
   portrait: {fileID: 21300000, guid: ccbb6ce1f10d10441bcf218f6f10c62d, type: 3}
@@ -2103,7 +2104,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 8
   indentLevel: 0
-  storyText: Do I look like I have a <color=green>pickaxe</color>?
+  storyText: Do I look like I have a {color=cyan}pickaxe{/color}?
   description: 
   character: {fileID: 8406403307615056768}
   portrait: {fileID: 21300000, guid: be58c415684e5b241854e96a9e5030ac, type: 3}
@@ -2130,9 +2131,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 9
   indentLevel: 0
-  storyText: 'To craft a <color=green>pickaxe</color>, you need to collect <color=green>branch</color>
-    from nearby trees, and <color=green>stone</color> in the beach area where you
-    spawned and combine them into a <color=green>pickaxe</color>. '
+  storyText: 'To craft a {color=cyan}pickaxe{/color}, you need to collect {color=cyan}branches{/color}
+    from nearby trees, and {color=cyan}stones{/color} in the beach area where you
+    spawned and combine them into a {color=cyan}pickaxe{/color}. '
   description: 
   character: {fileID: 8406403307675228253}
   portrait: {fileID: 21300000, guid: ccbb6ce1f10d10441bcf218f6f10c62d, type: 3}
@@ -2159,7 +2160,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 10
   indentLevel: 0
-  storyText: I also see that you have a <color=green>notepad (Hotkey "N")</color>
+  storyText: I also see that you have a {color=cyan}notepad (Hotkey "N"){/color}
     with you. Let me add some things that will help you out.
   description: 
   character: {fileID: 8406403307675228253}
@@ -2187,7 +2188,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 11
   indentLevel: 0
-  description: Display puzzle Icon
+  description: set puzzle Icon
   delay: 0
   invokeType: 0
   staticEvent:
