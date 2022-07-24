@@ -18,6 +18,9 @@ public class Equipment : Item
     // When this scriptable object is created
     void Awake()
     {
+        // Set the tooltipText
+        tooltipText = "<Right Click to Equip>";
+
         // Set the maximum stack number to 1
         maxStackNumber = 1;
     }

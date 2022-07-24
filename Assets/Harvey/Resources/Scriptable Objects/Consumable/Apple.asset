@@ -17,6 +17,11 @@ MonoBehaviour:
   itemIcon: {fileID: 21300000, guid: 5d9ba4e7d0964044ea54abe409d81dfd, type: 3}
   item3DModelPrefeb: {fileID: 1214027450135282919, guid: 7ced32ca6d3846249905f8dcae5f70a5, type: 3}
   maxStackNumber: 99
+  description: 'I am an apple.
+
+    Eat me.
+
+    Get healthy'
   modifier:
   - {fileID: 11400000, guid: 8ae99e277b1677145b7f1e01cadc620d, type: 2}
   - {fileID: 11400000, guid: 192705eb8325a504d80d0c0b420392af, type: 2}
