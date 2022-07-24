@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: ForestBranchSpawner
   m_EditorClassIdentifier: 
   SpawnableItems:
-  - {fileID: 7343729800507403010, guid: 3688c90a900970d45af2f7c64bf2f88f, type: 3}
+  - {fileID: 8828665058184601058, guid: d8e904ae66ac4a84f8867cade0cf0890, type: 3}
