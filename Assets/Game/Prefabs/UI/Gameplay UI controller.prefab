@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: 1096392629972974974}
   - component: {fileID: 5638458635532937121}
   - component: {fileID: 1712043806304274021}
+  - component: {fileID: 5200530406657530088}
   m_Layer: 0
   m_Name: Gameplay UI controller
   m_TagString: Untagged
@@ -360,6 +361,34 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: LeftClickHintController, Assembly-CSharp
         m_MethodName: HideHint
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &5200530406657530088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2561290329046322467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08c935cb4a9c0274bac1bdb68dbc67a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  channel: {fileID: 11400000, guid: d03e0306f2706754789a1376c130228e, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: QuestHintController, Assembly-CSharp
+        m_MethodName: SetQuestHint
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
