@@ -164,6 +164,7 @@ GameObject:
   - component: {fileID: 4604764347684264311}
   - component: {fileID: 4308169926811021863}
   - component: {fileID: 7922250021557899361}
+  - component: {fileID: 431291026053688897}
   m_Layer: 5
   m_Name: Warning Message Text (TMP)
   m_TagString: Untagged
@@ -343,6 +344,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!225 &431291026053688897
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1592441498500585792}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 0
+  m_IgnoreParentGroups: 0
 --- !u!1 &2158285521571605093
 GameObject:
   m_ObjectHideFlags: 0

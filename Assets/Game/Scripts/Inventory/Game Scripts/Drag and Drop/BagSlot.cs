@@ -24,13 +24,25 @@ public class BagSlot : MonoBehaviour, IDropHandler
         // If there is a bag in that slot
         if (playerInventory.bags[bagIndex] != null)
         {
+            // Cache the bag's image
+            Image bagImage = transform.GetChild(0).GetComponent<Image>();
+
             // Assign bag icon to the bag image based on which bag this bag slot is responsible for
-            transform.GetChild(0).GetComponent<Image>().sprite = playerInventory.bags[bagIndex].itemIcon;
+            bagImage.sprite = playerInventory.bags[bagIndex].itemIcon;
+
+            // Show the bag
+            bagImage.color = new Color(bagImage.color.r, bagImage.color.g, bagImage.color.b, 1);
         }
         else
         {
             // Disable blocksRaycasts to prevent player from dragging the bag image
             transform.GetChild(0).GetComponent<CanvasGroup>().blocksRaycasts = false;
+
+            // Cache the bag's image
+            Image bagImage = transform.GetChild(0).GetComponent<Image>();
+
+            // Hide the bag
+            bagImage.color = new Color(bagImage.color.r, bagImage.color.g, bagImage.color.b, 0);
         }
     }
 

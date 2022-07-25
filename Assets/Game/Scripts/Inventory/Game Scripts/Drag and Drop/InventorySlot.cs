@@ -209,6 +209,12 @@ public class InventorySlot : MonoBehaviour, IDropHandler
             {
                 // Turn on the block raycast
                 transform.GetChild(0).GetComponent<CanvasGroup>().blocksRaycasts = true;
+
+                // Cache the slotted item image color
+                Color slottedItemImageColor = transform.GetChild(0).GetComponent<Image>().color;
+
+                // Show the image
+                transform.GetChild(0).GetComponent<Image>().color = new Color(slottedItemImageColor.r, slottedItemImageColor.g, slottedItemImageColor.b, 1);
             }
         }
         // If there is no item in the slot that I am responsible to display
@@ -227,6 +233,12 @@ public class InventorySlot : MonoBehaviour, IDropHandler
             {
                 // Turn off the block raycast
                 transform.GetChild(0).GetComponent<CanvasGroup>().blocksRaycasts = false;
+
+                // Cache the slotted item image color
+                Color slottedItemImageColor = transform.GetChild(0).GetComponent<Image>().color;
+
+                // Hide the image
+                transform.GetChild(0).GetComponent<Image>().color = new Color(slottedItemImageColor.r, slottedItemImageColor.g, slottedItemImageColor.b, 0);
             }
         }
 

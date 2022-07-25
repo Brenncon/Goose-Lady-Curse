@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1449278425947956030}
   - component: {fileID: 1386231680415965840}
   - component: {fileID: 4317466773712872734}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Branch_1_LOD1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55,6 +55,8 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -79,6 +81,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!64 &4317466773712872734
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -89,9 +92,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 0
-  m_CookingOptions: 14
+  m_CookingOptions: 30
   m_Mesh: {fileID: 8138631053950577904, guid: 88a7b6657bfb1734f8bac20c79a03f05, type: 3}
 --- !u!1 &6205876987246777698
 GameObject:
@@ -105,7 +108,7 @@ GameObject:
   - component: {fileID: 503896086381514685}
   - component: {fileID: 4446356888046428037}
   - component: {fileID: 6788813690536369343}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Branch_1_LOD2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -148,6 +151,8 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -172,6 +177,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!64 &6788813690536369343
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -182,9 +188,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 0
-  m_CookingOptions: 14
+  m_CookingOptions: 30
   m_Mesh: {fileID: 1152231559003977566, guid: 88a7b6657bfb1734f8bac20c79a03f05, type: 3}
 --- !u!1 &6362026480357193727
 GameObject:
@@ -198,7 +204,7 @@ GameObject:
   - component: {fileID: 2608226028131151332}
   - component: {fileID: 451133812270390789}
   - component: {fileID: 8259758621595285794}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Branch_1_LOD0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -241,6 +247,8 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -265,6 +273,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!64 &8259758621595285794
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -275,9 +284,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 0
-  m_CookingOptions: 14
+  m_CookingOptions: 30
   m_Mesh: {fileID: 2100527024969032336, guid: 88a7b6657bfb1734f8bac20c79a03f05, type: 3}
 --- !u!1 &7350201176875573414
 GameObject:
@@ -291,7 +300,7 @@ GameObject:
   - component: {fileID: 797107797203081067}
   - component: {fileID: 3881689130230188386}
   - component: {fileID: 8699448209134090341}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Branch_1_LOD3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -334,6 +343,8 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -358,6 +369,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!64 &8699448209134090341
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -368,9 +380,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 0
-  m_CookingOptions: 14
+  m_CookingOptions: 30
   m_Mesh: {fileID: -5508521162900484416, guid: 88a7b6657bfb1734f8bac20c79a03f05, type: 3}
 --- !u!1 &7563980175664247047
 GameObject:
@@ -384,7 +396,7 @@ GameObject:
   - component: {fileID: 5635790681190750376}
   - component: {fileID: 2125037854197357208}
   - component: {fileID: 7171971888392115575}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Branch_1_LOD4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -427,6 +439,8 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -451,6 +465,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!64 &7171971888392115575
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -461,9 +476,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 0
-  m_CookingOptions: 14
+  m_CookingOptions: 30
   m_Mesh: {fileID: -2681845146484649861, guid: 88a7b6657bfb1734f8bac20c79a03f05, type: 3}
 --- !u!1 &8828665058184601058
 GameObject:
@@ -475,9 +490,11 @@ GameObject:
   m_Component:
   - component: {fileID: 5539112810596397041}
   - component: {fileID: 8939415825384962698}
-  m_Layer: 0
+  - component: {fileID: 1481315622173450309}
+  - component: {fileID: -5878188504689381830}
+  m_Layer: 3
   m_Name: Branch 1
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -536,3 +553,31 @@ LODGroup:
     renderers:
     - renderer: {fileID: 2125037854197357208}
   m_Enabled: 1
+--- !u!114 &1481315622173450309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8828665058184601058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: deba9b0a6bd010b49b2da0ac9236618e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radius: 1
+  item: {fileID: 11400000, guid: 3fffc9dad30e16942a05a920c996ce38, type: 2}
+  stackNumber: 1
+--- !u!135 &-5878188504689381830
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8828665058184601058}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}

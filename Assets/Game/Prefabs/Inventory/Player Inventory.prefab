@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: 674721510}
   - component: {fileID: 1964281664176780377}
   - component: {fileID: 6809860463035873620}
+  - component: {fileID: 4979853378912845710}
   m_Layer: 0
   m_Name: Player Inventory
   m_TagString: Untagged
@@ -89,9 +90,9 @@ MonoBehaviour:
   AddItemFromWorld:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6809860463435552693}
-        m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
-        m_MethodName: AddItem
+      - m_Target: {fileID: 11400000, guid: b593013012e00224a896307a0fd8adfe, type: 2}
+        m_TargetAssemblyTypeName: ItemIntEventChannel, Assembly-CSharp
+        m_MethodName: Raise
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -411,6 +412,34 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
         m_MethodName: TryPickupItem
         m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &4979853378912845710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6809860463435552695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38824944b90ae82479b3c7d6a76dc6c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  channel: {fileID: 11400000, guid: 9a3f88276a18fc7419eb58b5dde521c6, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6809860463435552693}
+        m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
+        m_MethodName: CheckinventoryState
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
