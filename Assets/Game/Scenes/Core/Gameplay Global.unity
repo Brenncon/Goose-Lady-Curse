@@ -1137,14 +1137,6 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1942357341, guid: 023aa68cb5e7e984e8ee5287b2b0974e, type: 3}
-      propertyPath: m_Type
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1942357341, guid: 023aa68cb5e7e984e8ee5287b2b0974e, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 37b5111ce47e352428e25882958dff28, type: 3}
     - target: {fileID: 2126237762, guid: 023aa68cb5e7e984e8ee5287b2b0974e, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -1177,6 +1169,14 @@ PrefabInstance:
       propertyPath: canvas
       value: 
       objectReference: {fileID: 1102571125}
+    - target: {fileID: 6927315257100854703, guid: 023aa68cb5e7e984e8ee5287b2b0974e, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 1102571125}
+    - target: {fileID: 6927315257100854703, guid: 023aa68cb5e7e984e8ee5287b2b0974e, type: 3}
+      propertyPath: unequipByRightClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: UnEquip
+      objectReference: {fileID: 0}
     - target: {fileID: 7848838253394569862, guid: 023aa68cb5e7e984e8ee5287b2b0974e, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
