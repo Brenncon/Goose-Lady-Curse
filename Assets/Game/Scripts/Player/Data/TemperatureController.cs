@@ -6,116 +6,91 @@ public class TemperatureController : MonoBehaviour
 {
     public Stat coldProtection;
     public SurvivalStat temperatureStat;
+    public float changeRate = 1;
     [Header("Forest")]
-    public Modifier forestDay;
-    public float forestDayMinimalTemperature;
-    private Modifier forestNight;
-    private float forestNightMinimalTemperature;
-    public Modifier forestRainyDay;
-    public float forestRainyDayMinimalTemperature;
-    private Modifier forestRainyNight;
-    private float forestRainyNightMinimalTemperature;
+    public float forestDayTemperature;
+    private float forestNightTemperature;
+    public float forestRainyDayTemperature;
+    private float forestRainyNightTemperature;
     [Header("Beach")]
-    public Modifier beachDay;
-    public float beachDayMinimalTemperature;
-    private Modifier beachNight;
-    private float beachNightMinimalTemperature;
+    public float beachDayTemperature;
+    private float beachNightTemperature;
     
-    private Modifier mountainDay;
-    private float mountainDayMinimalTemperature;
-    private Modifier mountainNight;
-    private float mountainNightMinimalTemperature;
+    private float mountainDayTemperature;
+    private float mountainNightTemperature;
     [Header("Mountain")]
-    public Modifier mountainSnowyDay;
-    public float mountainSnowyDayMinimalTemperature;
-    private Modifier mountainSnowyNight;
-    private float mountainSnowyNightMinimalTemperature;
+    public float mountainSnowyDayTemperature;
+    private float mountainSnowyNightTemperature;
 
-    private Modifier currentModifier;
-
+    private float targetTemperture;
+    private float envirenmentTemperature;
 
     public void Initialize()
     {
-        currentModifier = null;
         ApplyForestDay();//need to vary depending on the respawn locations
     }
 
     private void Update()
     {
-        //temperatureStat.actualChangeRate += coldProtection.finalValue;
+        targetTemperture = envirenmentTemperature + coldProtection.finalValue;
+        if (temperatureStat.currentValue != targetTemperture)
+        {
+            temperatureStat.currentValue = Mathf.Lerp(temperatureStat.currentValue,targetTemperture,changeRate*Time.deltaTime);
+        }
     }
 
     public void ApplyForestDay()
     {
-        ApplyDecreasingModifier(forestDay, forestDayMinimalTemperature);
+        SetEnvironmentTemperature(forestDayTemperature);
     }
 
     private void ApplyForestNight()
     {
-
-        ApplyDecreasingModifier(forestNight,forestNightMinimalTemperature);
+        SetEnvironmentTemperature(forestNightTemperature);
     }
 
     public void ApplyForestRainyDay()
     {
-        ApplyDecreasingModifier(forestRainyDay,forestRainyDayMinimalTemperature);
+        SetEnvironmentTemperature(forestDayTemperature);
     }
 
     private void ApplyForestRainyNight()
     {
-        ApplyDecreasingModifier(forestRainyNight,forestRainyNightMinimalTemperature);
+        SetEnvironmentTemperature(forestRainyNightTemperature);
     }
 
     public void ApplyBeachDay()
     {
-        Debug.Log("BE");
-        ApplyDecreasingModifier(beachDay, beachDayMinimalTemperature);
+        SetEnvironmentTemperature(beachDayTemperature);
     }
 
     private void ApplyBeachNight()
     {
-        ApplyDecreasingModifier(beachNight,beachNightMinimalTemperature);
+        SetEnvironmentTemperature(beachNightTemperature);
     }
 
     private void ApplyMountainDay()
     {
-        ApplyDecreasingModifier(mountainDay,mountainDayMinimalTemperature);
+        SetEnvironmentTemperature(mountainDayTemperature);
     }
 
     private void ApplyMountainNight()
     {
-        ApplyDecreasingModifier(mountainNight,mountainNightMinimalTemperature);
+        SetEnvironmentTemperature(mountainNightTemperature);
     }
 
     public void ApplyMountainSnowyDay()
     {
-        ApplyDecreasingModifier(mountainSnowyDay,mountainSnowyDayMinimalTemperature);
+        SetEnvironmentTemperature(mountainSnowyDayTemperature);
     }
 
     private void ApplyMountainSnowyNight()
     {
-        ApplyDecreasingModifier(mountainSnowyNight,mountainSnowyNightMinimalTemperature);
+        SetEnvironmentTemperature(mountainSnowyNightTemperature);
     }
 
-    private void ApplyDecreasingModifier(Modifier modifier, float minTemperature)
+    private void SetEnvironmentTemperature(float temperature)
     {
-        if (currentModifier != null)
-        {
-            currentModifier.Remove();
-        }
-        modifier.Apply();
-        currentModifier = modifier;
-        temperatureStat.minValue = minTemperature;
-    }
-
-    private void ApplyIncreasingModifier(Modifier modifier, float maxTemperature)
-    {
-        if (currentModifier != null)
-        {
-            currentModifier.Remove();
-        }
-        modifier.Apply();
-        currentModifier = modifier;
-        temperatureStat.baseValue = maxTemperature;
+        envirenmentTemperature = temperature;
     }
 }

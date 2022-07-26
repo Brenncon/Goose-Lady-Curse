@@ -6,6 +6,7 @@ using UnityEngine;
 public class EmojiBubble : MonoBehaviour
 {
     private Camera mainCamera;
+    private bool isCleared = true;
     public RectTransform rectTransform;
     public float panelMarginHeight = 30;
     public float panelMarginWidth = 30;
@@ -26,11 +27,11 @@ public class EmojiBubble : MonoBehaviour
         }
     }
 
-    public void ShowEmojis(List<GameObject> emojis)
+    public void SetEmoji(List<GameObject> emojis)
     {
         if (emojis.Count > 0)
         {
-            bubble.SetActive(true);
+            isCleared = false;
             bubble.transform.DetachChildren();
             float emojiWidth = emojis[0].GetComponent<RectTransform>().sizeDelta.x;
             float emojiHeight = emojis[0].GetComponent<RectTransform>().sizeDelta.y;
@@ -44,7 +45,18 @@ public class EmojiBubble : MonoBehaviour
                 icon.GetComponent<RectTransform>().localScale = Vector3.one;
             }
         }
+    }
 
+    public void ClearEmoji()
+    {
+        isCleared = true;
+        bubble.transform.DetachChildren();
+    }
+
+    public void ShowEmoji()
+    {
+        if (!isCleared)
+            bubble.SetActive(true);
     }
 
     public void HideEmoji()

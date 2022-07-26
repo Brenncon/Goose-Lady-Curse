@@ -3,47 +3,63 @@ using System.Collections.Generic;
 using UnityEngine;
 using Fungus;
 using UnityEngine.Events;
+using Project.Build.Commands;
 
 [RequireComponent(typeof(Flowchart))]
 public class Quest : MonoBehaviour
 {
     private Flowchart dialog;
-    public string description;
-    public bool objectiveComplete;
+    [SerializeField,ReadOnly]
+    private Objective currentObjective;
+    private int objectiveIndex;
+    public bool missionComplete;
+    public List<Objective> objectives;
     public Quest nextQuest;
-    public UnityEvent<string> UpdateQuestHint;
     public List<GameObject> emojiHint;
-    public UnityEvent<List<GameObject>> ShowEmojiEvent;
-    public UnityEvent HideEmojiEvent;
-    public GooseLadyEmojis ladyEmojis;
+    public UnityEvent<List<GameObject>> SetEmojiEvent;
+    public UnityEvent ClearEmojiEvent;
+    public UnityEvent<string> QuestCompleteInstruction;
     public enum Stage
     {
-        intro,
+        start,
         ongoing,
-        outro
+        completed
     }
     public Stage stage;
 
     private void OnEnable()
     {
         //save system needs to assign the stage according to progression
-        stage = Stage.intro;
+        stage = Stage.start;
         dialog = GetComponent<Flowchart>();
+        if (objectives.Count > 0)
+        {
+            currentObjective = objectives[0];
+        }
     }
 
     public void Dialog()
     {
         switch (stage)
         {
-            case Stage.intro:
+            case Stage.start:
                 dialog.SendFungusMessage("intro");
-                OnQuestIncomplete();
+                if (objectives.Count > 0)
+                {
+                    OnQuestIncomplete();
+                    currentObjective.SetObjective();
+                    currentObjective.ObjectiveComplete.AddListener(ObjectiveStateChange);
+                    SetEmojiEvent.Invoke(emojiHint);
+                }
+                else
+                {
+                    OnQuestComplete();
+                }
                 break;
             case Stage.ongoing:
                 dialog.SendFungusMessage("ongoing");
                 break;
-            case Stage.outro:
-                //dialog.SendFungusMessage("outro");
+            case Stage.completed:
                 break;
 
         }
@@ -52,30 +68,64 @@ public class Quest : MonoBehaviour
     public virtual void SkipDialog()
     {
         dialog.StopAllBlocks();
-        if (stage == Stage.ongoing)
+        if (objectives.Count == 0)
         {
-            //OnQuestIncomplete();
-            ShowEmojiEvent.Invoke(emojiHint);
+            stage = Stage.completed;
+            return;
         }
+        //if (stage == Stage.ongoing)
+        //{
+        //    SetEmojiEvent.Invoke(emojiHint);
+        //}
     }
 
     public void OnQuestComplete()
     {
-        stage = Stage.outro;
-        objectiveComplete = true;
-        HideEmojiEvent.Invoke();
-        UpdateQuestHint.Invoke("Approach a statue");//TODO: change the hard coded message later
+        stage = Stage.completed;
+        missionComplete = true;
+        ClearEmojiEvent.Invoke();
+        QuestCompleteInstruction.Invoke("");
     }
 
     public void OnQuestIncomplete()
     {
         stage = Stage.ongoing;
-        objectiveComplete = false;
-        UpdateQuestHint.Invoke(description);
+        missionComplete = false;
     }
 
-    public void ShowEmoji()
+    public void SetEmoji()
     {
-        ShowEmojiEvent.Invoke(emojiHint);
+        SetEmojiEvent.Invoke(emojiHint);
+    }
+
+    public void ObjectiveStateChange(bool state)
+    {
+        if (state)
+        {
+            currentObjective.ObjectiveComplete.RemoveListener(ObjectiveStateChange);
+            objectiveIndex++;
+            
+            if (objectiveIndex>=objectives.Count)
+            {
+                OnQuestComplete();
+            }
+            else
+            {
+                currentObjective = objectives[objectiveIndex];
+                currentObjective.SetObjective();
+                currentObjective.ObjectiveComplete.AddListener(ObjectiveStateChange);
+            }
+            
+        }
+        else
+        {
+            if (objectiveIndex - 1 >= 0)
+            {
+                currentObjective.ObjectiveComplete.RemoveListener(ObjectiveStateChange);
+                currentObjective = objectives[objectiveIndex--];
+                currentObjective.SetObjective();
+            }
+            currentObjective.ObjectiveComplete.AddListener(ObjectiveStateChange);
+        }
     }
 }

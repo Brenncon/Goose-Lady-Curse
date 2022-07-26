@@ -24,8 +24,8 @@ public class BagSlotsUI : MonoBehaviour
 
     void OnEnable()
     {
-        // Calculate the bag slot's position in the scene
-        rectTransform.anchoredPosition = new Vector2(-bagSlotPrefeb.GetComponent<RectTransform>().sizeDelta.x * 1.1f, inventoryGrouper.GetComponent<RectTransform>().anchoredPosition.y);
+        //// Calculate the bag slot's position in the scene
+        //rectTransform.anchoredPosition = new Vector2(-bagSlotPrefeb.GetComponent<RectTransform>().sizeDelta.x * 1.1f, inventoryGrouper.GetComponent<RectTransform>().anchoredPosition.y);
 
         // Instantiate a bag slot gameObject for every bag slot
         for (int i = 0; i < playerInventory.bags.Count; i++)

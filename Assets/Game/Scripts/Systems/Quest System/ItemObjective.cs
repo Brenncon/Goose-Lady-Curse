@@ -4,23 +4,21 @@ using UnityEngine;
 using Fungus;
 using System;
 using Project.Build.Commands;
+using UnityEngine.Events;
 
-public class ItemQuest : Quest
+[CreateAssetMenu(fileName = "ItemObjective", menuName = "Quest/ItemObjective")]
+public class ItemObjective : Objective
 { 
     public Item objective;
     public int targetCount;
     [SerializeField, ReadOnly]
     private float currentCount;
 
-    public override void SkipDialog()
+    protected override void OnEnable()
     {
-        if (objective == null)
-        {
-            OnQuestComplete();
-        }
-        base.SkipDialog();
+        base.OnEnable();
+        currentCount = 0;
     }
-
     public void PickupObjective(Item item, int stack)
     {
         if (objective != null)
@@ -30,12 +28,11 @@ public class ItemQuest : Quest
                 currentCount += stack;
             }
 
-            if (currentCount >= targetCount && !objectiveComplete)
+            if (currentCount >= targetCount&&!completed)
             {
-                OnQuestComplete();
+                OnCompletion(true); ;
             }
         }
-        
     }
 
     public void DropoffObjective(Item item, int stack)
@@ -46,10 +43,9 @@ public class ItemQuest : Quest
             {
                 currentCount -= stack;
             }
-            if (currentCount < targetCount && objectiveComplete)
+            if (currentCount < targetCount&&completed)
             {
-                // display a dialog box telling player to pick up the objective
-                OnQuestIncomplete();
+                OnCompletion(false);
             }
         }
     }

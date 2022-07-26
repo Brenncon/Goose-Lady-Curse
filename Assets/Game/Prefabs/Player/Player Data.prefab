@@ -431,16 +431,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coldProtection: {fileID: 11400000, guid: 3cba3d12b0814474c90a2a5923ccfe2b, type: 2}
-  coldProtectionModifier: {fileID: 11400000, guid: d2d090a48850804478a1aac71bbf9113, type: 2}
   temperatureStat: {fileID: 11400000, guid: 9726e81e1cc4f0a4ab24da40ecbee038, type: 2}
-  forestDay: {fileID: 11400000, guid: 90f03cc5a09ca4c41a74165055d7858c, type: 2}
-  forestDayMinimalTemperature: 0
-  forestRainyDay: {fileID: 11400000, guid: acd2cf8004fce0e44a30abb5187a3226, type: 2}
-  forestRainyDayMinimalTemperature: -10
-  beachDay: {fileID: 11400000, guid: 5e829141eb023b449a994b8d81d45665, type: 2}
-  beachDayMinimalTemperature: 10
-  mountainSnowyDay: {fileID: 11400000, guid: d9a550d6f59088f4db0ae7f1d45b1b31, type: 2}
-  mountainSnowyDayMinimalTemperature: -10
+  forestDayTemperature: 0
+  forestRainyDayTemperature: 0
+  beachDayTemperature: 11
+  mountainSnowyDayTemperature: -11
 --- !u!114 &5899555281281982039
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -704,6 +699,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  isDead: 0
 --- !u!114 &5424102413916240332
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -241,6 +241,12 @@ public class InventoryGrouper : MonoBehaviour
                         {
                             // Disable the raycast for the slotted item so that the player cannot drag it
                             currentInventorySlot.transform.GetChild(0).GetComponent<CanvasGroup>().blocksRaycasts = false;
+
+                            // Cache the slotted item image color
+                            Color slottedItemImageColor = currentInventorySlot.transform.GetChild(0).GetComponent<Image>().color;
+
+                            // Hide the image
+                            currentInventorySlot.transform.GetChild(0).GetComponent<Image>().color = new Color(slottedItemImageColor.r, slottedItemImageColor.g, slottedItemImageColor.b, 0);
                         }
                     }
                     // Else
@@ -251,6 +257,12 @@ public class InventoryGrouper : MonoBehaviour
                         {
                             // Enable the raycast for the slotted item so that the player can drag it
                             currentInventorySlot.transform.GetChild(0).GetComponent<CanvasGroup>().blocksRaycasts = true;
+
+                            // Cache the slotted item image color
+                            Color slottedItemImageColor = currentInventorySlot.transform.GetChild(0).GetComponent<Image>().color;
+
+                            // Show the image
+                            currentInventorySlot.transform.GetChild(0).GetComponent<Image>().color = new Color(slottedItemImageColor.r, slottedItemImageColor.g, slottedItemImageColor.b, 1);
                         }
                     }
                 }

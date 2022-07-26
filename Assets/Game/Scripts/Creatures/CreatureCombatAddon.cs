@@ -44,6 +44,8 @@ public class CreatureCombatAddon : MonoBehaviour
                 break;
             }
         }
+        gameObject.tag = "Attackable";
+        gameObject.layer = LayerMask.NameToLayer("Interactable");
     }
 
     private void Start()

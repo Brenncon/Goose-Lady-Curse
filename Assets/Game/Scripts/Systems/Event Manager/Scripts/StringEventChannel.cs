@@ -7,7 +7,6 @@ public class StringEventChannel : ScriptableObject
     private List<StringEventListener> listeners = new List<StringEventListener>();
     public void Raise(string str)
     {
-        Debug.Log(listeners.Count);
         for (int i = listeners.Count - 1; i >= 0; i--)
         {
             listeners[i].OnEventRaised(str);

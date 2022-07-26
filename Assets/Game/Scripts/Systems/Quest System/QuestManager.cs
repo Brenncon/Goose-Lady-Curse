@@ -23,7 +23,7 @@ public class QuestManager : MonoBehaviour
 
     public void ActivateCurrentDialog()
     {
-        if (currentQuest.stage == Quest.Stage.outro && currentQuest.nextQuest != null)
+        if (currentQuest.stage == Quest.Stage.completed && currentQuest.nextQuest != null)
         {
             currentQuest = currentQuest.nextQuest;
         }
