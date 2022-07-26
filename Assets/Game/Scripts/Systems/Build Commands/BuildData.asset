@@ -17,7 +17,11 @@ MonoBehaviour:
   projectName: goose-lady-curse
   ignore: []
   updateBuildInfo: 0
+<<<<<<< Updated upstream
   buildNumber: 18
+=======
+  buildNumber: 20
+>>>>>>> Stashed changes
   useGit: 0
   branchName: 
   sha: 

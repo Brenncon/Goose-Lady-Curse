@@ -982,6 +982,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< Updated upstream
+=======
+--- !u!114 &1789639230 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1678796153183038929, guid: 28690bdc42a69514b8fc6812d5df4fed, type: 3}
+  m_PrefabInstance: {fileID: 8327230580249607763}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db0adb10e8a1e5d4a81fb30be04faaa8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+>>>>>>> Stashed changes
 --- !u!114 &1938964724 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3039129445815029530, guid: 06249530526eabe4eb1789499c503035, type: 3}
@@ -2016,6 +2030,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1102571122}
     m_Modifications:
+    - target: {fileID: 1678796153183038929, guid: 28690bdc42a69514b8fc6812d5df4fed, type: 3}
+      propertyPath: canvasRectTransform
+      value: 
+      objectReference: {fileID: 1102571122}
     - target: {fileID: 8327230579855127016, guid: 28690bdc42a69514b8fc6812d5df4fed, type: 3}
       propertyPath: canvas
       value: 
