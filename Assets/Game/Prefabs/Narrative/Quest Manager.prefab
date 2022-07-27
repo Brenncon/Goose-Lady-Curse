@@ -178,7 +178,7 @@ PrefabInstance:
     - target: {fileID: 409392629131860059, guid: ca72b8cdc82b7fa43924251fc67e1e5f, type: 3}
       propertyPath: selectedCommands.Array.data[0]
       value: 
-      objectReference: {fileID: 1780892992}
+      objectReference: {fileID: 1780893003}
     - target: {fileID: 544221248758724968, guid: ca72b8cdc82b7fa43924251fc67e1e5f, type: 3}
       propertyPath: character
       value: 
@@ -489,6 +489,34 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5813666344889562399, guid: ca72b8cdc82b7fa43924251fc67e1e5f, type: 3}
   m_PrefabInstance: {fileID: 3422597234315062107}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1780892992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9210363371614658116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 13
+  indentLevel: 0
+  storyText: '{color=cyan}Crafting menu{/color} can be open via {color=cyan}hotkey
+    "B"{/color}'
+  description: 
+  character: {fileID: 8406403307675228253}
+  portrait: {fileID: 21300000, guid: ccbb6ce1f10d10441bcf218f6f10c62d, type: 3}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
 --- !u!114 &1780893003
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -503,7 +531,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 12
   indentLevel: 0
-  storyText: You can also rover your mouse above my goose head to get some clues
+  storyText: You can also hover your mouse above my goose head to get some clues
     for the current puzzle.
   description: 
   character: {fileID: 8406403307675228253}
@@ -629,34 +657,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &1780892992
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9210363371614658116}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 13
-  indentLevel: 0
-  storyText: '{color=cyan}Crafting menu{/color} can be open via {color=cyan}hotkey
-    "B"{/color}'
-  description: 
-  character: {fileID: 8406403307675228253}
-  portrait: {fileID: 21300000, guid: ccbb6ce1f10d10441bcf218f6f10c62d, type: 3}
-  voiceOverClip: {fileID: 0}
-  showAlways: 1
-  showCount: 1
-  extendPrevious: 0
-  fadeWhenDone: 1
-  waitForClick: 1
-  stopVoiceover: 1
-  waitForVO: 0
-  setSayDialog: {fileID: 0}
 --- !u!1001 &4957121092746035657
 PrefabInstance:
   m_ObjectHideFlags: 0

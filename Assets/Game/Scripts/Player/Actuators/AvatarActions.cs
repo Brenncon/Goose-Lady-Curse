@@ -121,12 +121,12 @@ public class AvatarActions : MonoBehaviour
     /// <param name="enemy">Enemy</param>
     public void Attack(Transform enemy)
     {
-        combat.AttackTarget(enemy);
+        combat.Attack(enemy);
     }
 
     public void CancelAttack()
     {
-        combat.AttackComplete();
+        combat.CancelAttack();
     }
 
     public bool TargetIsDead()
