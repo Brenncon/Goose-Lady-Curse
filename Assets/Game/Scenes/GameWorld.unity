@@ -3646,6 +3646,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 63900420162183858, guid: 0c73038af489e57479f9db4be58223cc, type: 3}
+      propertyPath: nodeRect.x
+      value: 253
+      objectReference: {fileID: 0}
     - target: {fileID: 8406403306594580197, guid: 0c73038af489e57479f9db4be58223cc, type: 3}
       propertyPath: m_Name
       value: Quest Manager
@@ -3692,6 +3696,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8406403306594580198, guid: 0c73038af489e57479f9db4be58223cc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206620880118580896, guid: 0c73038af489e57479f9db4be58223cc, type: 3}
+      propertyPath: selectedCommands.Array.size
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
