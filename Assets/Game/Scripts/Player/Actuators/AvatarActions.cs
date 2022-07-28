@@ -76,6 +76,7 @@ public class AvatarActions : MonoBehaviour
         if (item.TryGetComponent<ItemWrapper>(out ItemWrapper itemWrapper))
         {
             TryPickupItemEvent.Invoke(itemWrapper.item, itemWrapper.stackNumber, item.gameObject);
+            avatarAnimator.SetTrigger("pickup");
         }
         else
         {
