@@ -166,8 +166,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hint: {fileID: 6631874351333440760}
-  offset: {x: -10, y: 25}
-  localPosition: {x: 0, y: 0}
+  offset: {x: -25, y: 25}
   gameplayUI: {fileID: 0}
 --- !u!225 &549176130132364227
 CanvasGroup:

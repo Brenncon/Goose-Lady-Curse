@@ -7,7 +7,7 @@ public class LeftClickHintController : MonoBehaviour
 {
     public RectTransform hint;
     public Vector2 offset = new Vector2(0, 5);
-    public Vector2 localPosition;
+    private Vector2 localPosition;
     public RectTransform gameplayUI;
 
     public void ShowHint(Vector2 position)
