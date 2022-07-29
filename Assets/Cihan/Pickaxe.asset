@@ -17,6 +17,8 @@ MonoBehaviour:
   itemIcon: {fileID: 21300000, guid: 903f98c003c98404ba77f6164639abbb, type: 3}
   item3DModelPrefeb: {fileID: 7174249340566022651, guid: be762519a7f251a4bae473bdc3f018ff, type: 3}
   maxStackNumber: 1
-  equipmentSlot: {fileID: 11400000, guid: 4e85378141c83f2408a5c88ffe20dc07, type: 2}
+  description: 
+  tooltipText: <Right Click to Equip>
+  equipmentSlot: {fileID: 11400000, guid: a1f71c8926f6c3444a7fc9a147d45d03, type: 2}
   modifiers:
   - {fileID: 11400000, guid: 8f3e0aa711ac20e49b7672a9b19c55b7, type: 2}

@@ -76,6 +76,7 @@ public class AvatarActions : MonoBehaviour
         if (item.TryGetComponent<ItemWrapper>(out ItemWrapper itemWrapper))
         {
             TryPickupItemEvent.Invoke(itemWrapper.item, itemWrapper.stackNumber, item.gameObject);
+            avatarAnimator.SetTrigger("pickup");
         }
         else
         {
@@ -121,12 +122,12 @@ public class AvatarActions : MonoBehaviour
     /// <param name="enemy">Enemy</param>
     public void Attack(Transform enemy)
     {
-        combat.AttackTarget(enemy);
+        combat.Attack(enemy);
     }
 
     public void CancelAttack()
     {
-        combat.AttackComplete();
+        combat.CancelAttack();
     }
 
     public bool TargetIsDead()
