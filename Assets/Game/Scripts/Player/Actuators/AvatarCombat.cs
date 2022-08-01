@@ -20,6 +20,7 @@ public class AvatarCombat : MonoBehaviour
     private int attackSpeedHash = Animator.StringToHash("attack speed");
     public float animationLength = 1;
     private float animationSpeed;
+    [SerializeField,ReadOnly]
     private Transform target;
     private void Start()
     {
@@ -44,10 +45,11 @@ public class AvatarCombat : MonoBehaviour
             targetDead = creatureCombatAddon.isDead;
         }
 
+        Debug.Log(target);
         //for the rock and minerals
-        if (target != null && target.TryGetComponent<CreatureCombat>(out CreatureCombat creatureCombat))
+        if (target != null && target.TryGetComponent<DestructableObject>(out DestructableObject destructableObject))
         {
-            creatureCombat.TakeDamage(attackDamage.finalValue);
+           destructableObject.TakeDamage(attackDamage.finalValue);
         }
     }
 

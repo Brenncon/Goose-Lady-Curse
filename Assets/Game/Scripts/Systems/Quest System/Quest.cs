@@ -19,6 +19,7 @@ public class Quest : MonoBehaviour
     public UnityEvent<List<GameObject>> SetEmojiEvent;
     public UnityEvent ClearEmojiEvent;
     public UnityEvent<string> QuestCompleteInstruction;
+    public UnityEvent QuestOver;
     public enum Stage
     {
         start,
@@ -71,6 +72,7 @@ public class Quest : MonoBehaviour
         if (objectives.Count == 0)
         {
             stage = Stage.completed;
+            QuestOver.Invoke();
             return;
         }
         //if (stage == Stage.ongoing)
