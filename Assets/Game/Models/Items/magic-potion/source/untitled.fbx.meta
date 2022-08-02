@@ -1,9 +1,29 @@
 fileFormatVersion: 2
-guid: b0d5eaa89f167f44dae5a37826fef7f8
+guid: 4cfd2427b25aae944949e5baf20b27ee
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Agua
+    second: {fileID: 2100000, guid: f5bd0ac083bbb134889fe51f381b28da, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material
+    second: {fileID: 2100000, guid: 0b0303601afa32f4995787ea9f10cce1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material vidrio
+    second: {fileID: 2100000, guid: e82e595802dffce4aa4ff76e752b33bf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: NonMetal
+    second: {fileID: 2100000, guid: dded41a3347c2a2448c72d5daaa0fe38, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -34,7 +54,7 @@ ModelImporter:
     isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: 0.2
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
@@ -85,7 +105,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 1
+    globalScale: 0.002
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
