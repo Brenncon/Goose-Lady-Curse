@@ -16,12 +16,12 @@ public class AudioManager : Singleton<AudioManager>
 
     private void Awake()
     {
-        DontDestroyOnLoad(gameObject);
+        //DontDestroyOnLoad(gameObject);
         OnSoundFXVolumeChanged = new VolumeChangedEvent();
         OnBackgroundVolumeChanged = new VolumeChangedEvent();
     }
 
-    public void setBackgroundVolume(float volume)
+    public void SetBackgroundVolume(float volume)
     {
         if (volume > 1.0f)
         {
@@ -35,7 +35,7 @@ public class AudioManager : Singleton<AudioManager>
         OnBackgroundVolumeChanged.Invoke(backgroundVolume);
     }
 
-    public void setSoundFXVolume(float volume)
+    public void SetSoundFXVolume(float volume)
     {
         if (volume > 1.0f)
         {

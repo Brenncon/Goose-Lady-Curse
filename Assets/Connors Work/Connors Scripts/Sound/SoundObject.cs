@@ -13,7 +13,6 @@ public class SoundObject : MonoBehaviour
     private Vector3 Distance;
     private bool isPlaying = false;
     public float maxDistanceNum;
-    public float volume;
 
     private void Start()
     {
@@ -31,20 +30,19 @@ public class SoundObject : MonoBehaviour
         soundObjectPos = this.transform.position;
         Distance = (playerPos - soundObjectPos);
 
-        Debug.Log("Distance X "+Distance.x);
-        Debug.Log("Distance Z "+Distance.z);
+        //Debug.Log("Distance X "+Distance.x);
+        //Debug.Log("Distance Z "+Distance.z);
 
-        Debug.Log("Player X " + playerPos.x);
-        Debug.Log("Player Z " + playerPos.z);
+        //Debug.Log("Player X " + playerPos.x);
+        //Debug.Log("Player Z " + playerPos.z);
 
-        Debug.Log("Sound Object X " + soundObjectPos.x);
-        Debug.Log("Sound Object Z " + soundObjectPos.z);
+        //Debug.Log("Sound Object X " + soundObjectPos.x);
+        //Debug.Log("Sound Object Z " + soundObjectPos.z);
 
         //if (playerDistanceX <= 10 && playerDistanceZ <= 10)
         if (Distance.x <= maxDistanceNum && isPlaying == false || Distance.z <= maxDistanceNum && isPlaying == false)
         {
             gameAudio.Play();
-            gameAudio.volume = volume;
             gameAudio.loop = true;
             isPlaying = true;
             //gameAudio.isPlaying
