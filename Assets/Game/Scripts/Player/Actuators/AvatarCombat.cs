@@ -44,7 +44,11 @@ public class AvatarCombat : MonoBehaviour
             creatureCombatAddon.TakeDamage(attackDamage.finalValue);
             targetDead = creatureCombatAddon.isDead;
         }
-
+        if (target != null && target.TryGetComponent<CritterAddon>(out CritterAddon critterAddon))
+        {
+            critterAddon.TakeDamage(attackDamage.finalValue);
+            targetDead = critterAddon.isDead;
+        }
         Debug.Log(target);
         //for the rock and minerals
         if (target != null && target.TryGetComponent<DestructableObject>(out DestructableObject destructableObject))
