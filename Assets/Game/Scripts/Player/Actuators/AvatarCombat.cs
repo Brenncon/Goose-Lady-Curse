@@ -6,48 +6,50 @@ using UnityEngine;
 [RequireComponent(typeof(Animator))]
 public class AvatarCombat : MonoBehaviour
 {
+    [ReadOnly]
+    public bool attacking = false;
     public Stat attackDamage;
     public Stat attackRange;
     public Stat attackInterval;
     public Stat defence;
     public SurvivalStat health;
     public bool targetDead;
-    [SerializeField, ReadOnly]
-    private float intervalCounter;
-    [SerializeField, ReadOnly]
+
     private Animator avatarAnimator;
-    [SerializeField, ReadOnly]
-    private bool attacking = false;
+    private int attackAnimationHash = Animator.StringToHash("attack");
+    private int attackSpeedHash = Animator.StringToHash("attack speed");
+    public float animationLength = 1;
+    private float animationSpeed;
+    [SerializeField,ReadOnly]
+    private Transform target;
     private void Start()
     {
-        intervalCounter = 0;
         avatarAnimator = GetComponent<Animator>();
     }
 
-    public void AttackTarget(Transform target)
+    private void Update()
     {
-        if (intervalCounter > 0 && !attacking)
+        if (attacking)
         {
-            intervalCounter -= Time.deltaTime;
-            return;
+            animationSpeed = animationLength / attackInterval.finalValue;
+            avatarAnimator.SetFloat(attackSpeedHash, animationSpeed);
         }
+    }
 
-        if (target != null && target.TryGetComponent<CreatureCombatAddon>(out CreatureCombatAddon creatureCombatAddon) && !attacking)
+    public void DamageTarget()
+    {
+        
+        if (target != null && target.TryGetComponent<CreatureCombatAddon>(out CreatureCombatAddon creatureCombatAddon))
         {
             creatureCombatAddon.TakeDamage(attackDamage.finalValue);
             targetDead = creatureCombatAddon.isDead;
-            avatarAnimator.SetTrigger("attack");
-            intervalCounter = attackInterval.finalValue;
-            attacking = true;
         }
 
+        Debug.Log(target);
         //for the rock and minerals
-        if (target != null && target.TryGetComponent<CreatureCombat>(out CreatureCombat creatureCombat) && !attacking)
+        if (target != null && target.TryGetComponent<DestructableObject>(out DestructableObject destructableObject))
         {
-            creatureCombat.TakeDamage(attackDamage.finalValue);
-            avatarAnimator.SetTrigger("attack");
-            intervalCounter = attackInterval.finalValue;
-            attacking = true;
+           destructableObject.TakeDamage(attackDamage.finalValue);
         }
     }
 
@@ -58,19 +60,22 @@ public class AvatarCombat : MonoBehaviour
         health.currentValue -= actualDamage;
     }
 
-    public void AttackComplete()
-    {
-        attacking = false;
-    }
-
     public bool TargetIsDead()
     {
         return targetDead;
     }
 
-    //public void CancelAttack()
-    //{
-    //    attacking = false;
-    //    avatarAnimator.SetTrigger("cancel attack");
-    //}
+    public void Attack(Transform target)
+    {
+        attacking = true;
+        this.target = target;
+        avatarAnimator.SetBool(attackAnimationHash, attacking);
+    }
+
+    public void CancelAttack()
+    {
+        attacking = false;
+        target = null;
+        avatarAnimator.SetBool(attackAnimationHash,attacking);
+    }
 }

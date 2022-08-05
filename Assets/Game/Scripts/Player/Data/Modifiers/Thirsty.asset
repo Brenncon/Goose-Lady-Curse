@@ -15,4 +15,4 @@ MonoBehaviour:
   magnitude: -0.5
   duration: 0
   isPersistent: 1
-  targetStat: {fileID: 11400000, guid: a6406aefbcf63a842a84593470202597, type: 2}
+  targetStat: {fileID: 11400000, guid: 8bdeda9a5c8d1ff4a92c19cd3da7b1fa, type: 2}
