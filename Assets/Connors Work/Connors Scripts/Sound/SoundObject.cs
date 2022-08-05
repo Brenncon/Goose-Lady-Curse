@@ -13,7 +13,6 @@ public class SoundObject : MonoBehaviour
     private Vector3 Distance;
     private bool isPlaying = false;
     public float maxDistanceNum;
-    public float volume;
 
     private void Start()
     {
@@ -44,7 +43,6 @@ public class SoundObject : MonoBehaviour
         if (Distance.x <= maxDistanceNum && isPlaying == false || Distance.z <= maxDistanceNum && isPlaying == false)
         {
             gameAudio.Play();
-            gameAudio.volume = volume;
             gameAudio.loop = true;
             isPlaying = true;
             //gameAudio.isPlaying

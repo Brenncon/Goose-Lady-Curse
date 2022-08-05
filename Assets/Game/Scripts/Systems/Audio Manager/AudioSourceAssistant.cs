@@ -29,15 +29,21 @@ public class AudioSourceAssistant : MonoBehaviour
         }
     }
 
-    private void OnDestroy()
+    private void OnDisable()
     {
         if (audioType == AudioType.SoundFX)
         {
-            AudioManager.Instance.OnSoundFXVolumeChanged.RemoveListener(OnVolumeChangedCallback);
+            if (AudioManager.IsValidSingleton() == true)
+            {
+                AudioManager.Instance.OnSoundFXVolumeChanged.RemoveListener(OnVolumeChangedCallback);
+            }
         }
         else
         {
-            AudioManager.Instance.OnBackgroundVolumeChanged.RemoveListener(OnVolumeChangedCallback);
+            if (AudioManager.IsValidSingleton() == true)
+            {
+                AudioManager.Instance.OnBackgroundVolumeChanged.RemoveListener(OnVolumeChangedCallback);
+            }
         }
     }
 
