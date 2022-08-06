@@ -3788,14 +3788,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4926789033357758452, guid: 0c73038af489e57479f9db4be58223cc, type: 3}
-      propertyPath: nodeRect.y
-      value: 112
-      objectReference: {fileID: 0}
     - target: {fileID: 7835022300201797661, guid: 0c73038af489e57479f9db4be58223cc, type: 3}
-      propertyPath: commandList.Array.size
-      value: 11
-      objectReference: {fileID: 0}
+      propertyPath: commandList.Array.data[9]
+      value: 
+      objectReference: {fileID: 835625019, guid: 0c73038af489e57479f9db4be58223cc, type: 3}
     - target: {fileID: 8406403306594580197, guid: 0c73038af489e57479f9db4be58223cc, type: 3}
       propertyPath: m_Name
       value: Quest Manager
@@ -3844,9 +3840,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 835625019, guid: 0c73038af489e57479f9db4be58223cc, type: 3}
-    - {fileID: 835625017, guid: 0c73038af489e57479f9db4be58223cc, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c73038af489e57479f9db4be58223cc, type: 3}
 --- !u!114 &1780892988 stripped
 MonoBehaviour:
