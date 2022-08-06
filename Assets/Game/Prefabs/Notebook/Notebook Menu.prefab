@@ -1032,12 +1032,28 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0865510595eacac46a73873830d93da8, type: 3}
   - {fileID: 21300000, guid: e5211e797d884bc40862c445a220879a, type: 3}
   - {fileID: 21300000, guid: 2baf6180343ceae41a86e879d8e7d3b3, type: 3}
+  - {fileID: 21300000, guid: 9b36f9793264a21489689157b3033743, type: 3}
+  - {fileID: 21300000, guid: 87f9f6b54b28e3a41969344e8a3319a5, type: 3}
+  - {fileID: 21300000, guid: e2b2b2f112017024fae0df0fc6587aa8, type: 3}
+  - {fileID: 21300000, guid: ec6eace3c1a82fa4b848e1e182cde7f1, type: 3}
+  - {fileID: 21300000, guid: c7e9987e70df8ed439ab2bff3baaf74d, type: 3}
+  - {fileID: 21300000, guid: fb51e92a9bd4b4d44a5d9cda8547145d, type: 3}
+  - {fileID: 21300000, guid: d4c22c6da971cd8419f1de781aad9958, type: 3}
+  - {fileID: 21300000, guid: c5fdd96469d7c6942b4fc33dd32a2b23, type: 3}
   words:
   - Wolf
   - Apple
   - Stone
   - Branch
   - Tree
+  - Necklace
+  - Catalyst
+  - Rotate
+  - Beneath
+  - Grass
+  - Barry
+  - Cold
+  - Bear
   canvas: {fileID: 0}
   returnDroppingField: {fileID: 8472913821500036418}
 --- !u!114 &7980730655715583098
