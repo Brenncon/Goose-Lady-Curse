@@ -377,6 +377,7 @@ MonoBehaviour:
   origin: {x: 0, y: 0, z: 0}
   CurrentState: 0
   attackReach: 2
+  startPosition: {x: 0, y: 0, z: 0}
 --- !u!195 &195879434793580014
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -413,6 +414,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defence: 0
   healthBar: {fileID: 8218643179902704155}
+  dropItem: {fileID: 0}
   isDead: 0
   currentState: 0
 --- !u!114 &354347081
@@ -2050,6 +2052,10 @@ PrefabInstance:
       propertyPath: combat
       value: 
       objectReference: {fileID: 354347080}
+    - target: {fileID: 1583352613520011807, guid: c7b3bf64d9215434d8ef045d2a715797, type: 3}
+      propertyPath: healthBar
+      value: 
+      objectReference: {fileID: 6271675036280614950}
     - target: {fileID: 6758463192710873042, guid: c7b3bf64d9215434d8ef045d2a715797, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -2153,6 +2159,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7019578329874425012, guid: c7b3bf64d9215434d8ef045d2a715797, type: 3}
   m_PrefabInstance: {fileID: 7491543081674762244}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &6271675036280614950 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3530322426379540514, guid: c7b3bf64d9215434d8ef045d2a715797, type: 3}
+  m_PrefabInstance: {fileID: 7491543081674762244}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &8218643179902704155 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1583352613520011807, guid: c7b3bf64d9215434d8ef045d2a715797, type: 3}
