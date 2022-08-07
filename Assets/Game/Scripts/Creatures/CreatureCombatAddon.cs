@@ -7,6 +7,7 @@ using Polyperfect.Common;
 using UnityEngine.AI;
 
 [RequireComponent(typeof(Animal_WanderScript))]
+[RequireComponent(typeof(Interactable))]
 public class CreatureCombatAddon : MonoBehaviour
 {
     [SerializeField]
@@ -21,6 +22,7 @@ public class CreatureCombatAddon : MonoBehaviour
     private MovementState runningState;
     private Animal_WanderScript animalAI;
     public CreatureHealthBar healthBar;
+    public GameObject dropItem;
     public bool isDead;
     private enum State
     {
@@ -103,7 +105,10 @@ public class CreatureCombatAddon : MonoBehaviour
         animalAI.SetState(Common_WanderScript.WanderState.Dead);
         if (hasAgent)
             agent.enabled = false;
-
+        if (dropItem != null)
+        {
+            GameObject.Instantiate(dropItem, transform.position, transform.rotation);
+        }
     }
 
     private void AttackStateUpdate()

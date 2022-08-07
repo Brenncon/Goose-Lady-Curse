@@ -5,11 +5,7 @@ using UnityEngine.UI;
 [RequireComponent(typeof(Slider))]
 public class CreatureHealthBar : MonoBehaviour
 {
-    private Slider healthBar;
-    private void Start()
-    {
-        healthBar = GetComponent<Slider>();
-    }
+    public Slider healthBar;
 
     private void Update()
     {

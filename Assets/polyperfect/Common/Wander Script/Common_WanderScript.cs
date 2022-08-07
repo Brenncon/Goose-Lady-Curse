@@ -159,7 +159,7 @@ namespace Polyperfect.Common
         public float attackReach =2f; //modified to public to support add on
         bool forceUpdate = false;
         float idleStateDuration;
-        Vector3 startPosition;
+        public Vector3 startPosition;//modified to public to support add on
         Vector3 wanderTarget;
         IdleState currentIdleState;
         float idleUpdateTime;
@@ -769,7 +769,7 @@ namespace Polyperfect.Common
         }
 
 
-        void ClearAnimatorBools()
+        public void ClearAnimatorBools()
         {
             foreach (var item in idleStates) 
                 TrySetBool(item.animationBool, false);
@@ -780,7 +780,7 @@ namespace Polyperfect.Common
             foreach (var item in deathStates) 
                 TrySetBool(item.animationBool, false);
         }
-        void TrySetBool(string parameterName,bool value)
+        public void TrySetBool(string parameterName,bool value)
         {
             if (!string.IsNullOrEmpty(parameterName))
             {
