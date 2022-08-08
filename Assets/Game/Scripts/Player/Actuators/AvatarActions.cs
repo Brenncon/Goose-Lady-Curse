@@ -78,6 +78,10 @@ public class AvatarActions : MonoBehaviour
             TryPickupItemEvent.Invoke(itemWrapper.item, itemWrapper.stackNumber, item.gameObject);
             avatarAnimator.SetTrigger("pickup");
         }
+        else if (item.TryGetComponent<QuestFourTrigger>(out QuestFourTrigger trigger))
+        {
+            trigger.OnTriggerClicked();
+        }
         else
         {
             Debug.LogWarning("ItemWrapper is null");

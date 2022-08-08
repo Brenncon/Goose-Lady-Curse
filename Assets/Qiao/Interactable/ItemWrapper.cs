@@ -20,7 +20,7 @@ public class ItemWrapper : Interactable
             y = -1;
         }
         y += Time.deltaTime;
-        transform.Rotate(0, 15f * Time.deltaTime, 0);
+        //transform.Rotate(0, 15f * Time.deltaTime, 0);
         transform.Translate(Vector3.up * Mathf.Sin(y * Mathf.PI) * Time.deltaTime);
     }
 

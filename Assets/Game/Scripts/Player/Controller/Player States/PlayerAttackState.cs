@@ -34,6 +34,7 @@ public class PlayerAttackState : PlayerBaseState
             if (fsm.actions.TargetIsDead())
             {
                 fsm.motion.target = null;
+                fsm.actions.combat.targetDead = false;
             }
         }
         else

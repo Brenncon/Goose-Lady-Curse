@@ -21,6 +21,7 @@ public class CreatureCombatAddon : MonoBehaviour
     private NavMeshAgent agent;
     private MovementState runningState;
     private Animal_WanderScript animalAI;
+    private CharacterController controller;
     public CreatureHealthBar healthBar;
     public GameObject dropItem;
     public bool isDead;
@@ -48,6 +49,7 @@ public class CreatureCombatAddon : MonoBehaviour
         }
         gameObject.tag = "Attackable";
         gameObject.layer = LayerMask.NameToLayer("Interactable");
+        controller = GetComponent<CharacterController>();
     }
 
     private void Start()
@@ -99,6 +101,8 @@ public class CreatureCombatAddon : MonoBehaviour
     private void SetDeathState()
     {
         healthBar.gameObject.SetActive(false);
+        controller.enabled = false;
+        agent.enabled = false;
         currentState = State.death;
         isDead = true;
         animalAI.enabled = false;

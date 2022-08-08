@@ -190,8 +190,8 @@ CharacterController:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Height: 1.14
-  m_Radius: 1.5
+  m_Height: 1.72
+  m_Radius: 0.86
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
@@ -349,9 +349,9 @@ MonoBehaviour:
     animationBool: isDead
   species: Wolf
   stats: {fileID: 11400000, guid: eb63abc8ed4638546b1db42f35c9b0b3, type: 2}
-  wanderZone: 10
-  awareness: 10
-  scent: 10
+  wanderZone: 5
+  awareness: 5
+  scent: 5
   toughness: 5
   constainedToWanderZone: 1
   nonAgressiveTowards: []
@@ -2056,13 +2056,17 @@ PrefabInstance:
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 6271675036280614950}
-    - target: {fileID: 6758463192710873042, guid: c7b3bf64d9215434d8ef045d2a715797, type: 3}
-      propertyPath: m_AnchorMax.x
+    - target: {fileID: 3867856662106414729, guid: c7b3bf64d9215434d8ef045d2a715797, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6758463192710873042, guid: c7b3bf64d9215434d8ef045d2a715797, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6758463192710873042, guid: c7b3bf64d9215434d8ef045d2a715797, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7019578329874425012, guid: c7b3bf64d9215434d8ef045d2a715797, type: 3}
       propertyPath: m_Pivot.x

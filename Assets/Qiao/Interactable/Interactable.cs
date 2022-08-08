@@ -5,4 +5,8 @@ using UnityEngine;
 public class Interactable : MonoBehaviour
 {
     public float radius = 1;
+    private void Awake()
+    {
+        gameObject.layer = LayerMask.NameToLayer("Interactable");
+    }
 }

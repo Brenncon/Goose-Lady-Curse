@@ -1409,11 +1409,11 @@ GameObject:
   - component: {fileID: 7416772766371148659}
   - component: {fileID: 7416603722026621899}
   - component: {fileID: 7335689510778134347}
-  - component: {fileID: 2764823295345042950}
   - component: {fileID: 2249155797355073236}
-  m_Layer: 0
+  - component: {fileID: 2764823295345042950}
+  m_Layer: 3
   m_Name: Bear
-  m_TagString: Untagged
+  m_TagString: Attackable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1465,7 +1465,7 @@ CharacterController:
   m_Enabled: 1
   serializedVersion: 2
   m_Height: 2
-  m_Radius: 1.06
+  m_Radius: 1.5
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
@@ -1623,16 +1623,16 @@ MonoBehaviour:
     animationBool: isDead
   species: Bear
   stats: {fileID: 11400000, guid: 7c0caf258cdab7a4fa8d1b3f9a9a5510, type: 2}
-  wanderZone: 25
-  awareness: 30
-  scent: 30
+  wanderZone: 5
+  awareness: 5
+  scent: 5
   toughness: 5
   constainedToWanderZone: 0
   nonAgressiveTowards: []
   matchSurfaceRotation: 0
   surfaceRotationSpeed: 2
   logChanges: 0
-  showGizmos: 0
+  showGizmos: 1
   drawWanderRange: 1
   drawScentRange: 1
   drawAwarenessRange: 1
@@ -1674,19 +1674,6 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &2764823295345042950
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7457937078157762941}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57a060e2d6c3e814aae6691e33c44e9b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  radius: 1
 --- !u!114 &2249155797355073236
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1704,6 +1691,19 @@ MonoBehaviour:
   dropItem: {fileID: 0}
   isDead: 0
   currentState: 0
+--- !u!114 &2764823295345042950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7457937078157762941}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57a060e2d6c3e814aae6691e33c44e9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radius: 1
 --- !u!1001 &9201483054061622412
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1814,6 +1814,10 @@ PrefabInstance:
     - target: {fileID: 8252559705041873237, guid: c7b3bf64d9215434d8ef045d2a715797, type: 3}
       propertyPath: m_Name
       value: Creature Health Bar
+      objectReference: {fileID: 0}
+    - target: {fileID: 8635671628980365668, guid: c7b3bf64d9215434d8ef045d2a715797, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 131
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7b3bf64d9215434d8ef045d2a715797, type: 3}
