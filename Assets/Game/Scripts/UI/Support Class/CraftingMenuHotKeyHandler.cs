@@ -6,6 +6,7 @@ public class CraftingMenuHotKeyHandler : MonoBehaviour
 {
     public InputReader reader;
     public GameObject craftingMenu;
+
     private void OnEnable()
     {
         reader.OpenCraftingMenuEvent += OpenInventory;

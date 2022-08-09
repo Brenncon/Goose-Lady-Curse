@@ -1,12 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class CraftingMenu : Menu
 {
     [SerializeField] CraftingMenuHotKeyHandler craftingMenuHotKeyHandler;
 
     [SerializeField] GameObject craftingUI;
+
+    // temp
+    public UnityEvent<string> displayRecipes;
+
+    public string path = "";
+    // temp
 
     public void MenuToggle()
     {

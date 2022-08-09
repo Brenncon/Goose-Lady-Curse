@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ed4a558f30bfac4cb8ae38300ac2c14, type: 3}
   m_Name: 1StonePickaxe
   m_EditorClassIdentifier: 
-  recipeID: -1
+  recipeID: 1
   recipeName: Stone Pickaxe
   item: {fileID: 11400000, guid: b10034d4845ef40409b05da5d9becff3, type: 2}
   reagents:
