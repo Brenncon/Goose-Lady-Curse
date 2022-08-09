@@ -1032,12 +1032,34 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0865510595eacac46a73873830d93da8, type: 3}
   - {fileID: 21300000, guid: e5211e797d884bc40862c445a220879a, type: 3}
   - {fileID: 21300000, guid: 2baf6180343ceae41a86e879d8e7d3b3, type: 3}
+  - {fileID: 21300000, guid: bc29fa2df88d0264b9c59e86d5b79feb, type: 3}
+  - {fileID: 21300000, guid: 4f9cebdaef220624cbbd13e371a8b637, type: 3}
+  - {fileID: 21300000, guid: 266078d856fc1de4584aa017b46b0e7f, type: 3}
+  - {fileID: 21300000, guid: c134de7b70209a7419dd82c57540c2be, type: 3}
+  - {fileID: 21300000, guid: 47f97c98cb1f6a94291b54e91696f07b, type: 3}
+  - {fileID: 21300000, guid: afec48a34182f6e4ea1a940857ae672f, type: 3}
+  - {fileID: 21300000, guid: a867e89ae6e900f4bb832850308288db, type: 3}
+  - {fileID: 21300000, guid: 30099296d6b94f842810cc75fccaa335, type: 3}
+  - {fileID: 21300000, guid: fdf3165f51d24ba479bf9f7423a73712, type: 3}
+  - {fileID: 21300000, guid: d24f9fcac7d0e05479fa11c902e24ea3, type: 3}
+  - {fileID: 21300000, guid: a901845b4a67a05499c61ac471db2304, type: 3}
   words:
   - Wolf
   - Apple
   - Stone
   - Branch
   - Tree
+  - Pentagon
+  - Bear
+  - Cold
+  - Beneath
+  - Barry
+  - Rotate
+  - Necklace
+  - Grass
+  - Square
+  - Catalyst
+  - Triangle
   canvas: {fileID: 0}
   returnDroppingField: {fileID: 8472913821500036418}
 --- !u!114 &7980730655715583098
