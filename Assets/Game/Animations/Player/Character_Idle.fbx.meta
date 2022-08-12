@@ -9,7 +9,57 @@ ModelImporter:
   - first:
       74: -203655887218126122
     second: idle
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: dress
+    second: {fileID: 2100000, guid: f112962527242e64ea02777c45085bb7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: hair
+    second: {fileID: 2100000, guid: 1cba2d6c1512768479bfedf3c2cffd46, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: legs1
+    second: {fileID: 2100000, guid: 33968fcef34092b40b2c6a1f75edf9d8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: shin
+    second: {fileID: 2100000, guid: cb9228d4be0e210418197614d62877c6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: shirt
+    second: {fileID: 2100000, guid: 62427090aa110ec41a8f4bdd4615f755, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: shirt1
+    second: {fileID: 2100000, guid: 5b386d42af9e0dc4dba752d565de109d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: shoes
+    second: {fileID: 2100000, guid: caac476e131fb2b438922ab2fc393caa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: shoes_parts
+    second: {fileID: 2100000, guid: e51a1bc56c036ca4693f73fc9d548e32, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: dress
+    second: {fileID: 2800000, guid: 0d5aac3884c414342b63f6e45e0ffc9b, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: eyes
+    second: {fileID: 2800000, guid: 17cb98e7766d45a49bb6b7bf40ebb5d0, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0

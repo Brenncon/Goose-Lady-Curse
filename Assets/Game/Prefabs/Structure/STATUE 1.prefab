@@ -13,12 +13,12 @@ GameObject:
   - component: {fileID: 3153542096888612645}
   - component: {fileID: 3968359480875285270}
   - component: {fileID: 395455351482280248}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: STATUE 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &4289833713142250570
 Transform:
@@ -91,7 +91,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3513755093300602608}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 1.7132678

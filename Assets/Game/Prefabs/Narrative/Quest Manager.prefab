@@ -15,7 +15,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &8406403306594580198
 Transform:
@@ -62,6 +62,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 8406403306594580198}
     m_Modifications:
     - target: {fileID: 395536253110605459, guid: 3d3f8b736ae011243ba25ae1f282f82e, type: 3}
+      propertyPath: portrait
+      value: 
+      objectReference: {fileID: 21300000, guid: af8701f1f04b02b4fa417d703508b81a, type: 3}
+    - target: {fileID: 395536253110605459, guid: 3d3f8b736ae011243ba25ae1f282f82e, type: 3}
       propertyPath: character
       value: 
       objectReference: {fileID: 8406403307675228253}
@@ -72,7 +76,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 887447293646674677, guid: 3d3f8b736ae011243ba25ae1f282f82e, type: 3}
       propertyPath: selectedCommands.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 887447293646674677, guid: 3d3f8b736ae011243ba25ae1f282f82e, type: 3}
       propertyPath: selectedCommands.Array.data[0]
@@ -193,6 +197,10 @@ PrefabInstance:
     - target: {fileID: 8048376060243284436, guid: 3d3f8b736ae011243ba25ae1f282f82e, type: 3}
       propertyPath: m_Name
       value: Quest4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8048376060243284436, guid: 3d3f8b736ae011243ba25ae1f282f82e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 8251770866348995959, guid: 3d3f8b736ae011243ba25ae1f282f82e, type: 3}
       propertyPath: nextQuest
@@ -369,7 +377,7 @@ MonoBehaviour:
   storyText: "Let\u2019s go! No more pranks this time, I promise."
   description: 
   character: {fileID: 8406403307675228253}
-  portrait: {fileID: 21300000, guid: ccbb6ce1f10d10441bcf218f6f10c62d, type: 3}
+  portrait: {fileID: 21300000, guid: af8701f1f04b02b4fa417d703508b81a, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -396,7 +404,7 @@ MonoBehaviour:
   storyText: "Chill, it\u2019s just a prank. The catalysts will be in the beach area. "
   description: 
   character: {fileID: 8406403307675228253}
-  portrait: {fileID: 21300000, guid: ccbb6ce1f10d10441bcf218f6f10c62d, type: 3}
+  portrait: {fileID: 21300000, guid: af8701f1f04b02b4fa417d703508b81a, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -423,7 +431,7 @@ MonoBehaviour:
   storyText: "What an awful Goddess\u2026"
   description: 
   character: {fileID: 8406403307615056768}
-  portrait: {fileID: 21300000, guid: be58c415684e5b241854e96a9e5030ac, type: 3}
+  portrait: {fileID: 21300000, guid: 72ad9806a0b64214bbd3ea418dec0742, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -450,7 +458,7 @@ MonoBehaviour:
   storyText: Ahh~ that was fun. What do I need next? Oh yes, the catalyst.
   description: 
   character: {fileID: 8406403307675228253}
-  portrait: {fileID: 21300000, guid: ccbb6ce1f10d10441bcf218f6f10c62d, type: 3}
+  portrait: {fileID: 21300000, guid: af8701f1f04b02b4fa417d703508b81a, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -477,7 +485,7 @@ MonoBehaviour:
   storyText: Ok, ok, let me lift the effect for you.
   description: 
   character: {fileID: 8406403307675228253}
-  portrait: {fileID: 21300000, guid: ccbb6ce1f10d10441bcf218f6f10c62d, type: 3}
+  portrait: {fileID: 21300000, guid: af8701f1f04b02b4fa417d703508b81a, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -504,7 +512,7 @@ MonoBehaviour:
   storyText: "I can\u2019t walk around like this!"
   description: 
   character: {fileID: 8406403307615056768}
-  portrait: {fileID: 21300000, guid: be58c415684e5b241854e96a9e5030ac, type: 3}
+  portrait: {fileID: 21300000, guid: 72ad9806a0b64214bbd3ea418dec0742, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -532,7 +540,7 @@ MonoBehaviour:
     potions.
   description: 
   character: {fileID: 8406403307675228253}
-  portrait: {fileID: 21300000, guid: ccbb6ce1f10d10441bcf218f6f10c62d, type: 3}
+  portrait: {fileID: 21300000, guid: af8701f1f04b02b4fa417d703508b81a, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -559,7 +567,7 @@ MonoBehaviour:
   storyText: "I knew it\u2026..."
   description: 
   character: {fileID: 8406403307615056768}
-  portrait: {fileID: 21300000, guid: be58c415684e5b241854e96a9e5030ac, type: 3}
+  portrait: {fileID: 21300000, guid: 72ad9806a0b64214bbd3ea418dec0742, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -586,7 +594,7 @@ MonoBehaviour:
   storyText: 'Puff~ ha(Quack)~ ha(Quack)~ ha(Quack)~ '
   description: 
   character: {fileID: 8406403307675228253}
-  portrait: {fileID: 21300000, guid: ccbb6ce1f10d10441bcf218f6f10c62d, type: 3}
+  portrait: {fileID: 21300000, guid: af8701f1f04b02b4fa417d703508b81a, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -613,7 +621,7 @@ MonoBehaviour:
   storyText: "I\u2019m feeling strange, dizzy. Wait, my head IS wobbling\u2026"
   description: 
   character: {fileID: 8406403307615056768}
-  portrait: {fileID: 21300000, guid: be58c415684e5b241854e96a9e5030ac, type: 3}
+  portrait: {fileID: 21300000, guid: 72ad9806a0b64214bbd3ea418dec0742, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -640,7 +648,7 @@ MonoBehaviour:
   storyText: "umm\u2026 (take a sip unwillingly)"
   description: 
   character: {fileID: 8406403307615056768}
-  portrait: {fileID: 21300000, guid: be58c415684e5b241854e96a9e5030ac, type: 3}
+  portrait: {fileID: 21300000, guid: 72ad9806a0b64214bbd3ea418dec0742, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -667,7 +675,7 @@ MonoBehaviour:
   storyText: "Here\u2019s the potion you asked for."
   description: 
   character: {fileID: 8406403307615056768}
-  portrait: {fileID: 21300000, guid: be58c415684e5b241854e96a9e5030ac, type: 3}
+  portrait: {fileID: 21300000, guid: 72ad9806a0b64214bbd3ea418dec0742, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -777,6 +785,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 8406403306594580198}
     m_Modifications:
     - target: {fileID: 395536253110605459, guid: 3d3f8b736ae011243ba25ae1f282f82e, type: 3}
+      propertyPath: portrait
+      value: 
+      objectReference: {fileID: 21300000, guid: af8701f1f04b02b4fa417d703508b81a, type: 3}
+    - target: {fileID: 395536253110605459, guid: 3d3f8b736ae011243ba25ae1f282f82e, type: 3}
       propertyPath: character
       value: 
       objectReference: {fileID: 8406403307675228253}
@@ -792,7 +804,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 887447293646674677, guid: 3d3f8b736ae011243ba25ae1f282f82e, type: 3}
       propertyPath: selectedCommands.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 887447293646674677, guid: 3d3f8b736ae011243ba25ae1f282f82e, type: 3}
       propertyPath: selectedCommands.Array.data[0]
@@ -913,6 +925,10 @@ PrefabInstance:
     - target: {fileID: 8048376060243284436, guid: 3d3f8b736ae011243ba25ae1f282f82e, type: 3}
       propertyPath: m_Name
       value: Quest5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8048376060243284436, guid: 3d3f8b736ae011243ba25ae1f282f82e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 8251770866348995959, guid: 3d3f8b736ae011243ba25ae1f282f82e, type: 3}
       propertyPath: nextQuest
@@ -1086,7 +1102,7 @@ MonoBehaviour:
     gonna die."
   description: 
   character: {fileID: 8406403307615056768}
-  portrait: {fileID: 21300000, guid: be58c415684e5b241854e96a9e5030ac, type: 3}
+  portrait: {fileID: 21300000, guid: 72ad9806a0b64214bbd3ea418dec0742, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -1114,7 +1130,7 @@ MonoBehaviour:
     the beach.
   description: 
   character: {fileID: 8406403307675228253}
-  portrait: {fileID: 21300000, guid: ccbb6ce1f10d10441bcf218f6f10c62d, type: 3}
+  portrait: {fileID: 21300000, guid: af8701f1f04b02b4fa417d703508b81a, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -1141,7 +1157,7 @@ MonoBehaviour:
   storyText: Ha! Justice.
   description: 
   character: {fileID: 8406403307615056768}
-  portrait: {fileID: 21300000, guid: be58c415684e5b241854e96a9e5030ac, type: 3}
+  portrait: {fileID: 21300000, guid: 72ad9806a0b64214bbd3ea418dec0742, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -1169,7 +1185,7 @@ MonoBehaviour:
     it beat me off.
   description: 
   character: {fileID: 8406403307675228253}
-  portrait: {fileID: 21300000, guid: ccbb6ce1f10d10441bcf218f6f10c62d, type: 3}
+  portrait: {fileID: 21300000, guid: af8701f1f04b02b4fa417d703508b81a, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -1196,7 +1212,7 @@ MonoBehaviour:
   storyText: "Of course, I am, don\u2019t let my goosely appearance fool you."
   description: 
   character: {fileID: 8406403307675228253}
-  portrait: {fileID: 21300000, guid: ccbb6ce1f10d10441bcf218f6f10c62d, type: 3}
+  portrait: {fileID: 21300000, guid: af8701f1f04b02b4fa417d703508b81a, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -1224,7 +1240,7 @@ MonoBehaviour:
     such as a Goose\u2026\nWow, such power!"
   description: 
   character: {fileID: 8406403307615056768}
-  portrait: {fileID: 21300000, guid: be58c415684e5b241854e96a9e5030ac, type: 3}
+  portrait: {fileID: 21300000, guid: 72ad9806a0b64214bbd3ea418dec0742, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -1251,7 +1267,7 @@ MonoBehaviour:
   storyText: Not making its head wobbly, but yeah, I was pranking.
   description: 
   character: {fileID: 8406403307675228253}
-  portrait: {fileID: 21300000, guid: ccbb6ce1f10d10441bcf218f6f10c62d, type: 3}
+  portrait: {fileID: 21300000, guid: af8701f1f04b02b4fa417d703508b81a, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -1279,7 +1295,7 @@ MonoBehaviour:
     that goose\u2019s head wobbly as well?"
   description: 
   character: {fileID: 8406403307615056768}
-  portrait: {fileID: 21300000, guid: be58c415684e5b241854e96a9e5030ac, type: 3}
+  portrait: {fileID: 21300000, guid: 72ad9806a0b64214bbd3ea418dec0742, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -1306,7 +1322,7 @@ MonoBehaviour:
   storyText: So, tell me, how did you become a Goose?
   description: 
   character: {fileID: 8406403307615056768}
-  portrait: {fileID: 21300000, guid: be58c415684e5b241854e96a9e5030ac, type: 3}
+  portrait: {fileID: 21300000, guid: 72ad9806a0b64214bbd3ea418dec0742, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -1418,7 +1434,7 @@ PrefabInstance:
     - target: {fileID: 395536253110605459, guid: 3d3f8b736ae011243ba25ae1f282f82e, type: 3}
       propertyPath: portrait
       value: 
-      objectReference: {fileID: 21300000, guid: be58c415684e5b241854e96a9e5030ac, type: 3}
+      objectReference: {fileID: 21300000, guid: 72ad9806a0b64214bbd3ea418dec0742, type: 3}
     - target: {fileID: 395536253110605459, guid: 3d3f8b736ae011243ba25ae1f282f82e, type: 3}
       propertyPath: character
       value: 
@@ -1433,7 +1449,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 887447293646674677, guid: 3d3f8b736ae011243ba25ae1f282f82e, type: 3}
       propertyPath: selectedCommands.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 887447293646674677, guid: 3d3f8b736ae011243ba25ae1f282f82e, type: 3}
       propertyPath: selectedCommands.Array.data[0]
@@ -1558,6 +1574,10 @@ PrefabInstance:
     - target: {fileID: 8048376060243284436, guid: 3d3f8b736ae011243ba25ae1f282f82e, type: 3}
       propertyPath: m_Name
       value: Quest7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8048376060243284436, guid: 3d3f8b736ae011243ba25ae1f282f82e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 8251770866348995959, guid: 3d3f8b736ae011243ba25ae1f282f82e, type: 3}
       propertyPath: nextQuest
@@ -1730,7 +1750,7 @@ MonoBehaviour:
   storyText: What did you say!? Come back here!
   description: 
   character: {fileID: 8406403307675228253}
-  portrait: {fileID: 21300000, guid: ccbb6ce1f10d10441bcf218f6f10c62d, type: 3}
+  portrait: {fileID: 21300000, guid: af8701f1f04b02b4fa417d703508b81a, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -1757,7 +1777,7 @@ MonoBehaviour:
   storyText: Bye! Awful and puny Goddess!
   description: 
   character: {fileID: 8406403307615056768}
-  portrait: {fileID: 21300000, guid: be58c415684e5b241854e96a9e5030ac, type: 3}
+  portrait: {fileID: 21300000, guid: 72ad9806a0b64214bbd3ea418dec0742, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -1784,7 +1804,7 @@ MonoBehaviour:
   storyText: 'Excellent work, mortal! Now I shall fulfill my part of the bargain. '
   description: 
   character: {fileID: 8406403307675228253}
-  portrait: {fileID: 21300000, guid: ccbb6ce1f10d10441bcf218f6f10c62d, type: 3}
+  portrait: {fileID: 21300000, guid: af8701f1f04b02b4fa417d703508b81a, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -1811,7 +1831,7 @@ MonoBehaviour:
   storyText: "Wow, you beat the \u201CFeather\u201D! What a Chad!"
   description: 
   character: {fileID: 8406403307675228253}
-  portrait: {fileID: 21300000, guid: ccbb6ce1f10d10441bcf218f6f10c62d, type: 3}
+  portrait: {fileID: 21300000, guid: af8701f1f04b02b4fa417d703508b81a, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -1884,6 +1904,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8406403306594580198}
     m_Modifications:
+    - target: {fileID: 395536253110605459, guid: 3d3f8b736ae011243ba25ae1f282f82e, type: 3}
+      propertyPath: portrait
+      value: 
+      objectReference: {fileID: 21300000, guid: af8701f1f04b02b4fa417d703508b81a, type: 3}
     - target: {fileID: 395536253110605459, guid: 3d3f8b736ae011243ba25ae1f282f82e, type: 3}
       propertyPath: character
       value: 
@@ -1963,6 +1987,10 @@ PrefabInstance:
     - target: {fileID: 8048376060243284436, guid: 3d3f8b736ae011243ba25ae1f282f82e, type: 3}
       propertyPath: m_Name
       value: Quest3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8048376060243284436, guid: 3d3f8b736ae011243ba25ae1f282f82e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 8251770866348995959, guid: 3d3f8b736ae011243ba25ae1f282f82e, type: 3}
       propertyPath: nextQuest
@@ -2219,7 +2247,7 @@ MonoBehaviour:
   storyText: Alright
   description: 
   character: {fileID: 8406403307615056768}
-  portrait: {fileID: 21300000, guid: be58c415684e5b241854e96a9e5030ac, type: 3}
+  portrait: {fileID: 21300000, guid: 72ad9806a0b64214bbd3ea418dec0742, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -2253,6 +2281,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8406403307675228253}
     - target: {fileID: 889008671365982164, guid: ca72b8cdc82b7fa43924251fc67e1e5f, type: 3}
+      propertyPath: portrait
+      value: 
+      objectReference: {fileID: 21300000, guid: af8701f1f04b02b4fa417d703508b81a, type: 3}
+    - target: {fileID: 889008671365982164, guid: ca72b8cdc82b7fa43924251fc67e1e5f, type: 3}
       propertyPath: character
       value: 
       objectReference: {fileID: 8406403307675228253}
@@ -2260,6 +2292,10 @@ PrefabInstance:
       propertyPath: staticEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 5148063970935954286}
+    - target: {fileID: 1245828601042254905, guid: ca72b8cdc82b7fa43924251fc67e1e5f, type: 3}
+      propertyPath: portrait
+      value: 
+      objectReference: {fileID: 21300000, guid: 72ad9806a0b64214bbd3ea418dec0742, type: 3}
     - target: {fileID: 1245828601042254905, guid: ca72b8cdc82b7fa43924251fc67e1e5f, type: 3}
       propertyPath: character
       value: 
@@ -2285,6 +2321,10 @@ PrefabInstance:
       value: ItemObjective, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 2182939181291993291, guid: ca72b8cdc82b7fa43924251fc67e1e5f, type: 3}
+      propertyPath: portrait
+      value: 
+      objectReference: {fileID: 21300000, guid: af8701f1f04b02b4fa417d703508b81a, type: 3}
+    - target: {fileID: 2182939181291993291, guid: ca72b8cdc82b7fa43924251fc67e1e5f, type: 3}
       propertyPath: character
       value: 
       objectReference: {fileID: 8406403307675228253}
@@ -2293,6 +2333,10 @@ PrefabInstance:
       value: 'I also see that you have a {color=cyan}notepad (Hotkey "N"){/color}
         with you. Let me add some hints that will help you out. '
       objectReference: {fileID: 0}
+    - target: {fileID: 3346518183349279303, guid: ca72b8cdc82b7fa43924251fc67e1e5f, type: 3}
+      propertyPath: portrait
+      value: 
+      objectReference: {fileID: 21300000, guid: af8701f1f04b02b4fa417d703508b81a, type: 3}
     - target: {fileID: 3346518183349279303, guid: ca72b8cdc82b7fa43924251fc67e1e5f, type: 3}
       propertyPath: character
       value: 
@@ -2336,6 +2380,10 @@ PrefabInstance:
     - target: {fileID: 5813666344889562399, guid: ca72b8cdc82b7fa43924251fc67e1e5f, type: 3}
       propertyPath: m_Name
       value: Quest2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5813666344889562399, guid: ca72b8cdc82b7fa43924251fc67e1e5f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 7497960025769029685, guid: ca72b8cdc82b7fa43924251fc67e1e5f, type: 3}
       propertyPath: nextQuest
@@ -2614,7 +2662,7 @@ MonoBehaviour:
     "B"{/color}'
   description: 
   character: {fileID: 8406403307675228253}
-  portrait: {fileID: 21300000, guid: ccbb6ce1f10d10441bcf218f6f10c62d, type: 3}
+  portrait: {fileID: 21300000, guid: af8701f1f04b02b4fa417d703508b81a, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -2670,7 +2718,7 @@ MonoBehaviour:
     for the current puzzle.
   description: 
   character: {fileID: 8406403307675228253}
-  portrait: {fileID: 21300000, guid: ccbb6ce1f10d10441bcf218f6f10c62d, type: 3}
+  portrait: {fileID: 21300000, guid: af8701f1f04b02b4fa417d703508b81a, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -2771,6 +2819,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8406403306594580198}
     m_Modifications:
+    - target: {fileID: 395536253110605459, guid: 3d3f8b736ae011243ba25ae1f282f82e, type: 3}
+      propertyPath: portrait
+      value: 
+      objectReference: {fileID: 21300000, guid: af8701f1f04b02b4fa417d703508b81a, type: 3}
     - target: {fileID: 395536253110605459, guid: 3d3f8b736ae011243ba25ae1f282f82e, type: 3}
       propertyPath: character
       value: 
@@ -2910,6 +2962,10 @@ PrefabInstance:
     - target: {fileID: 8048376060243284436, guid: 3d3f8b736ae011243ba25ae1f282f82e, type: 3}
       propertyPath: m_Name
       value: Quest6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8048376060243284436, guid: 3d3f8b736ae011243ba25ae1f282f82e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 8251770866348995959, guid: 3d3f8b736ae011243ba25ae1f282f82e, type: 3}
       propertyPath: nextQuest
@@ -3098,7 +3154,7 @@ MonoBehaviour:
   storyText: Go, my champion, you have my blessing.
   description: 
   character: {fileID: 8406403307675228253}
-  portrait: {fileID: 21300000, guid: ccbb6ce1f10d10441bcf218f6f10c62d, type: 3}
+  portrait: {fileID: 21300000, guid: af8701f1f04b02b4fa417d703508b81a, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -3126,7 +3182,7 @@ MonoBehaviour:
     your spell."
   description: 
   character: {fileID: 8406403307615056768}
-  portrait: {fileID: 21300000, guid: be58c415684e5b241854e96a9e5030ac, type: 3}
+  portrait: {fileID: 21300000, guid: 72ad9806a0b64214bbd3ea418dec0742, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -3154,7 +3210,7 @@ MonoBehaviour:
     \u201CFeather\u201D, the goose that beat- I mean the goose I was fighting."
   description: 
   character: {fileID: 8406403307675228253}
-  portrait: {fileID: 21300000, guid: ccbb6ce1f10d10441bcf218f6f10c62d, type: 3}
+  portrait: {fileID: 21300000, guid: af8701f1f04b02b4fa417d703508b81a, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -3181,7 +3237,7 @@ MonoBehaviour:
   storyText: Spare me your blessing. Let me check how many potions I have left.
   description: 
   character: {fileID: 8406403307615056768}
-  portrait: {fileID: 21300000, guid: be58c415684e5b241854e96a9e5030ac, type: 3}
+  portrait: {fileID: 21300000, guid: 72ad9806a0b64214bbd3ea418dec0742, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -3209,7 +3265,7 @@ MonoBehaviour:
     spell, and then you showed up. Oops! '
   description: 
   character: {fileID: 8406403307675228253}
-  portrait: {fileID: 21300000, guid: ccbb6ce1f10d10441bcf218f6f10c62d, type: 3}
+  portrait: {fileID: 21300000, guid: af8701f1f04b02b4fa417d703508b81a, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -3292,7 +3348,7 @@ MonoBehaviour:
   storyText: Oh, you gotta be kidding me! Do I still need to go against that goose?
   description: 
   character: {fileID: 8406403307615056768}
-  portrait: {fileID: 21300000, guid: be58c415684e5b241854e96a9e5030ac, type: 3}
+  portrait: {fileID: 21300000, guid: 72ad9806a0b64214bbd3ea418dec0742, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -3320,7 +3376,7 @@ MonoBehaviour:
     you can just cast the spell and get restored?
   description: 
   character: {fileID: 8406403307615056768}
-  portrait: {fileID: 21300000, guid: be58c415684e5b241854e96a9e5030ac, type: 3}
+  portrait: {fileID: 21300000, guid: 72ad9806a0b64214bbd3ea418dec0742, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -3347,7 +3403,7 @@ MonoBehaviour:
   storyText: Hew... that was close. Do we have all we need?
   description: 
   character: {fileID: 8406403307615056768}
-  portrait: {fileID: 21300000, guid: be58c415684e5b241854e96a9e5030ac, type: 3}
+  portrait: {fileID: 21300000, guid: 72ad9806a0b64214bbd3ea418dec0742, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -3408,9 +3464,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3398699541603643850, guid: c9659549d35c82744899f19fedcce237, type: 3}
+      propertyPath: portraits.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: af8701f1f04b02b4fa417d703508b81a, type: 3}
     - target: {fileID: 3398699541603643851, guid: c9659549d35c82744899f19fedcce237, type: 3}
       propertyPath: m_Name
       value: Goose Lady Character
+      objectReference: {fileID: 0}
+    - target: {fileID: 3398699541603643851, guid: c9659549d35c82744899f19fedcce237, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c9659549d35c82744899f19fedcce237, type: 3}
@@ -3492,6 +3556,10 @@ PrefabInstance:
     - target: {fileID: 874882769729261245, guid: a8ade4b86e73b6c42890b19633b975a8, type: 3}
       propertyPath: m_Name
       value: Protagnist Character
+      objectReference: {fileID: 0}
+    - target: {fileID: 874882769729261245, guid: a8ade4b86e73b6c42890b19633b975a8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a8ade4b86e73b6c42890b19633b975a8, type: 3}
@@ -3575,6 +3643,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 7031418553646068816}
     - target: {fileID: 855251384096814492, guid: 5a022d6588735554babcb8f56fa4e8df, type: 3}
+      propertyPath: portrait
+      value: 
+      objectReference: {fileID: 21300000, guid: af8701f1f04b02b4fa417d703508b81a, type: 3}
+    - target: {fileID: 855251384096814492, guid: 5a022d6588735554babcb8f56fa4e8df, type: 3}
       propertyPath: character
       value: 
       objectReference: {fileID: 8406403307675228253}
@@ -3586,6 +3658,10 @@ PrefabInstance:
       propertyPath: storyText
       value: Why are you staring at me like that? Go eat your {color=cyan}apple{/color}!
       objectReference: {fileID: 0}
+    - target: {fileID: 1400532339582272947, guid: 5a022d6588735554babcb8f56fa4e8df, type: 3}
+      propertyPath: portrait
+      value: 
+      objectReference: {fileID: 21300000, guid: 72ad9806a0b64214bbd3ea418dec0742, type: 3}
     - target: {fileID: 1400532339582272947, guid: 5a022d6588735554babcb8f56fa4e8df, type: 3}
       propertyPath: character
       value: 
@@ -3599,12 +3675,20 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1498177995925767785}
     - target: {fileID: 4480186323694510444, guid: 5a022d6588735554babcb8f56fa4e8df, type: 3}
+      propertyPath: portrait
+      value: 
+      objectReference: {fileID: 21300000, guid: 72ad9806a0b64214bbd3ea418dec0742, type: 3}
+    - target: {fileID: 4480186323694510444, guid: 5a022d6588735554babcb8f56fa4e8df, type: 3}
       propertyPath: character
       value: 
       objectReference: {fileID: 8406403307615056768}
     - target: {fileID: 4740123708528389045, guid: 5a022d6588735554babcb8f56fa4e8df, type: 3}
       propertyPath: m_Name
       value: Quest1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4740123708528389045, guid: 5a022d6588735554babcb8f56fa4e8df, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 6540348968023855666, guid: 5a022d6588735554babcb8f56fa4e8df, type: 3}
       propertyPath: nodeRect.x
@@ -3747,9 +3831,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 503110910}
     - target: {fileID: 8689273554193141130, guid: 5a022d6588735554babcb8f56fa4e8df, type: 3}
+      propertyPath: portrait
+      value: 
+      objectReference: {fileID: 21300000, guid: af8701f1f04b02b4fa417d703508b81a, type: 3}
+    - target: {fileID: 8689273554193141130, guid: 5a022d6588735554babcb8f56fa4e8df, type: 3}
       propertyPath: character
       value: 
       objectReference: {fileID: 8406403307675228253}
+    - target: {fileID: 8689273554193141131, guid: 5a022d6588735554babcb8f56fa4e8df, type: 3}
+      propertyPath: portrait
+      value: 
+      objectReference: {fileID: 21300000, guid: af8701f1f04b02b4fa417d703508b81a, type: 3}
     - target: {fileID: 8689273554193141131, guid: 5a022d6588735554babcb8f56fa4e8df, type: 3}
       propertyPath: character
       value: 
@@ -3886,7 +3978,7 @@ MonoBehaviour:
   storyText: Fine!
   description: 
   character: {fileID: 8406403307615056768}
-  portrait: {fileID: 21300000, guid: be58c415684e5b241854e96a9e5030ac, type: 3}
+  portrait: {fileID: 21300000, guid: 72ad9806a0b64214bbd3ea418dec0742, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -3913,7 +4005,7 @@ MonoBehaviour:
   storyText: You will be fine! If you restore me, I can get you home. Deal?
   description: 
   character: {fileID: 8406403307675228253}
-  portrait: {fileID: 21300000, guid: ccbb6ce1f10d10441bcf218f6f10c62d, type: 3}
+  portrait: {fileID: 21300000, guid: af8701f1f04b02b4fa417d703508b81a, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -3940,7 +4032,7 @@ MonoBehaviour:
   storyText: Huh??? I'm not sure if I'm up for the task.
   description: 
   character: {fileID: 8406403307615056768}
-  portrait: {fileID: 21300000, guid: be58c415684e5b241854e96a9e5030ac, type: 3}
+  portrait: {fileID: 21300000, guid: 72ad9806a0b64214bbd3ea418dec0742, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -3967,7 +4059,7 @@ MonoBehaviour:
   storyText: Please, I beg you!
   description: 
   character: {fileID: 8406403307675228253}
-  portrait: {fileID: 21300000, guid: ccbb6ce1f10d10441bcf218f6f10c62d, type: 3}
+  portrait: {fileID: 21300000, guid: af8701f1f04b02b4fa417d703508b81a, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -3995,7 +4087,7 @@ MonoBehaviour:
     without aid! '
   description: 
   character: {fileID: 8406403307675228253}
-  portrait: {fileID: 21300000, guid: ccbb6ce1f10d10441bcf218f6f10c62d, type: 3}
+  portrait: {fileID: 21300000, guid: af8701f1f04b02b4fa417d703508b81a, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -4022,7 +4114,7 @@ MonoBehaviour:
   storyText: 'N-No please don''t leave me. I need your help! '
   description: 
   character: {fileID: 8406403307675228253}
-  portrait: {fileID: 21300000, guid: ccbb6ce1f10d10441bcf218f6f10c62d, type: 3}
+  portrait: {fileID: 21300000, guid: af8701f1f04b02b4fa417d703508b81a, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -4049,7 +4141,7 @@ MonoBehaviour:
   storyText: 'Nah, thanks. I got to get back to- '
   description: 
   character: {fileID: 8406403307615056768}
-  portrait: {fileID: 21300000, guid: be58c415684e5b241854e96a9e5030ac, type: 3}
+  portrait: {fileID: 21300000, guid: 72ad9806a0b64214bbd3ea418dec0742, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -4077,7 +4169,7 @@ MonoBehaviour:
     Now you need to \u2013"
   description: 
   character: {fileID: 8406403307675228253}
-  portrait: {fileID: 21300000, guid: ccbb6ce1f10d10441bcf218f6f10c62d, type: 3}
+  portrait: {fileID: 21300000, guid: af8701f1f04b02b4fa417d703508b81a, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -4105,7 +4197,7 @@ MonoBehaviour:
     my statue. "
   description: 
   character: {fileID: 8406403307675228253}
-  portrait: {fileID: 21300000, guid: ccbb6ce1f10d10441bcf218f6f10c62d, type: 3}
+  portrait: {fileID: 21300000, guid: af8701f1f04b02b4fa417d703508b81a, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -4132,7 +4224,7 @@ MonoBehaviour:
   storyText: What the? Who are you? W-wait, where am I?
   description: 
   character: {fileID: 8406403307615056768}
-  portrait: {fileID: 21300000, guid: be58c415684e5b241854e96a9e5030ac, type: 3}
+  portrait: {fileID: 21300000, guid: 72ad9806a0b64214bbd3ea418dec0742, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
