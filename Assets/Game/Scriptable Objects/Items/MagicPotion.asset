@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: MagicPotion
   m_EditorClassIdentifier: 
   itemID: 2
-  itemDisplayName: 
+  itemDisplayName: Magic Potion
   itemIcon: {fileID: 21300000, guid: 4e8b35477a7fb5a46870c1973a523722, type: 3}
   item3DModelPrefeb: {fileID: 5614466428608700876, guid: 75983b4de58804d4fa93455c546666a3, type: 3}
   maxStackNumber: 99
