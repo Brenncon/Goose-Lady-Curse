@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99801bf7714de8446997a07e26c7079f, type: 3}
   m_Name: Apple Juice Thrist Change Rate
   m_EditorClassIdentifier: 
-  magnitude: 20
+  magnitude: 30
   duration: 2
   isPersistent: 0
   targetStat: {fileID: 11400000, guid: 72b6f944c7934724a95b27445bf573f0, type: 2}
