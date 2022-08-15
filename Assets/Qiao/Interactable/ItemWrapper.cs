@@ -5,7 +5,7 @@ using UnityEngine;
 public class ItemWrapper : Interactable
 {
     public Item item;
-
+    public float floatAmplitude = 0.5f;
     public int stackNumber = 1;
     private float y;
 
@@ -21,7 +21,7 @@ public class ItemWrapper : Interactable
         }
         y += Time.deltaTime;
         //transform.Rotate(0, 15f * Time.deltaTime, 0);
-        transform.Translate(Vector3.up * Mathf.Sin(y * Mathf.PI) * Time.deltaTime);
+        transform.Translate(floatAmplitude*Vector3.up * Mathf.Sin(y * Mathf.PI) * Time.deltaTime);
     }
 
     private void Awake()

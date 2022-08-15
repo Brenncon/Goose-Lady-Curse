@@ -172,7 +172,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 125, y: 30}
+  m_SizeDelta: {x: 125, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6183676674496706233
 CanvasRenderer:
@@ -202,7 +202,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 5134559523624755036, guid: 94f4bc26be19ff844a6af127a2edbf94, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -225,10 +225,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DraggableClonePrefeb: {fileID: 7036800571944764881, guid: 03f1ab40ce721304fac87a2cc1f2e64f, type: 3}
-  myClone: {fileID: 0}
   myImage: {fileID: 6183676674496706234}
   myTextField: {fileID: 6183676673903917044}
-  originalParent: {fileID: 0}
+  myClone: {fileID: 0}
+  returnDroppingField: {fileID: 0}
   canvas: {fileID: 0}
 --- !u!225 &6633783604170485155
 CanvasGroup:

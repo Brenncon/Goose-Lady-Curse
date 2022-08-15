@@ -12,12 +12,15 @@ public class Quest : MonoBehaviour
     [SerializeField,ReadOnly]
     private Objective currentObjective;
     private int objectiveIndex;
+    public float initialShowHintTime = 5f;
     public bool missionComplete;
     public List<Objective> objectives;
     public Quest nextQuest;
     public List<GameObject> emojiHint;
     public UnityEvent<List<GameObject>> SetEmojiEvent;
     public UnityEvent ClearEmojiEvent;
+    public UnityEvent ShowEmojiEvent;
+    public UnityEvent HideEmojiEvent;
     public UnityEvent<string> QuestCompleteInstruction;
     public UnityEvent QuestOver;
     public enum Stage
@@ -75,6 +78,7 @@ public class Quest : MonoBehaviour
             QuestOver.Invoke();
             return;
         }
+        InitialShowHint();
         //if (stage == Stage.ongoing)
         //{
         //    SetEmojiEvent.Invoke(emojiHint);
@@ -98,6 +102,7 @@ public class Quest : MonoBehaviour
     public void SetEmoji()
     {
         SetEmojiEvent.Invoke(emojiHint);
+        
     }
 
     public void ObjectiveStateChange(bool state)
@@ -129,5 +134,17 @@ public class Quest : MonoBehaviour
             }
             currentObjective.ObjectiveComplete.AddListener(ObjectiveStateChange);
         }
+    }
+
+    public void InitialShowHint()
+    {
+        StartCoroutine(InitialHint());
+    }
+
+    IEnumerator InitialHint()
+    {
+        ShowEmojiEvent.Invoke();
+        yield return new WaitForSeconds(initialShowHintTime);
+        HideEmojiEvent.Invoke();
     }
 }

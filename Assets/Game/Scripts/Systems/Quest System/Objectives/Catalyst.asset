@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   completed: 0
   inverseEventSignal: 0
-  instruction: Solve the puzzle at the beach
+  instruction: Get the catalyst at the beach
   ObjectiveComplete:
     m_PersistentCalls:
       m_Calls: []

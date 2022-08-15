@@ -9,6 +9,25 @@ public class QuestFourTrigger : Interactable
     public QuestFour quest;
     public SurvivalStat health;
 
+    public float floatAmplitude = 0.5f;
+    private float y;
+
+    void Start()
+    {
+        y = Random.Range(-1f, 1f);
+        GetComponent<Rigidbody>().isKinematic = true;
+    }
+    void Update()
+    {
+        if (y >= 1)
+        {
+            y = -1;
+        }
+        y += Time.deltaTime;
+        //transform.Rotate(0, 15f * Time.deltaTime, 0);
+        transform.Translate(floatAmplitude * Vector3.up * Mathf.Sin(y * Mathf.PI) * Time.deltaTime);
+    }
+
     private void Awake()
     {
         gameObject.tag = "Item";
@@ -20,6 +39,7 @@ public class QuestFourTrigger : Interactable
         {
             isTriggered = true;
             quest.SetNextTrigger();
+            GetComponent<Rigidbody>().isKinematic = false;
         }
         else
         {

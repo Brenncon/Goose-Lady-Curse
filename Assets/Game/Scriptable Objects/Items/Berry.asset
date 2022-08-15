@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemID: 1
   itemDisplayName: Berry
-  itemIcon: {fileID: 21300000, guid: 744346851eab03640bb9ae80104ae164, type: 3}
+  itemIcon: {fileID: 21300000, guid: 1b1141f4c72a0e74e99f11c60f8f4fb0, type: 3}
   item3DModelPrefeb: {fileID: 3565533534635286133, guid: b45bbfa0145c3694fbeb8319a18e5bfd, type: 3}
   maxStackNumber: 99
   description: 

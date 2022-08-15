@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemID: -1
   itemDisplayName: Pickaxe
-  itemIcon: {fileID: 21300000, guid: 903f98c003c98404ba77f6164639abbb, type: 3}
+  itemIcon: {fileID: 21300000, guid: d2e3d1e6f8b63ef48ab40dd82e21ed1c, type: 3}
   item3DModelPrefeb: {fileID: 7174249340566022651, guid: be762519a7f251a4bae473bdc3f018ff, type: 3}
   maxStackNumber: 1
   description: 

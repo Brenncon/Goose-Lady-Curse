@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   completed: 0
   inverseEventSignal: 0
-  instruction: Defeat the bad goose on the top of this mountain
+  instruction: Defeat the bad goose in the forest
   ObjectiveComplete:
     m_PersistentCalls:
       m_Calls: []

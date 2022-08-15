@@ -34,7 +34,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -40, y: 200}
+  m_AnchoredPosition: {x: -100, y: 340}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1181576020
@@ -73,7 +73,7 @@ MonoBehaviour:
   m_ChildAlignment: 6
   m_StartCorner: 2
   m_StartAxis: 0
-  m_CellSize: {x: 30, y: 30}
+  m_CellSize: {x: 60, y: 60}
   m_Spacing: {x: 0, y: 62.5}
   m_Constraint: 1
   m_ConstraintCount: 1
@@ -110,8 +110,8 @@ RectTransform:
   m_Father: {fileID: 1662930229063520683}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -180,7 +180,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -150, y: 120}
+  m_AnchoredPosition: {x: -400, y: 240}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 1, y: 0}
 --- !u!114 &1662930229416265340
@@ -203,8 +203,8 @@ MonoBehaviour:
   m_ChildAlignment: 6
   m_StartCorner: 2
   m_StartAxis: 0
-  m_CellSize: {x: 150, y: 90}
-  m_Spacing: {x: 0, y: 5}
+  m_CellSize: {x: 320, y: 150}
+  m_Spacing: {x: 10, y: 10}
   m_Constraint: 1
   m_ConstraintCount: 1
 --- !u!114 &1662930229941437477
@@ -376,7 +376,7 @@ MonoBehaviour:
   menuClassifier: {fileID: 11400000, guid: 1162db2669cad884187114e36e290aee, type: 2}
   menuRoot: {fileID: 1662930229063520683}
   startingMenuState: 1
-  resetPosition: 0
+  resetPosition: 1
   OnRefreshMenu:
     m_PersistentCalls:
       m_Calls: []

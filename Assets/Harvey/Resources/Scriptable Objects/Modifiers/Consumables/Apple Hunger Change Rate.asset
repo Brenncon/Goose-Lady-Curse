@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99801bf7714de8446997a07e26c7079f, type: 3}
   m_Name: Apple Hunger Change Rate
   m_EditorClassIdentifier: 
-  magnitude: 10
+  magnitude: 25
   duration: 2
   isPersistent: 0
   targetStat: {fileID: 11400000, guid: 91bffc1407c4b6e468fdedcbf5a5200b, type: 2}
