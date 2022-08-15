@@ -326,6 +326,7 @@ GameObject:
   - component: {fileID: 515168671}
   - component: {fileID: 515168673}
   - component: {fileID: 515168672}
+  - component: {fileID: 515168674}
   m_Layer: 0
   m_Name: Audio Manager
   m_TagString: Untagged
@@ -423,6 +424,22 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &515168674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 515168669}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee744710697d4c043b8044651949c781, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  muteSound: 0
+  objectPoolLength: 20
+  soundDistance: 7
+  logSounds: 0
 --- !u!1 &652263604
 GameObject:
   m_ObjectHideFlags: 0

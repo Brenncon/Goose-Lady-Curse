@@ -11,7 +11,7 @@ public class AudioSourceAssistant : MonoBehaviour
         BackgroundMusic
     };
     public AudioType audioType;
-
+    [SerializeField] float localVolume = 1;
     private AudioSource audioSource;
 
     void Awake()
@@ -49,6 +49,6 @@ public class AudioSourceAssistant : MonoBehaviour
 
     void OnVolumeChangedCallback(float volume)
     {
-        audioSource.volume = volume;
+        audioSource.volume = volume * localVolume;
     }
 }
