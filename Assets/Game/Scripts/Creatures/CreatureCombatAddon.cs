@@ -179,7 +179,8 @@ public class CreatureCombatAddon : MonoBehaviour
             agent.SetDestination(destination);
 
             animalAI.SetState(Common_WanderScript.WanderState.Chase);
-            agent.speed = runningState.moveSpeed;
+            if(runningState!=null)
+                agent.speed = runningState.moveSpeed;
         }
     }
 

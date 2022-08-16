@@ -76,12 +76,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 887447293646674677, guid: 3d3f8b736ae011243ba25ae1f282f82e, type: 3}
       propertyPath: selectedCommands.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 887447293646674677, guid: 3d3f8b736ae011243ba25ae1f282f82e, type: 3}
       propertyPath: selectedCommands.Array.data[0]
       value: 
-      objectReference: {fileID: 8824415429594748698}
+      objectReference: {fileID: 1841380134}
     - target: {fileID: 7395875961792604729, guid: 3d3f8b736ae011243ba25ae1f282f82e, type: 3}
       propertyPath: character
       value: 
@@ -420,6 +420,62 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4c41baef8036ca49943111f42d97a86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1780892998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8048376060324638670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95d9ff288f3904c05ada7ac9c9a075bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 29
+  indentLevel: 0
+  description: Show hint
+  delay: 0
+  invokeType: 0
+  staticEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1498177995925767785}
+        m_TargetAssemblyTypeName: Quest, Assembly-CSharp
+        m_MethodName: InitialShowHint
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  booleanParameter:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+  booleanEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  integerParameter:
+    integerRef: {fileID: 0}
+    integerVal: 0
+  integerEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  floatParameter:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  floatEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  stringParameter:
+    stringRef: {fileID: 0}
+    stringVal: 
+  stringEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &1841380132
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -491,7 +547,7 @@ MonoBehaviour:
   storyText: "What an awful Goddess\u2026"
   description: 
   character: {fileID: 8406403307615056768}
-  portrait: {fileID: 21300000, guid: 72ad9806a0b64214bbd3ea418dec0742, type: 3}
+  portrait: {fileID: 21300000, guid: ff4604d0d0eee14408fc810d2d508314, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -572,7 +628,7 @@ MonoBehaviour:
   storyText: "I can\u2019t walk around like this!"
   description: 
   character: {fileID: 8406403307615056768}
-  portrait: {fileID: 21300000, guid: 72ad9806a0b64214bbd3ea418dec0742, type: 3}
+  portrait: {fileID: 21300000, guid: ff4604d0d0eee14408fc810d2d508314, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -627,7 +683,7 @@ MonoBehaviour:
   storyText: "I knew it\u2026..."
   description: 
   character: {fileID: 8406403307615056768}
-  portrait: {fileID: 21300000, guid: 72ad9806a0b64214bbd3ea418dec0742, type: 3}
+  portrait: {fileID: 21300000, guid: ff4604d0d0eee14408fc810d2d508314, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -681,7 +737,7 @@ MonoBehaviour:
   storyText: "I\u2019m feeling strange, dizzy. Wait, my head IS wobbling\u2026"
   description: 
   character: {fileID: 8406403307615056768}
-  portrait: {fileID: 21300000, guid: 72ad9806a0b64214bbd3ea418dec0742, type: 3}
+  portrait: {fileID: 21300000, guid: ff4604d0d0eee14408fc810d2d508314, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -708,7 +764,7 @@ MonoBehaviour:
   storyText: "umm\u2026 (take a sip unwillingly)"
   description: 
   character: {fileID: 8406403307615056768}
-  portrait: {fileID: 21300000, guid: 72ad9806a0b64214bbd3ea418dec0742, type: 3}
+  portrait: {fileID: 21300000, guid: ff4604d0d0eee14408fc810d2d508314, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -735,7 +791,7 @@ MonoBehaviour:
   storyText: "Here\u2019s the potion you asked for."
   description: 
   character: {fileID: 8406403307615056768}
-  portrait: {fileID: 21300000, guid: 72ad9806a0b64214bbd3ea418dec0742, type: 3}
+  portrait: {fileID: 21300000, guid: ff4604d0d0eee14408fc810d2d508314, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -837,62 +893,6 @@ MonoBehaviour:
   parentTransformOLD: {fileID: 0}
   spawnPositionOLD: {x: 0, y: 0, z: 0}
   spawnRotationOLD: {x: 0, y: 0, z: 0}
---- !u!114 &1780892998
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8048376060324638670}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95d9ff288f3904c05ada7ac9c9a075bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 29
-  indentLevel: 0
-  description: Show hint
-  delay: 0
-  invokeType: 0
-  staticEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1498177995925767785}
-        m_TargetAssemblyTypeName: Quest, Assembly-CSharp
-        m_MethodName: InitialShowHint
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  booleanParameter:
-    booleanRef: {fileID: 0}
-    booleanVal: 0
-  booleanEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  integerParameter:
-    integerRef: {fileID: 0}
-    integerVal: 0
-  integerEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  floatParameter:
-    floatRef: {fileID: 0}
-    floatVal: 0
-  floatEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  stringParameter:
-    stringRef: {fileID: 0}
-    stringVal: 
-  stringEvent:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1001 &1541989646
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -920,12 +920,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 887447293646674677, guid: 3d3f8b736ae011243ba25ae1f282f82e, type: 3}
       propertyPath: selectedCommands.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 887447293646674677, guid: 3d3f8b736ae011243ba25ae1f282f82e, type: 3}
       propertyPath: selectedCommands.Array.data[0]
       value: 
-      objectReference: {fileID: 8583862960155435268}
+      objectReference: {fileID: 835625018}
     - target: {fileID: 7395875961792604729, guid: 3d3f8b736ae011243ba25ae1f282f82e, type: 3}
       propertyPath: character
       value: 
@@ -1274,7 +1274,7 @@ MonoBehaviour:
     gonna die."
   description: 
   character: {fileID: 8406403307615056768}
-  portrait: {fileID: 21300000, guid: 72ad9806a0b64214bbd3ea418dec0742, type: 3}
+  portrait: {fileID: 21300000, guid: ff4604d0d0eee14408fc810d2d508314, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -1329,7 +1329,7 @@ MonoBehaviour:
   storyText: Ha! Justice.
   description: 
   character: {fileID: 8406403307615056768}
-  portrait: {fileID: 21300000, guid: 72ad9806a0b64214bbd3ea418dec0742, type: 3}
+  portrait: {fileID: 21300000, guid: ff4604d0d0eee14408fc810d2d508314, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -1412,7 +1412,7 @@ MonoBehaviour:
     such as a Goose\u2026\nWow, such power!"
   description: 
   character: {fileID: 8406403307615056768}
-  portrait: {fileID: 21300000, guid: 72ad9806a0b64214bbd3ea418dec0742, type: 3}
+  portrait: {fileID: 21300000, guid: ff4604d0d0eee14408fc810d2d508314, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -1467,7 +1467,7 @@ MonoBehaviour:
     that goose\u2019s head wobbly as well?"
   description: 
   character: {fileID: 8406403307615056768}
-  portrait: {fileID: 21300000, guid: 72ad9806a0b64214bbd3ea418dec0742, type: 3}
+  portrait: {fileID: 21300000, guid: ff4604d0d0eee14408fc810d2d508314, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -1494,7 +1494,7 @@ MonoBehaviour:
   storyText: So, tell me, how did you become a Goose?
   description: 
   character: {fileID: 8406403307615056768}
-  portrait: {fileID: 21300000, guid: 72ad9806a0b64214bbd3ea418dec0742, type: 3}
+  portrait: {fileID: 21300000, guid: ff4604d0d0eee14408fc810d2d508314, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -1504,6 +1504,62 @@ MonoBehaviour:
   stopVoiceover: 1
   waitForVO: 0
   setSayDialog: {fileID: 0}
+--- !u!114 &1780892997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8048376058781103322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95d9ff288f3904c05ada7ac9c9a075bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 29
+  indentLevel: 0
+  description: Show hint
+  delay: 0
+  invokeType: 0
+  staticEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1498177995925767785}
+        m_TargetAssemblyTypeName: Quest, Assembly-CSharp
+        m_MethodName: InitialShowHint
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  booleanParameter:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+  booleanEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  integerParameter:
+    integerRef: {fileID: 0}
+    integerVal: 0
+  integerEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  floatParameter:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  floatEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  stringParameter:
+    stringRef: {fileID: 0}
+    stringVal: 
+  stringEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &2107146484110394274
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1596,62 +1652,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &1780892997
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8048376058781103322}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95d9ff288f3904c05ada7ac9c9a075bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 29
-  indentLevel: 0
-  description: Show hint
-  delay: 0
-  invokeType: 0
-  staticEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1498177995925767785}
-        m_TargetAssemblyTypeName: Quest, Assembly-CSharp
-        m_MethodName: InitialShowHint
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  booleanParameter:
-    booleanRef: {fileID: 0}
-    booleanVal: 0
-  booleanEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  integerParameter:
-    integerRef: {fileID: 0}
-    integerVal: 0
-  integerEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  floatParameter:
-    floatRef: {fileID: 0}
-    floatVal: 0
-  floatEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  stringParameter:
-    stringRef: {fileID: 0}
-    stringVal: 
-  stringEvent:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1001 &1490854725359576425
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1662,7 +1662,7 @@ PrefabInstance:
     - target: {fileID: 395536253110605459, guid: 3d3f8b736ae011243ba25ae1f282f82e, type: 3}
       propertyPath: portrait
       value: 
-      objectReference: {fileID: 21300000, guid: 72ad9806a0b64214bbd3ea418dec0742, type: 3}
+      objectReference: {fileID: 21300000, guid: ff4604d0d0eee14408fc810d2d508314, type: 3}
     - target: {fileID: 395536253110605459, guid: 3d3f8b736ae011243ba25ae1f282f82e, type: 3}
       propertyPath: character
       value: 
@@ -1677,12 +1677,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 887447293646674677, guid: 3d3f8b736ae011243ba25ae1f282f82e, type: 3}
       propertyPath: selectedCommands.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 887447293646674677, guid: 3d3f8b736ae011243ba25ae1f282f82e, type: 3}
       propertyPath: selectedCommands.Array.data[0]
       value: 
-      objectReference: {fileID: 7395881933440074023}
+      objectReference: {fileID: 3857890624774766240}
     - target: {fileID: 7395875961792604729, guid: 3d3f8b736ae011243ba25ae1f282f82e, type: 3}
       propertyPath: character
       value: 
@@ -2061,7 +2061,7 @@ MonoBehaviour:
   storyText: Bye! Awful and puny Goddess!
   description: 
   character: {fileID: 8406403307615056768}
-  portrait: {fileID: 21300000, guid: 72ad9806a0b64214bbd3ea418dec0742, type: 3}
+  portrait: {fileID: 21300000, guid: ff4604d0d0eee14408fc810d2d508314, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -2250,7 +2250,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7835022301113494803, guid: 3d3f8b736ae011243ba25ae1f282f82e, type: 3}
       propertyPath: nodeRect.y
-      value: 111
+      value: 110
       objectReference: {fileID: 0}
     - target: {fileID: 7835022301113494803, guid: 3d3f8b736ae011243ba25ae1f282f82e, type: 3}
       propertyPath: commandList.Array.size
@@ -2591,7 +2591,7 @@ MonoBehaviour:
   storyText: Alright
   description: 
   character: {fileID: 8406403307615056768}
-  portrait: {fileID: 21300000, guid: 72ad9806a0b64214bbd3ea418dec0742, type: 3}
+  portrait: {fileID: 21300000, guid: ff4604d0d0eee14408fc810d2d508314, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -2666,7 +2666,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 409392629131860059, guid: ca72b8cdc82b7fa43924251fc67e1e5f, type: 3}
       propertyPath: selectedCommands.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 409392629131860059, guid: ca72b8cdc82b7fa43924251fc67e1e5f, type: 3}
       propertyPath: selectedBlocks.Array.data[0]
@@ -2675,7 +2675,7 @@ PrefabInstance:
     - target: {fileID: 409392629131860059, guid: ca72b8cdc82b7fa43924251fc67e1e5f, type: 3}
       propertyPath: selectedCommands.Array.data[0]
       value: 
-      objectReference: {fileID: 2399499009304574362}
+      objectReference: {fileID: 4482647944091162466}
     - target: {fileID: 544221248758724968, guid: ca72b8cdc82b7fa43924251fc67e1e5f, type: 3}
       propertyPath: character
       value: 
@@ -2695,7 +2695,7 @@ PrefabInstance:
     - target: {fileID: 1245828601042254905, guid: ca72b8cdc82b7fa43924251fc67e1e5f, type: 3}
       propertyPath: portrait
       value: 
-      objectReference: {fileID: 21300000, guid: 72ad9806a0b64214bbd3ea418dec0742, type: 3}
+      objectReference: {fileID: 21300000, guid: ff4604d0d0eee14408fc810d2d508314, type: 3}
     - target: {fileID: 1245828601042254905, guid: ca72b8cdc82b7fa43924251fc67e1e5f, type: 3}
       propertyPath: character
       value: 
@@ -3244,34 +3244,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &9002193229662784386
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9210363371614658116}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7bd2812d0ae4c04099619019bfa637d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  channel: {fileID: 11400000, guid: b593013012e00224a896307a0fd8adfe, type: 2}
-  response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 11400000, guid: f3d1f1f90ab0bf448805b60fe7bf9501, type: 2}
-        m_TargetAssemblyTypeName: ItemObjective, Assembly-CSharp
-        m_MethodName: PickupObjective
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &7320206052098035003
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3328,6 +3300,34 @@ MonoBehaviour:
   stringEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &9002193229662784386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9210363371614658116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7bd2812d0ae4c04099619019bfa637d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  channel: {fileID: 11400000, guid: b593013012e00224a896307a0fd8adfe, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: f3d1f1f90ab0bf448805b60fe7bf9501, type: 2}
+        m_TargetAssemblyTypeName: ItemObjective, Assembly-CSharp
+        m_MethodName: PickupObjective
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &6406555835393746662
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3353,7 +3353,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 887447293646674677, guid: 3d3f8b736ae011243ba25ae1f282f82e, type: 3}
       propertyPath: selectedCommands.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 887447293646674677, guid: 3d3f8b736ae011243ba25ae1f282f82e, type: 3}
       propertyPath: selectedCommands.Array.data[0]
@@ -3673,6 +3673,62 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4c41baef8036ca49943111f42d97a86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1780892996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3988284867322754866}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95d9ff288f3904c05ada7ac9c9a075bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 29
+  indentLevel: 0
+  description: Show hint
+  delay: 0
+  invokeType: 0
+  staticEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1498177995925767785}
+        m_TargetAssemblyTypeName: Quest, Assembly-CSharp
+        m_MethodName: InitialShowHint
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  booleanParameter:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+  booleanEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  integerParameter:
+    integerRef: {fileID: 0}
+    integerVal: 0
+  integerEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  floatParameter:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  floatEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  stringParameter:
+    stringRef: {fileID: 0}
+    stringVal: 
+  stringEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &3789614651512047367
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3754,7 +3810,7 @@ MonoBehaviour:
     your spell."
   description: 
   character: {fileID: 8406403307615056768}
-  portrait: {fileID: 21300000, guid: 72ad9806a0b64214bbd3ea418dec0742, type: 3}
+  portrait: {fileID: 21300000, guid: ff4604d0d0eee14408fc810d2d508314, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -3809,7 +3865,7 @@ MonoBehaviour:
   storyText: Spare me your blessing. Let me check how many potions I have left.
   description: 
   character: {fileID: 8406403307615056768}
-  portrait: {fileID: 21300000, guid: 72ad9806a0b64214bbd3ea418dec0742, type: 3}
+  portrait: {fileID: 21300000, guid: ff4604d0d0eee14408fc810d2d508314, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -3920,7 +3976,7 @@ MonoBehaviour:
   storyText: Oh, you gotta be kidding me! Do I still need to go against that goose?
   description: 
   character: {fileID: 8406403307615056768}
-  portrait: {fileID: 21300000, guid: 72ad9806a0b64214bbd3ea418dec0742, type: 3}
+  portrait: {fileID: 21300000, guid: ff4604d0d0eee14408fc810d2d508314, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -3948,7 +4004,7 @@ MonoBehaviour:
     you can just cast the spell and get restored?
   description: 
   character: {fileID: 8406403307615056768}
-  portrait: {fileID: 21300000, guid: 72ad9806a0b64214bbd3ea418dec0742, type: 3}
+  portrait: {fileID: 21300000, guid: ff4604d0d0eee14408fc810d2d508314, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -3975,7 +4031,7 @@ MonoBehaviour:
   storyText: Hew... that was close. Do we have all we need?
   description: 
   character: {fileID: 8406403307615056768}
-  portrait: {fileID: 21300000, guid: 72ad9806a0b64214bbd3ea418dec0742, type: 3}
+  portrait: {fileID: 21300000, guid: ff4604d0d0eee14408fc810d2d508314, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -3985,62 +4041,6 @@ MonoBehaviour:
   stopVoiceover: 1
   waitForVO: 0
   setSayDialog: {fileID: 0}
---- !u!114 &1780892996
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3988284867322754866}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95d9ff288f3904c05ada7ac9c9a075bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 29
-  indentLevel: 0
-  description: Show hint
-  delay: 0
-  invokeType: 0
-  staticEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1498177995925767785}
-        m_TargetAssemblyTypeName: Quest, Assembly-CSharp
-        m_MethodName: InitialShowHint
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  booleanParameter:
-    booleanRef: {fileID: 0}
-    booleanVal: 0
-  booleanEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  integerParameter:
-    integerRef: {fileID: 0}
-    integerVal: 0
-  integerEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  floatParameter:
-    floatRef: {fileID: 0}
-    floatVal: 0
-  floatEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  stringParameter:
-    stringRef: {fileID: 0}
-    stringVal: 
-  stringEvent:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1001 &6594132409182579095
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4136,7 +4136,7 @@ PrefabInstance:
     - target: {fileID: 874882769729261242, guid: a8ade4b86e73b6c42890b19633b975a8, type: 3}
       propertyPath: portraits.Array.data[0]
       value: 
-      objectReference: {fileID: 21300000, guid: 72ad9806a0b64214bbd3ea418dec0742, type: 3}
+      objectReference: {fileID: 21300000, guid: ff4604d0d0eee14408fc810d2d508314, type: 3}
     - target: {fileID: 874882769729261243, guid: a8ade4b86e73b6c42890b19633b975a8, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -4260,7 +4260,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 527761921906415572, guid: 5a022d6588735554babcb8f56fa4e8df, type: 3}
       propertyPath: selectedCommands.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 527761921906415572, guid: 5a022d6588735554babcb8f56fa4e8df, type: 3}
       propertyPath: selectedBlocks.Array.data[0]
@@ -4269,7 +4269,7 @@ PrefabInstance:
     - target: {fileID: 527761921906415572, guid: 5a022d6588735554babcb8f56fa4e8df, type: 3}
       propertyPath: selectedCommands.Array.data[0]
       value: 
-      objectReference: {fileID: 7031418553646068816}
+      objectReference: {fileID: 5096476070883094552}
     - target: {fileID: 855251384096814492, guid: 5a022d6588735554babcb8f56fa4e8df, type: 3}
       propertyPath: portrait
       value: 
@@ -4289,7 +4289,7 @@ PrefabInstance:
     - target: {fileID: 1400532339582272947, guid: 5a022d6588735554babcb8f56fa4e8df, type: 3}
       propertyPath: portrait
       value: 
-      objectReference: {fileID: 21300000, guid: 72ad9806a0b64214bbd3ea418dec0742, type: 3}
+      objectReference: {fileID: 21300000, guid: ff4604d0d0eee14408fc810d2d508314, type: 3}
     - target: {fileID: 1400532339582272947, guid: 5a022d6588735554babcb8f56fa4e8df, type: 3}
       propertyPath: character
       value: 
@@ -4305,7 +4305,7 @@ PrefabInstance:
     - target: {fileID: 4480186323694510444, guid: 5a022d6588735554babcb8f56fa4e8df, type: 3}
       propertyPath: portrait
       value: 
-      objectReference: {fileID: 21300000, guid: 72ad9806a0b64214bbd3ea418dec0742, type: 3}
+      objectReference: {fileID: 21300000, guid: ff4604d0d0eee14408fc810d2d508314, type: 3}
     - target: {fileID: 4480186323694510444, guid: 5a022d6588735554babcb8f56fa4e8df, type: 3}
       propertyPath: character
       value: 
@@ -4649,6 +4649,62 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1780892995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4133967064926911169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95d9ff288f3904c05ada7ac9c9a075bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 27
+  indentLevel: 0
+  description: Show hint
+  delay: 0
+  invokeType: 0
+  staticEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1498177995925767785}
+        m_TargetAssemblyTypeName: Quest, Assembly-CSharp
+        m_MethodName: InitialShowHint
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  booleanParameter:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+  booleanEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  integerParameter:
+    integerRef: {fileID: 0}
+    integerVal: 0
+  integerEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  floatParameter:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  floatEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  stringParameter:
+    stringRef: {fileID: 0}
+    stringVal: 
+  stringEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &1780892999
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4666,7 +4722,7 @@ MonoBehaviour:
   storyText: Fine!
   description: 
   character: {fileID: 8406403307615056768}
-  portrait: {fileID: 21300000, guid: 72ad9806a0b64214bbd3ea418dec0742, type: 3}
+  portrait: {fileID: 21300000, guid: ff4604d0d0eee14408fc810d2d508314, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -4720,7 +4776,7 @@ MonoBehaviour:
   storyText: Huh??? I'm not sure if I'm up for the task.
   description: 
   character: {fileID: 8406403307615056768}
-  portrait: {fileID: 21300000, guid: 72ad9806a0b64214bbd3ea418dec0742, type: 3}
+  portrait: {fileID: 21300000, guid: ff4604d0d0eee14408fc810d2d508314, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -4829,7 +4885,7 @@ MonoBehaviour:
   storyText: 'Nah, thanks. I got to get back to- '
   description: 
   character: {fileID: 8406403307615056768}
-  portrait: {fileID: 21300000, guid: 72ad9806a0b64214bbd3ea418dec0742, type: 3}
+  portrait: {fileID: 21300000, guid: ff4604d0d0eee14408fc810d2d508314, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -4912,7 +4968,7 @@ MonoBehaviour:
   storyText: What the? Who are you? W-wait, where am I?
   description: 
   character: {fileID: 8406403307615056768}
-  portrait: {fileID: 21300000, guid: 72ad9806a0b64214bbd3ea418dec0742, type: 3}
+  portrait: {fileID: 21300000, guid: ff4604d0d0eee14408fc810d2d508314, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -4992,59 +5048,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetStat: {fileID: 11400000, guid: 91bffc1407c4b6e468fdedcbf5a5200b, type: 2}
   value: 30.1
---- !u!114 &1780892995
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4133967064926911169}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95d9ff288f3904c05ada7ac9c9a075bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 27
-  indentLevel: 0
-  description: Show hint
-  delay: 0
-  invokeType: 0
-  staticEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1498177995925767785}
-        m_TargetAssemblyTypeName: Quest, Assembly-CSharp
-        m_MethodName: InitialShowHint
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  booleanParameter:
-    booleanRef: {fileID: 0}
-    booleanVal: 0
-  booleanEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  integerParameter:
-    integerRef: {fileID: 0}
-    integerVal: 0
-  integerEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  floatParameter:
-    floatRef: {fileID: 0}
-    floatVal: 0
-  floatEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  stringParameter:
-    stringRef: {fileID: 0}
-    stringVal: 
-  stringEvent:
-    m_PersistentCalls:
-      m_Calls: []

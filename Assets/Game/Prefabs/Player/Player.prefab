@@ -4282,7 +4282,7 @@ MonoBehaviour:
   dropOffRange: 2
   dropOffHeight: 1
   attackRange: 0.5
-  rangeMargin: 0.2
+  rangeMargin: 0.5
   motion: {fileID: 995660012520668861}
   combat: {fileID: 3129107949461929951}
   spawnPoint: {fileID: 0}
