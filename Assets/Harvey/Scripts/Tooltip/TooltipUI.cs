@@ -10,6 +10,7 @@ public class TooltipUI : MonoBehaviour
     [SerializeField] RectTransform tooltipUIRectTransform;
     [SerializeField] Canvas canvas;
     [SerializeField] TMP_Text mytext;
+    [SerializeField] Vector2 padding;
 
     void Start()
     {
@@ -36,7 +37,7 @@ public class TooltipUI : MonoBehaviour
         Vector2 textSize = mytext.GetRenderedValues(false);
 
         // Resize the background to match the size of the tooltip text
-        myRectTransform.sizeDelta = textSize;
+        myRectTransform.sizeDelta = textSize+2*padding;
     }
 
     public void UpdateTooltipPosition()
