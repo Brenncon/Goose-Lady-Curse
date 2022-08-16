@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Animator))]
+[RequireComponent(typeof(AudioSource))]
 public class AvatarCombat : MonoBehaviour
 {
     [ReadOnly]
@@ -14,17 +15,22 @@ public class AvatarCombat : MonoBehaviour
     public Stat defence;
     public SurvivalStat health;
     public bool targetDead;
+    public AudioClip hit;
+    public AudioClip mine;
+
 
     private Animator avatarAnimator;
     private int attackAnimationHash = Animator.StringToHash("attack");
     private int attackSpeedHash = Animator.StringToHash("attack speed");
     public float animationLength = 1;
     private float animationSpeed;
+    private AudioSource playerAudio;
     [SerializeField,ReadOnly]
     private Transform target;
     private void Start()
     {
         avatarAnimator = GetComponent<Animator>();
+        playerAudio = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -42,18 +48,20 @@ public class AvatarCombat : MonoBehaviour
         if (target != null && target.TryGetComponent<CreatureCombatAddon>(out CreatureCombatAddon creatureCombatAddon))
         {
             creatureCombatAddon.TakeDamage(attackDamage.finalValue);
+            playerAudio.PlayOneShot(hit);
             targetDead = creatureCombatAddon.isDead;
         }
         if (target != null && target.TryGetComponent<CritterAddon>(out CritterAddon critterAddon))
         {
             critterAddon.TakeDamage(attackDamage.finalValue);
+            playerAudio.PlayOneShot(hit);
             targetDead = critterAddon.isDead;
         }
-        Debug.Log(target);
         //for the rock and minerals
         if (target != null && target.TryGetComponent<DestructableObject>(out DestructableObject destructableObject))
         {
            destructableObject.TakeDamage(attackDamage.finalValue);
+            playerAudio.PlayOneShot(mine);
         }
     }
 

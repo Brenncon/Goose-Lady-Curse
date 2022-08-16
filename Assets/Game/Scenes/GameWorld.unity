@@ -7219,10 +7219,6 @@ PrefabInstance:
       propertyPath: spawnPoint
       value: 
       objectReference: {fileID: 184292260}
-    - target: {fileID: 4477276587462887495, guid: 9acc1d23c2ba2bc4c9e3148153467f87, type: 3}
-      propertyPath: pickUpRange
-      value: 0.5
-      objectReference: {fileID: 0}
     - target: {fileID: 8174957559777500097, guid: 9acc1d23c2ba2bc4c9e3148153467f87, type: 3}
       propertyPath: m_RootOrder
       value: 43

@@ -4278,7 +4278,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63efa3fc7b837b44ba4ce4ff97a07897, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pickUpRange: 0.1
+  pickUpRange: 0.5
   dropOffRange: 2
   dropOffHeight: 1
   attackRange: 0.5
@@ -4301,6 +4301,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  pickup: {fileID: 8300000, guid: 286a1c47222429a4cbf28b53f172d2a1, type: 3}
+  footstep: {fileID: 8300000, guid: ee2279c2a3ed2a740b7ef239dc118d5a, type: 3}
   interactionTarget: {fileID: 0}
 --- !u!114 &3129107949461929951
 MonoBehaviour:
@@ -4321,6 +4323,8 @@ MonoBehaviour:
   defence: {fileID: 11400000, guid: 7fa6aed232293ae489ebcdc996f22ec9, type: 2}
   health: {fileID: 11400000, guid: 8bdeda9a5c8d1ff4a92c19cd3da7b1fa, type: 2}
   targetDead: 0
+  hit: {fileID: 8300000, guid: 6a93da211845f9c49b7cb12e15b5bdff, type: 3}
+  mine: {fileID: 8300000, guid: 37d91c5af35d3ef44b56ae0441e57f56, type: 3}
   animationLength: 2
   target: {fileID: 0}
 --- !u!114 &4778963146375873940
