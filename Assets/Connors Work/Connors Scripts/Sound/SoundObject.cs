@@ -22,7 +22,9 @@ public class SoundObject : MonoBehaviour
     }
 
     // Update is called once per frame
-    // Goes to a random point to go to, and goes to a random point away from the player if the player gets too close.
+    // Plays the specified audio clip at the distance the player is at to the object specified. So if 10, the distance
+    // must be at or below the specified distace to the sound object before the audio clip will play. If the distance is
+    // too great the audio will not play as the player is too far away.
     void Update()
     {
         playerPos = player.transform.position;
