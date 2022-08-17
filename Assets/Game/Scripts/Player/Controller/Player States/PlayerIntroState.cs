@@ -8,14 +8,21 @@ public class PlayerIntroState : PlayerBaseState
     public UnityEvent Intro;
     public InputReader reader;
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    { 
-        reader.DisableAllInput();
+    {
+        reader.EnableIntroStageInput();
+        reader.SkipIntroEvent += EndIntro;
     }
 
     public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        Intro.Invoke();
+        EndIntro();
         reader.EnableGameplayInput();
-        Debug.Log("intro ended");
+        reader.SkipIntroEvent -= EndIntro;
+    }
+
+    private void EndIntro()
+    {
+        Intro.Invoke();
+        fsm.ChangeState(fsm.IdleStateName);
     }
 }

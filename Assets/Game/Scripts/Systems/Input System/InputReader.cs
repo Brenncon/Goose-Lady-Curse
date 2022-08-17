@@ -7,7 +7,7 @@ using UnityEngine.EventSystems;
 /// A scriptable object that can be attached to any class that need input
 /// </summary>
 [CreateAssetMenu(fileName = "InputReader", menuName = "Input/Input Reader")]
-public class InputReader : ScriptableObject, InputMap.ICharacterControlsActions, InputMap.IGameplayMenusActions, InputMap.ISystemMenusActions, InputMap.IDialoguesActions
+public class InputReader : ScriptableObject, InputMap.ICharacterControlsActions, InputMap.IGameplayMenusActions, InputMap.ISystemMenusActions, InputMap.IDialoguesActions, InputMap.IIntroStageActions
 {
     public event UnityAction<Vector3> MovementEvent = delegate { };
     public event UnityAction<Transform> AttackEvent = delegate { };
@@ -27,6 +27,7 @@ public class InputReader : ScriptableObject, InputMap.ICharacterControlsActions,
     public event UnityAction RotateCameraLeftEvent = delegate { };
     public event UnityAction RotateCameraRightEvent = delegate { };
     public event UnityAction RotateCameraCancelEvent = delegate { };
+    public event UnityAction SkipIntroEvent = delegate { };
 
     private InputMap gameInput;
     private Ray ray;
@@ -41,6 +42,7 @@ public class InputReader : ScriptableObject, InputMap.ICharacterControlsActions,
             gameInput.GameplayMenus.SetCallbacks(this);
             gameInput.SystemMenus.SetCallbacks(this);
             gameInput.Dialogues.SetCallbacks(this);
+            gameInput.IntroStage.SetCallbacks(this);
         }
         ClickInteractionLayerMask = LayerMask.GetMask("Interactable");
     }
@@ -212,12 +214,30 @@ public class InputReader : ScriptableObject, InputMap.ICharacterControlsActions,
         }
     }
 
+    public void OnSkipIntro(InputAction.CallbackContext context)
+    {
+        if (context.phase == InputActionPhase.Performed)
+        {
+            SkipIntroEvent.Invoke();
+        }
+    }
+
+    public void EnableIntroStageInput()
+    {
+        gameInput.SystemMenus.Disable();
+        gameInput.CharacterControls.Disable();
+        gameInput.GameplayMenus.Disable();
+        gameInput.Dialogues.Disable();
+        gameInput.IntroStage.Enable();
+    }
+
     public void EnableGameplayInput()
     {
         gameInput.CharacterControls.Enable();
         gameInput.GameplayMenus.Enable();
         gameInput.SystemMenus.Disable();
         gameInput.Dialogues.Disable();
+        gameInput.IntroStage.Disable();
     }
 
     public void EnableSystemMenuInput()
@@ -226,6 +246,7 @@ public class InputReader : ScriptableObject, InputMap.ICharacterControlsActions,
         gameInput.CharacterControls.Disable();
         gameInput.GameplayMenus.Disable();
         gameInput.Dialogues.Disable();
+        gameInput.IntroStage.Disable();
     }
 
     public void EnableDialogInput()
@@ -234,16 +255,7 @@ public class InputReader : ScriptableObject, InputMap.ICharacterControlsActions,
         gameInput.CharacterControls.Disable();
         gameInput.GameplayMenus.Disable();
         gameInput.Dialogues.Enable();
-    }
-
-    public void EnableCharacterControl()
-    {
-        gameInput.CharacterControls.Enable();
-    }
-
-    public void DisableCharacterControl()
-    {
-        gameInput.CharacterControls.Disable();
+        gameInput.IntroStage.Disable();
     }
 
     public void DisableAllInput()
@@ -252,5 +264,6 @@ public class InputReader : ScriptableObject, InputMap.ICharacterControlsActions,
         gameInput.CharacterControls.Disable();
         gameInput.GameplayMenus.Disable();
         gameInput.Dialogues.Disable();
+        gameInput.IntroStage.Disable();
     }
 }

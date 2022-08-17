@@ -372,6 +372,34 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "IntroStage",
+            "id": "dec03fdd-e693-4e0a-97cc-bb72a0d8739e",
+            "actions": [
+                {
+                    "name": "SkipIntro",
+                    "type": "Button",
+                    "id": "a85d52e8-8610-4ca8-89b6-035f275252aa",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "e1e74812-eaca-47bb-a53d-cb0c7101556c",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SkipIntro",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": [

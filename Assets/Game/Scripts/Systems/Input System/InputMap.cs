@@ -394,6 +394,34 @@ public partial class @InputMap : IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""IntroStage"",
+            ""id"": ""dec03fdd-e693-4e0a-97cc-bb72a0d8739e"",
+            ""actions"": [
+                {
+                    ""name"": ""SkipIntro"",
+                    ""type"": ""Button"",
+                    ""id"": ""a85d52e8-8610-4ca8-89b6-035f275252aa"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""e1e74812-eaca-47bb-a53d-cb0c7101556c"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""SkipIntro"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": [
@@ -440,6 +468,9 @@ public partial class @InputMap : IInputActionCollection2, IDisposable
         // Dialogues
         m_Dialogues = asset.FindActionMap("Dialogues", throwIfNotFound: true);
         m_Dialogues_SkipDialog = m_Dialogues.FindAction("Skip Dialog", throwIfNotFound: true);
+        // IntroStage
+        m_IntroStage = asset.FindActionMap("IntroStage", throwIfNotFound: true);
+        m_IntroStage_SkipIntro = m_IntroStage.FindAction("SkipIntro", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -731,6 +762,39 @@ public partial class @InputMap : IInputActionCollection2, IDisposable
         }
     }
     public DialoguesActions @Dialogues => new DialoguesActions(this);
+
+    // IntroStage
+    private readonly InputActionMap m_IntroStage;
+    private IIntroStageActions m_IntroStageActionsCallbackInterface;
+    private readonly InputAction m_IntroStage_SkipIntro;
+    public struct IntroStageActions
+    {
+        private @InputMap m_Wrapper;
+        public IntroStageActions(@InputMap wrapper) { m_Wrapper = wrapper; }
+        public InputAction @SkipIntro => m_Wrapper.m_IntroStage_SkipIntro;
+        public InputActionMap Get() { return m_Wrapper.m_IntroStage; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(IntroStageActions set) { return set.Get(); }
+        public void SetCallbacks(IIntroStageActions instance)
+        {
+            if (m_Wrapper.m_IntroStageActionsCallbackInterface != null)
+            {
+                @SkipIntro.started -= m_Wrapper.m_IntroStageActionsCallbackInterface.OnSkipIntro;
+                @SkipIntro.performed -= m_Wrapper.m_IntroStageActionsCallbackInterface.OnSkipIntro;
+                @SkipIntro.canceled -= m_Wrapper.m_IntroStageActionsCallbackInterface.OnSkipIntro;
+            }
+            m_Wrapper.m_IntroStageActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                @SkipIntro.started += instance.OnSkipIntro;
+                @SkipIntro.performed += instance.OnSkipIntro;
+                @SkipIntro.canceled += instance.OnSkipIntro;
+            }
+        }
+    }
+    public IntroStageActions @IntroStage => new IntroStageActions(this);
     private int m_MouseandKeyboardSchemeIndex = -1;
     public InputControlScheme MouseandKeyboardScheme
     {
@@ -768,5 +832,9 @@ public partial class @InputMap : IInputActionCollection2, IDisposable
     public interface IDialoguesActions
     {
         void OnSkipDialog(InputAction.CallbackContext context);
+    }
+    public interface IIntroStageActions
+    {
+        void OnSkipIntro(InputAction.CallbackContext context);
     }
 }
