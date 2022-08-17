@@ -12,21 +12,26 @@ public class EquipmentSlot : ScriptableObject
     public UnityEvent OnEquip;
     public UnityEvent<Item,int> OnUnequip;
 
-    void Awake()
-    {
-        // If the equipment slot has an equipment at start for some reason, safety measure
-        if (equipment != null)
-        {
-            // Set up the equipment slot as if the player equips the equipment
-            // Set isOccupied to true
-            isOccupied = true;
+    //void Awake()
+    //{
+    //    // If the equipment slot has an equipment at start for some reason, safety measure
+    //    if (equipment != null)
+    //    {
+    //        // Set up the equipment slot as if the player equips the equipment
+    //        // Set isOccupied to true
+    //        isOccupied = true;
 
-            //Apply item bounus
-            for (int i = 0; i < equipment.modifiers.Length; i++)
-            {
-                equipment.modifiers[i].Apply();
-            }
-        }
+    //        //Apply item bounus
+    //        for (int i = 0; i < equipment.modifiers.Length; i++)
+    //        {
+    //            equipment.modifiers[i].Apply();
+    //        }
+    //    }
+    //}
+
+    private void OnEnable()
+    {
+        equipment = null;
     }
 
     public void Equip(Equipment equipment)
