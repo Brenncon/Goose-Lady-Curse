@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Beach Rock Spawn
   m_EditorClassIdentifier: 
   SpawnableItems:
-  - {fileID: 8868404800207700714, guid: 4ac0eddb16555d84f87cc6ad00149f6b, type: 3}
+  - {fileID: 6067079273039888904, guid: 258f395c055ca874eb045e69116753d2, type: 3}
