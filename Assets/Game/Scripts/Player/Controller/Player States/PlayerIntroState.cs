@@ -5,6 +5,7 @@ using UnityEngine.Events;
 
 public class PlayerIntroState : PlayerBaseState
 {
+    public UnityEvent Intro;
     public InputReader reader;
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     { 
@@ -13,6 +14,8 @@ public class PlayerIntroState : PlayerBaseState
 
     public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        Intro.Invoke();
         reader.EnableGameplayInput();
+        Debug.Log("intro ended");
     }
 }
