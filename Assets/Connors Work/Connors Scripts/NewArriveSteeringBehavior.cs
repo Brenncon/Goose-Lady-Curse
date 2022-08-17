@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class NewArriveSteeringBehavior : SeekSteeringBehaviour
 {
+    //variable declaration
     public float SlowdownDistance = 1.0f;
     public float Deceleration = 2.5f;
     public float StoppingDistance = 0.1f;
@@ -18,18 +19,10 @@ public class NewArriveSteeringBehavior : SeekSteeringBehaviour
     public int NumTimmerWillStopAt;
     public GameObject Player;
     public GameObject Bunny;
-    //public GameObject fleeBehavior;
     public float DistanceToStayAway;
 
-
-    public override Vector3 CalculateForce()
-    {
-        //pointToGoTo.Set(5, 0, 1);
-        //target.Set(5, 1, 0);
-        // CheckMouseInput();
-        return DetermineDesiredArriveForce();
-    }
-
+    //Picks a random point to go to baased on the data given, and goes to it.
+    //While picking points to go to away from the player if the player gets near.
     private void Update()
     {
         float distance = Vector3.Distance(Bunny.transform.position, Player.transform.position);
@@ -38,8 +31,6 @@ public class NewArriveSteeringBehavior : SeekSteeringBehaviour
         {
             float x;
             float z;
-            //fleeBehavior.SetActive(true);
-            //this.gameObject.SetActive(false);
             if(Player.transform.position.x > 0)
             {
                 x = Bunny.transform.position.x - 3;
@@ -238,49 +229,8 @@ public class NewArriveSteeringBehavior : SeekSteeringBehaviour
         }
 
         pointToGoTo4.Set(x, 0, z);
-
-        // this.transform.position.
-
-        //pointToGoTo1.Set(0.688f, 0, 5.971f);
-        //pointToGoTo2.Set(-6.883f, 0, -6.2f);
-        //pointToGoTo3.Set(6.3f, 0, -4.8f);
-        //pointToGoTo4.Set(0.82f, 0, 4.105f);
         Timer = 0;
         counter = 1;
-    }
-
-    protected Vector3 DetermineDesiredArriveForce()
-    {
-        Vector3 toTarget = target - transform.position;
-        float distance = toTarget.magnitude;
-
-        steeringAgent.reachedGoal = false;
-        if (distance > SlowdownDistance)
-        {
-            return base.DetermineDesiredSeekForce();
-        }
-        else if (distance > StoppingDistance && distance <= SlowdownDistance)
-        {
-            toTarget.Normalize();
-
-            float speed = distance / Deceleration;
-            speed = (speed < steeringAgent.maxSpeed ? speed : steeringAgent.maxSpeed);
-
-            speed = speed / distance;
-            desiredForce = toTarget * speed;
-            return desiredForce - steeringAgent.velocity;
-        }
-
-        steeringAgent.reachedGoal = true;
-        return Vector3.zero;
-    }
-
-    protected override void OnDrawGizmos()
-    {
-        base.OnDrawGizmos();
-
-        DebugExtension.DebugCircle(target, Vector3.up, Color.red, SlowdownDistance);
-        DebugExtension.DebugCircle(target, Vector3.up, Color.blue, StoppingDistance);
     }
 
 }
