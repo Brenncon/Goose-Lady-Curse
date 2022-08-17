@@ -2079,7 +2079,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e702b59a2926ecb4eaf2e4a5bdf2356f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  path: Scriptable Objects/Recipes/Alchemy Set
+  path: Recipes/Alchemy Set
   displayRecipes:
     m_PersistentCalls:
       m_Calls:
@@ -2747,7 +2747,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  path: Scriptable Objects/Recipes/Work Bench
+  path: Recipes/Easter Egg
 --- !u!1 &3039129447660156319
 GameObject:
   m_ObjectHideFlags: 0
@@ -3311,7 +3311,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  path: Scriptable Objects/Recipes/Alchemy Set
+  path: Recipes/Alchemy Set
 --- !u!1 &3039129447771596090
 GameObject:
   m_ObjectHideFlags: 0
