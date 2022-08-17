@@ -53,6 +53,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentQuest: {fileID: 1498177995925767785}
+  questFour: {fileID: 6512418515567269776}
   inputReader: {fileID: 11400000, guid: 4fd610bd80c60024e89dee3ebc384516, type: 2}
 --- !u!1001 &132611610
 PrefabInstance:
