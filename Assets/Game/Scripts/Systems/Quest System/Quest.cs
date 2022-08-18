@@ -38,6 +38,10 @@ public class Quest : MonoBehaviour
         dialog = GetComponent<Flowchart>();
         if (objectives.Count > 0)
         {
+            foreach (Objective obj in objectives)
+            {
+                obj.Initialize();
+            }
             currentObjective = objectives[0];
         }
     }
@@ -102,7 +106,6 @@ public class Quest : MonoBehaviour
     public void SetEmoji()
     {
         SetEmojiEvent.Invoke(emojiHint);
-        
     }
 
     public void ObjectiveStateChange(bool state)
