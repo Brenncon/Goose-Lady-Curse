@@ -14,9 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemID: 9999
   itemDisplayName: Easter Egg
-  itemIcon: {fileID: 21300000, guid: 600a9af382e1c224988fbb010753f0b0, type: 3}
+  itemIcon: {fileID: 21300000, guid: ae68cbd311b752a4c812eeb2451275c0, type: 3}
   item3DModelPrefeb: {fileID: 7969001914794838314, guid: e8f161527f50c144dae5829314a56961, type: 3}
   maxStackNumber: 99
+  description: WhosYourDaddy
+  tooltipText: <Right Click to Consume>
   modifier:
   - {fileID: 11400000, guid: e3e155e50972d3f44925bd55b40c7ddf, type: 2}
   - {fileID: 11400000, guid: fce3733a8e4a62d4997bfc0925721f02, type: 2}
