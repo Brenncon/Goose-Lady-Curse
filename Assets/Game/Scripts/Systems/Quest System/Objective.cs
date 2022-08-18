@@ -6,7 +6,7 @@ using UnityEngine.Events;
 [CreateAssetMenu(fileName = "Objective", menuName = "Quest/Objectve")]
 public class Objective : ScriptableObject
 {
-    [SerializeField,ReadOnly]
+    [SerializeField, ReadOnly]
     protected bool completed;
     protected bool started;
     public bool inverseEventSignal;
@@ -15,7 +15,7 @@ public class Objective : ScriptableObject
     public UnityEvent<bool> ObjectiveComplete;
     public UnityEvent<string> SetInstruction;
 
-    protected virtual void OnEnable()
+    public virtual void Initialize()
     {
         completed = false;
         started = false;
@@ -37,7 +37,7 @@ public class Objective : ScriptableObject
 
     public void OnCompletion(bool state)
     {
-        if (!started||completed)
+        if (!started || completed)
         {
             return;
         }

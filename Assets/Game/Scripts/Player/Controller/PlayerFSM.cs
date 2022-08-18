@@ -61,7 +61,6 @@ public class PlayerFSM: FSM
     {
         SetState(IdleStateName);
         motion.ResetState();
-        actions.ResetState();
     }
 
     public void MovementState(Vector3 point)

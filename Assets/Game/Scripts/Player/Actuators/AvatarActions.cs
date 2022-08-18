@@ -1,3 +1,4 @@
+using Project.Build.Commands;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -33,33 +34,19 @@ public class AvatarActions : MonoBehaviour
     [Tooltip("This channel send item pickup event to inventory")]
     public UnityEvent<Item, int, GameObject> TryPickupItemEvent;
 
+    public AudioClip pickup;
+    public AudioClip footstep;
+    [ReadOnly]
     public Structure interactionTarget;
     private Animator avatarAnimator;
+    private AudioSource playerAudio;
     private bool hasAnimator;
-    private void OnEnable()
-    {
-        
-    }
-
-    private void OnDisable()
-    {
-
-    }
-
-    public void ResetState()
-    {
-
-    }
 
     // Start is called before the first frame update
     void Start()
     {
         hasAnimator = TryGetComponent<Animator>(out avatarAnimator);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
+        playerAudio = GetComponent<AudioSource>();
     }
     /// <summary>
     /// Pickup the item
@@ -87,6 +74,7 @@ public class AvatarActions : MonoBehaviour
             Debug.LogWarning("ItemWrapper is null");
             return;
         }
+        playerAudio.PlayOneShot(pickup);
     }
 
     public void CancelPickup()
@@ -174,5 +162,8 @@ public class AvatarActions : MonoBehaviour
         return motion.IsInInteractionRange(attackRange + rangeMargin);
     }
 
-
+    public void FootStepSound()
+    {
+        playerAudio.PlayOneShot(footstep);
+    }
 }

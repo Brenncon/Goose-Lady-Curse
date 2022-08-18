@@ -14,9 +14,9 @@ public class ItemObjective : Objective
     [SerializeField, ReadOnly]
     private float currentCount;
 
-    protected override void OnEnable()
+    public override void Initialize()
     {
-        base.OnEnable();
+        base.Initialize();
         currentCount = 0;
     }
     public void PickupObjective(Item item, int stack)

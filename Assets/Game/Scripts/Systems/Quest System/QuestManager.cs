@@ -8,6 +8,7 @@ public class QuestManager : MonoBehaviour
 {
     //initialize in the inspector with the first quest
     public Quest currentQuest;
+    public Quest postTutorialQuest;
     public InputReader inputReader;
 
     private void OnEnable()
@@ -33,5 +34,10 @@ public class QuestManager : MonoBehaviour
     public void SkipDialog()
     {
         currentQuest.SkipDialog();
+    }
+
+    public void SkipTutorial()
+    {
+        currentQuest = postTutorialQuest;
     }
 }
